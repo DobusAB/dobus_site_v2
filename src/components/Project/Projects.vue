@@ -1,13 +1,8 @@
   <template>
-  <div class="hello" v-if="data.content" transition="test">
-    <h1>{{ data.title.rendered }}</h1>
+  <div class="main-container" v-if="data.content">
     <div>
-        {{{data.content.rendered}}}
+      <projects :project="data.sub_pages"></projects>
     </div>
-    <div>
-     <projects :project="data.sub_pages"></projects>
-     </div>
-
   </div>
   
  <router-view></router-view>
