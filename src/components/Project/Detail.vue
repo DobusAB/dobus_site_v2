@@ -2,6 +2,7 @@
 	<div class="project-container" v-if="data.length > 0" transition="expand">
     <div class="project-inner">
 		<h1>{{{data[0].title.rendered}}}</h1>
+    <a href="" v-link="{path: '/projects'}">Stäng</a>
 		{{{data[0].content.rendered}}}
     </div>
 	</div>

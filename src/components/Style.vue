@@ -21,7 +21,7 @@
 		overflow:scroll;
 		right:0;
 		transform:translateX(100%);
-		transition:all 0.3s;
+		transition:all 0.6s cubic-bezier(0.86, 0, 0.07, 1);
 
 		.project-inner {
 			height:2000px;
@@ -35,7 +35,7 @@
 
 
 	.expand-transition {
-	 	transform:translateX(10%);
+	 	transform:translateX(5%);
 	}
 
 	.expand-leave {
