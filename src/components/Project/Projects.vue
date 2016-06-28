@@ -1,5 +1,6 @@
   <template>
   <div class="main-container" v-if="data.content">
+    <h1>{{data.title.rendered}}</h1>
     <div>
       <projects :project="data.sub_pages"></projects>
     </div>
@@ -9,7 +10,7 @@
 </template>
 
 <script>
-import Projects from '../Home/Projects/Project'
+import Projects from '../Project/Partials/Project'
 export default {
   data () {
     return {
@@ -17,12 +18,20 @@ export default {
       // with hot-reload because the reloaded component
       // preserves its current state and we are modifying
       // its initial state.
-      msg: 'Hello World',
       data: []
     }
   },
   components: {
     projects: Projects
+  },
+  methods: {
+    getProject: function () {
+      this.$http.get('http://127.0.0.1/index.php/wp-json/wp/v2/pages/2').then((response) => {
+        this.data = response.data
+        console.log(response.data)
+      },
+      (response) => {})
+    }
   },
   route: {
     activate: function (transition) {
@@ -30,11 +39,7 @@ export default {
     }
   },
   ready: function () {
-    this.$http.get('http://127.0.0.1/index.php/wp-json/wp/v2/pages/2').then((response) => {
-      this.data = response.data
-      console.log(response.data)
-    },
-    (response) => {})
+    this.getProject()
   }
 }
 </script>

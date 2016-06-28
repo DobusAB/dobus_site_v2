@@ -1,9 +1,9 @@
 <template>
-    <h1>{{ data.title.rendered }}</h1>
+    <h1 v-if="data.title">{{ data.title.rendered }}</h1>
 </template>
 
 <script>
-import Projects from './Home/Projects/Project'
+import Projects from './Project/Partials/Project'
 export default {
   data () {
     return {
@@ -18,6 +18,15 @@ export default {
   components: {
     projects: Projects
   },
+  methods: {
+    getPageData: function () {
+      this.$http.get('http://127.0.0.1/index.php/wp-json/wp/v2/pages/37').then((response) => {
+        this.data = response.data
+        console.log(response.data)
+      },
+      (response) => {})
+    }
+  },
   route: {
     activate: function (transition) {
       console.log('hook-example activated!')
@@ -26,11 +35,7 @@ export default {
     canReuse: true
   },
   ready: function () {
-    this.$http.get('http://127.0.0.1/index.php/wp-json/wp/v2/pages/2').then((response) => {
-      this.data = response.data
-      console.log(response.data)
-    },
-    (response) => {})
+    this.getPageData()
   }
 }
 </script>

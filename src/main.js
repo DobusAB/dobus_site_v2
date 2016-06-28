@@ -17,7 +17,7 @@ var router = new VueRouter({
 router.map({
   '/': {
     name: 'start',
-    component: require('./components/Home.vue')
+    component: require('./components/Home/Home.vue')
   },
   '/about': {
     name: 'about',
@@ -32,6 +32,14 @@ router.map({
         component: require('./components/Project/Detail.vue')
       }
     }
+  },
+  '/work': {
+    name: 'work',
+    component: require('./components/Work/Work.vue')
+  },
+  '/process': {
+    name: 'process',
+    component: require('./components/Process/Process.vue')
   }
 })
 

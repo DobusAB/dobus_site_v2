@@ -23,12 +23,17 @@ export default {
   props: {
     project: []
   },
-  route: {
-    data: function (transition) {
+  methods: {
+    getDetailData: function () {
       this.$http.get('http://127.0.0.1/index.php/wp-json/wp/v2/pages?filter[name]=' + this.$route.params.name).then((response) => {
         this.data = response.data
       },
       (response) => {})
+    }
+  },
+  route: {
+    data: function (transition) {
+      this.getDetailData()
     },
     deactivate: function (transition) {
       transition.next(transition)
