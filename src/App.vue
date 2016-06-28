@@ -1,6 +1,8 @@
 <template>
+<div class="container">
 <menu></menu>
- <router-view></router-view>
+  <router-view></router-view>
+</div>
 </template>
 
 <script>

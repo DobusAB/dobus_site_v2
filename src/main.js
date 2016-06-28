@@ -3,7 +3,9 @@ import App from './App'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 // import Style from '!css!sass!./components/Style.vue'
-require('./components/Style.vue')
+require('./components/Styles/Style.vue')
+require('./components/Styles/Navigation.vue')
+require('./components/Styles/Sally.vue')
 Vue.use(VueRouter)
 Vue.use(VueResource)
 // Vue.use(Style)
@@ -15,7 +17,7 @@ var router = new VueRouter({
 router.map({
   '/': {
     name: 'start',
-    component: require('./components/Hello.vue')
+    component: require('./components/Home.vue')
   },
   '/about': {
     name: 'about',

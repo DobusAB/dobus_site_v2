@@ -1,14 +1,5 @@
-  <template>
-  <div class="hello" v-if="data.content" transition="test">
+<template>
     <h1>{{ data.title.rendered }}</h1>
-    <div>
-        {{{data.content.rendered}}}
-    </div>
-    <div>
-     <projects :project="data.sub_pages"></projects>
-     </div>
-  </div>
- 
 </template>
 
 <script>

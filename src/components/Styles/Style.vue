@@ -4,11 +4,16 @@
 	body {
 		margin:0;
 		padding:0;
-		overflow:hidden;
+		font-family: sans-serif;
+		//overflow:hidden;
+	}
+
+	.flex {
+		display:flex;
 	}
 
 	.main-container {
-		height:100vh;
+		//height:100vh;
 		background-color:white;
 	}
 
