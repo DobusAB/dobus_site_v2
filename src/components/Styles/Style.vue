@@ -12,11 +12,6 @@
 		display:flex;
 	}
 
-	.main-container {
-		//height:100vh;
-		background-color:white;
-	}
-
 	.project-container {
 		max-height:100vh;
 		background-color:lightgray;

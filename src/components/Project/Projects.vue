@@ -1,11 +1,9 @@
-  <template>
-  <div class="main-container" v-if="data.content">
-    <h1>{{data.title.rendered}}</h1>
-    <div>
-      <projects :project="data.sub_pages"></projects>
-    </div>
+
+<template>
+  <h1>{{data.title.rendered}}</h1>
+  <div v-if="data.content">
+  <projects :project="data.sub_pages"></projects>
   </div>
-  
  <router-view></router-view>
 </template>
 

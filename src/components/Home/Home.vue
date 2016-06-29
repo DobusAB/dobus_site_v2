@@ -3,7 +3,6 @@
 </template>
 
 <script>
-import Projects from './Project/Partials/Project'
 export default {
   data () {
     return {
@@ -14,9 +13,6 @@ export default {
       msg: 'Hello World',
       data: []
     }
-  },
-  components: {
-    projects: Projects
   },
   methods: {
     getPageData: function () {
