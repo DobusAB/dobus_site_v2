@@ -1,4 +1,5 @@
 <style lang="scss">
+
 *, *:after, *:before {
   box-sizing: border-box;
 }
@@ -7,6 +8,18 @@ $device-sm: 30em;
 $device-md: 50em;
 $device-lg: 72em;
 $column-gutter: 1.4rem;
+
+@mixin tablet {
+  @media (min-width: #{$device-md}) and (max-width: #{$device-lg - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$device-lg}) {
+    @content;
+  }
+}
 
 html, body {
   font-size: 14px;
