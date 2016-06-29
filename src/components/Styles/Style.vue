@@ -57,6 +57,11 @@
 		}
 	}
 
+	.page--intro {
+		height:65vh;
+		background-color:blue;
+	}
+	
 	.section--service {
 
 		.section--service--header {
@@ -65,10 +70,10 @@
 		}
 
 		.section--service--content {
-			min-height:50vh;
 
 			.section--service--project {
 				min-width: $device-sm;
+				height:50vh;
 			}
 		}
 	}
