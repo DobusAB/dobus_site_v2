@@ -8,6 +8,7 @@
 </template>
 
 <script>
+import Init from '../Partials/Init'
 import Projects from '../Project/Partials/Project'
 export default {
   data () {
@@ -24,7 +25,7 @@ export default {
   },
   methods: {
     getProject: function () {
-      this.$http.get('http://127.0.0.1/index.php/wp-json/wp/v2/pages/2').then((response) => {
+      this.$http.get(Init.globalUrl() + 'index.php/wp-json/wp/v2/pages/2').then((response) => {
         this.data = response.data
         console.log(response.data)
       },
