@@ -28,6 +28,7 @@ html, body {
 .container {
   margin: 0 auto;
   text-align: center;
+  background-color: #fff;
   //padding: 0 $column-gutter;
   //max-width: $device-lg;
 }

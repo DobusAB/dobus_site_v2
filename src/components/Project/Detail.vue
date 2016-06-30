@@ -1,9 +1,9 @@
 <template>
-	<div class="project-container" v-if="data.length > 0" transition="expand">
+	<div class="project-container" v-if="data.length > 0" transition="expand" v-bind:style="{'background':data[0].custom_field.project_color}">
     <div class="project-inner">
 		<h1>{{{data[0].title.rendered}}}</h1>
+    {{{data[0].content.rendered}}}
     <a href="" v-link="{path: '/projects'}">Stäng</a>
-		{{{data[0].content.rendered}}}
     </div>
 	</div>
 	

@@ -1,5 +1,8 @@
 <template>
-    <h1 v-if="data.title">{{ data.title.rendered }}</h1>
+     <div class="page--intro flow-vertical flex align-left ">
+        <h1>{{data.title.rendered}}</h1>
+        <p>{{{data.content.rendered}}}</p>
+    </div>
 </template>
 
 <script>

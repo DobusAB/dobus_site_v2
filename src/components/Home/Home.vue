@@ -1,5 +1,7 @@
 <template>
-    <h1 v-if="data.title">{{ data.title.rendered }}</h1>
+    <div class="landing-container flex align-center align-middle">
+       <h1 v-if="data.title">{{ data.title.rendered }}</h1>
+    </div>
 </template>
 
 <script>
