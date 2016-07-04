@@ -10,6 +10,7 @@
 
 </template>
 <script>
+import Init from '../Partials/Init'
 export default {
   data () {
     return {
@@ -25,7 +26,7 @@ export default {
   },
   methods: {
     getDetailData: function () {
-      this.$http.get('http://127.0.0.1/index.php/wp-json/wp/v2/pages?filter[name]=' + this.$route.params.name).then((response) => {
+      this.$http.get(Init.globalUrl() + 'index.php/wp-json/wp/v2/pages?filter[name]=' + this.$route.params.name).then((response) => {
         this.data = response.data
       },
       (response) => {})

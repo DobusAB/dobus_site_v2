@@ -1,5 +1,5 @@
 // URL and endpoint constants
-const API_URL = 'http://127.0.0.1/'
+const API_URL = 'http://beta.labb.dobus.se/'
 
 export default {
 
