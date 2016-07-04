@@ -9,7 +9,7 @@
 	$margin--medium: 5em;
 	$margin--large: 10em;
 
-	$color--primary: #fff;
+	$dobus--primary: #FFC100;
 	$color--secondary: #fff;
 
 	@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
@@ -35,7 +35,7 @@
 	  }
 	}
 
-@include scrollbars(.5em, slategray);
+@include scrollbars(0em, slategray);
 
 	@mixin tablet {
 	  @media (min-width: #{$device-md}) and (max-width: #{$device-lg - 0.1em}) {
@@ -98,9 +98,8 @@
 	}
 
 	.page--intro {
-		//height:50vh;
-		background-color:#FFC100;
-		padding:$margin--small;
+		background-color:$dobus--primary;
+		padding:$margin--large $margin--small $margin--small $margin--small;
 		text-align: left;
 
 		@include desktop {
@@ -117,11 +116,11 @@
 		}
 
 		h1 {
-			font-size:3.5em;
+			font-size:2em;
 		}
 
 		p {
-			font-size:1.3em;
+			font-size:1.1em;
 		}
 	}
 
@@ -137,11 +136,11 @@
 			padding:$margin--small;
 
 			h1 {
-				font-size:2.75em;
+				font-size:2em;
 			}
 
 			p {
-				font-size:1.25em;
+				font-size:1.1em;
 			}
 
 			@include desktop {
@@ -224,7 +223,7 @@
 		transition:all 0.6s cubic-bezier(0.86, 0, 0.07, 1);
 
 		.project-inner {
-			//height:2000px;
+			height:2000px;
 			display:flex;
 			justify-content: center;
 			align-items: center;
