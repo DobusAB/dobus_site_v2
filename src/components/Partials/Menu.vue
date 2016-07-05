@@ -6,15 +6,15 @@
 	  	 <div class="nav--links">
 		      <a v-link="{ name: 'project', activeClass: 'nav--active' }" class="flex align-middle">
 		      	<span></span>
-		      	Projekt
+		      	Projekt & Tjänster
 		      </a>
 		      <a v-link="{ name: 'about', activeClass: 'nav--active' }" class="flex align-middle">
 		      	<span></span>
-		      	Vårt Team
+		      	Kontakta oss
 		      </a>
 		      <a v-link="{ name: 'process', activeClass: 'nav--active' }" class="flex align-middle">
 		      	<span></span>
-		      	Vår Process
+		      	Såhär jobbar vi
 		      </a>
 		      <a v-link="{ name: 'work', activeClass: 'nav--active' }" class="flex align-middle">
 		      	<span></span>

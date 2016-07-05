@@ -60,6 +60,7 @@
 		.nav--gradient {
 			position:fixed;
 			right:5%;
+			z-index:99;
 			top:0;
 			height:$nav--height;
 			width:125px;
@@ -88,7 +89,7 @@
 			border-radius:0.2em;
 			height:40px;
 			width:60px;
-			margin-left:1.5em;
+			margin-left:1.75em;
 
 			@include desktop {
 				margin-left:2em;
