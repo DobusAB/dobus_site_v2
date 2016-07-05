@@ -37,6 +37,7 @@ export default {
       this.getDetailData()
     },
     deactivate: function (transition) {
+      this.$root.global.projectOpen = false
       transition.next(transition)
     }
     /* activate: function (transition) {
@@ -48,6 +49,9 @@ export default {
       this.data = response.data
     },
     (response) => {}) */
+    console.log(this.$root.global.projectOpen)
+    this.$root.global.projectOpen = true
+    console.log(this.$root.global.projectOpen)
   }
 }
 </script>

@@ -15,7 +15,9 @@ export default {
       // preserves its current state and we are modifying
       // its initial state.
       msg: 'About',
-      data: []
+      global: {
+        projectOpen: false
+      }
     }
   },
   components: {
