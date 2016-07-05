@@ -30,6 +30,15 @@ export default {
         this.data = response.data
       },
       (response) => {})
+    },
+    getAllProjects: function () {
+      this.$http.get(Init.globalUrl() + 'index.php/wp-json/wp/v2/pages/2').then((response) => {
+        // console.log(response.data.sub_pages.length)
+        for (var i = 0; i < response.data.sub_pages.length; i++) {
+          console.log(i)
+        }
+      },
+      (response) => {})
     }
   },
   route: {
@@ -45,13 +54,8 @@ export default {
     } */
   },
   ready: function () {
-    /* this.$http.get('http://127.0.0.1/index.php/wp-json/wp/v2/pages?filter[name]=' + this.$route.params.name).then((response) => {
-      this.data = response.data
-    },
-    (response) => {}) */
-    console.log(this.$root.global.projectOpen)
     this.$root.global.projectOpen = true
-    console.log(this.$root.global.projectOpen)
+    this.getAllProjects()
   }
 }
 </script>

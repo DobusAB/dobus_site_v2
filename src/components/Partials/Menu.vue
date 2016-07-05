@@ -1,5 +1,5 @@
 <template>
-	<div class="nav--primary row align-middle">
+	<div class="nav--primary row align-middle" v-bind:class="{'nav--project_open': this.$root.global.projectOpen}">
 	  <div class="nav--gradient"></div>
 	  <div class="nav--inner">
 	  	 <div class="nav--logo" v-link="{ name: 'start' }"></div>
