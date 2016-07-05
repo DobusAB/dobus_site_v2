@@ -114,13 +114,15 @@
 				color:gray;
 				position:relative;
 				margin-right:1.5em;
+				overflow:hidden;
+				transition:padding-bottom 0.35s ;
 
 				span {
 					width:100%;
 					height:0px;
 					position:absolute;
-					top:0;
-					transition:height 0.2s;
+					bottom:0px;
+					transition:bottom 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 					margin:0 auto;
 					border-bottom-left-radius: 4px;
 					border-bottom-right-radius: 4px;
@@ -129,8 +131,10 @@
 
 				&.nav--active {
 					color:#000;
+					padding-bottom:0.75em;
+					
 					span {
-						height:6.5px;
+						bottom:32.5px;
 					}
 				}
 

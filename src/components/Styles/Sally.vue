@@ -22,7 +22,7 @@ $column-gutter: 1.4rem;
 }
 
 html, body {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .container {
