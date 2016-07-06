@@ -5,13 +5,15 @@
             <h1 v-if="data.title">{{ data.title.rendered }}</h1>
           </div>
           <div class="col-lg-5 bg landing--carousel flex align-middle">
-            <div class="carousel--item text-left">
-              <div class="item--left">
+            <div class="carousel--item row text-left">
+              <div class="item--left col-xs-5 col-md-12">
               <div class="item--image" style="background-image: url('http://beta.labb.dobus.se/wp-content/uploads/2016/06/tvmedluuk-featured.png');"></div>
               <div class="item--shadow"></div>
               </div>
+              <div class="item--right col-xs-7 col-md-12 align-middle align-center">
               <span>Utvalt projekt</span>
               <h2>En podcast site med Kristian Luuk.</h2>
+              </div>
             </div>
           </div>
       </div>

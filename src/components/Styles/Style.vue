@@ -1,7 +1,7 @@
 <style lang="scss">
 
 	$device-sm: 30em;
-	$device-md: 50em;
+	$device-md: 40em;
 	$device-lg: 72em;
 	$column-gutter: 1.4rem;
 
@@ -11,7 +11,7 @@
 
 	$dobus--primary: #FFC100;
 	$dobus--black: #222222;
-	$color--secondary: #fff;
+
 
 	@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
 	  ::-webkit-scrollbar {
@@ -142,56 +142,87 @@
 		@include desktop {
 			padding:0em $margin--medium;
 		}
+		@include tablet {
+			padding:0em $margin--small;
+		}
+
 		.landing--intro {
-			height:50vh;
-			align-items:flex-end;
+			height:100vh;
 			@include desktop {
 				height:100vh;
 				align-items:center;
 			}
 			h1 {
-				font-size:2em;
+				font-size:1.5em;
 				@include desktop {
 					font-size:3.25em;
 					line-height: 1.1;
 				}
+				@include tablet {
+					font-size:2.8em;
+				}
 			}
 		}
 		.landing--carousel {
-			display:none;
-			
-			@include desktop {
-				display:flex;
-			}
 			height:100%;
-			height:50vh;
+			height:30vh;
+			position:absolute;
+			bottom:0;
+			left:0;
+
+			@include desktop {
+				position:flex;
+				bottom:auto;
+				left:auto;
+			}
 			.carousel--item {
 				width:100%;
 				padding:0em;
 				flex-direction:row;
 				//transform: perspective( 900px ) rotateY( -10deg );
-
 				@include desktop {
 					padding:$margin--medium;
 				}
 
-				span {
-					font-size:1.5em;
-					font-weight:500;
-					opacity:0.2;
-					color:#000;
-				}
-				h2 {
-					margin-top:0.2em;
-					font-size:2em;
+
+				.item--right {
+				    display: flex;
+				    justify-content: center;
+				    flex-direction: column;
+					span {
+						font-size:1em;
+						font-weight:500;
+						opacity:0.2;
+						color:#000;
+						@include desktop {
+							font-size:1.5em;
+						}
+						@include tablet {
+							font-size:1.5em;
+						}
+					}
+					h2 {
+						margin-top:0.2em;
+						font-size:1.25em;
+						@include desktop {
+							font-size:2em;
+						}
+						@include tablet {
+							font-size:2em;
+						}
+					}
 				}
 
 				.item--shadow {
 					height:10px;
-					width:40%;
+					width:80%;
 					@include desktop {
-						width:60%;
+						width:70%;
 						height:20px;
+					}
+					@include tablet {
+						width:60%;
+						height:12.5px;
 					}
 					margin:0 auto;
 					opacity:0.2;
@@ -203,39 +234,44 @@
 					animation: scale 1.75s infinite;
 					animation-direction: alternate;
 				}
+				.item--left {
 
-				.item--image {
-					height:125px;
+					.item--image {
+						height:110px;
 
-					@include desktop {
-						height:250px;
+						@include desktop {
+							height:425px;
+						}
+						@include tablet {
+							height:210px;
+						}
+						width:100%;
+						z-index:2;
+						background-size:contain;
+						background-position:center;
+						background-repeat:no-repeat;
+						animation: hover 1.75s infinite;
+						animation-direction: alternate;
+
 					}
-					width:100%;
-					z-index:2;
-					background-size:contain;
-					background-position:center;
-					background-repeat:no-repeat;
-					animation: hover 1.75s infinite;
-					animation-direction: alternate;
 
-				}
+					@keyframes hover {
+					  0% {
+					    transform: translateY(0px);
+					  }
+					  100% {
+					    transform: translateY(20px);
+					  }
+					}
 
-				@keyframes hover {
-				  0% {
-				    transform: translateY(0px);
-				  }
-				  100% {
-				    transform: translateY(20px);
-				  }
-				}
-
-				@keyframes scale {
-				  0% {
-				    transform: scale(0.9);
-				  }
-				  100% {
-				    transform: scale(1);
-				  }
+					@keyframes scale {
+					  0% {
+					    transform: scale(0.9);
+					  }
+					  100% {
+					    transform: scale(1);
+					  }
+					}
 				}
 			}
 			@include desktop {

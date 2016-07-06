@@ -1,11 +1,11 @@
 <style lang="scss">
 	/* always present */
-
+	@import 'Variables';
 	$device-sm: 30em;
 	$device-md: 50em;
 	$device-lg: 72em;
 
-	$dobus--primary: #FFC100;
+	//$dobus--primary: #FFC100;
 	$nav--height: 85px;
 
 	@mixin box_shadow ($level) {
