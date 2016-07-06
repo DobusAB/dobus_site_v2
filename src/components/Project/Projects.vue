@@ -30,7 +30,6 @@ export default {
     getProject: function () {
       this.$http.get(Init.globalUrl() + 'index.php/wp-json/wp/v2/pages/2').then((response) => {
         this.data = response.data
-        console.log(response.data)
       },
       (response) => {})
     }
