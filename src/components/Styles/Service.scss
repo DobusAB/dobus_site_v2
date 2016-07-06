@@ -1,0 +1,98 @@
+.service--section {
+	padding:$margin--small/2;
+	color:#fff;
+
+	@include desktop {
+		padding:$margin--large;
+	}
+
+	h1 {
+		font-size:1.75em;
+		margin-top: $margin--small/2;
+		@include desktop {
+			font-size:3em;
+			margin-top: $no-margin--top;
+		}
+	}
+
+	p {
+		font-size:1.1em;
+		margin-left:0em;
+		padding:0em;
+
+		@include desktop {
+			margin-left:$margin--small;
+			font-size:1.25em;
+		}
+	}
+
+	.service--header {
+		padding:$margin--small/2;
+	}
+
+
+	.service--content {
+		margin-top:$margin--small;
+		margin-bottom:$margin--small;
+		display:inline-flex;
+		@include desktop {
+			margin-top:$margin--small/2;
+			margin-bottom:$margin--small/2;
+		}
+
+		.service--project {
+			width:100px !important;
+			display:inline-flex;
+			position:relative;
+			min-width:200px;
+			img {
+				position:absolute;
+				height:50px;
+				max-width:50%;
+				@include centerer;
+
+				@include desktop {
+					max-height:50px;
+					width:auto;
+
+				}
+			}
+			.project--image {
+				height:150px;
+				animation: hover 1.75s infinite;
+				animation-direction: alternate;
+
+				@include desktop {
+					height:300px;
+					margin-bottom:$margin--medium;
+				}
+
+				margin-bottom:$margin--small;
+				position:relative;
+				background-position:center;
+				width:80%;
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+
+			.project--shadow {
+				height:10px;
+				background-color:black;
+				opacity: 0.2;
+				width:50%;
+				max-width:225px;
+				animation: scale 1.75s infinite;
+				animation-direction: alternate;
+
+				@include desktop {
+					width:40%;
+				}
+				border-radius:50%;
+			}
+
+			button {
+				margin-top:2em;
+			}
+		}
+	}
+}

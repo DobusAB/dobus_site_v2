@@ -1,8 +1,7 @@
 
 <template>
-  <div class="page--intro flow-vertical flex align-left ">
+  <div class="page--intro flex align-left align-middle">
       <h1>{{data.title.rendered}}</h1>
-      <p>{{{data.content.rendered}}}</p>
   </div>
   <div v-if="data.content">
   <projects :project="data.sub_pages"></projects>

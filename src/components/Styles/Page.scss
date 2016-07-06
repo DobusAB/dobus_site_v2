@@ -1,0 +1,29 @@
+.page--intro {
+		background-color:$dobus--primary;
+		padding:$margin--large $margin--small $margin--small $margin--small;
+		text-align: left;
+		color:#fff;
+		min-height:75vh;
+
+		@include desktop {
+			padding:$margin--large $margin--medium;
+		}
+
+		h1 {
+			font-size:2em;
+			@include desktop {
+				font-size:3.5em;
+				width:70%;
+				margin-bottom:0em;
+			}
+		}
+
+		p {
+			font-size:1.1em;
+
+			@include desktop {
+				font-size:1.3em;
+				width:80%;
+			}
+		}
+	}
