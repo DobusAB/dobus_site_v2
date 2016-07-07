@@ -1,6 +1,22 @@
 .service--section {
 	padding:$margin--small/2;
 	color:#fff;
+	position:relative;
+
+	.section--overlap {
+		position:absolute;
+		bottom:-40px;
+		height:40px;
+		left:0;
+		z-index:2;
+		right:0;
+		margin:auto;
+
+		@include desktop {
+			height:55px;
+			bottom:-55px;
+		}
+	}
 
 	@include desktop {
 		padding:$margin--large;
@@ -28,6 +44,33 @@
 
 	.service--header {
 		padding:$margin--small/2;
+		position:relative;
+		.service--text {
+			padding:0;
+		}
+		.service--finger {
+				position:absolute;
+				right:-$margin--small/2;
+				top:2.75em;
+				transform:rotate(180deg);
+				overflow:hidden;
+
+				svg {
+					transform:translateX(-2.5em);
+				}
+		}
+		@include desktop {
+			.service--finger {
+				position:absolute;
+				left:-$margin--large*1.2;
+				top:2.2em;
+				transform:rotate(0deg);
+
+				svg {
+					transform:translateX(-1em);
+				}
+			}
+		}
 	}
 
 
@@ -45,7 +88,12 @@
 			display:inline-flex;
 			position:relative;
 			min-width:200px;
+			margin-top:$margin--small;
+			&:first-child {
+				margin-top:0em;
+			}
 			@include desktop {
+				margin-top:0em;
 				.project--image {
 					opacity:0.5;
 					transition:all 0.2s;
@@ -53,6 +101,7 @@
 				&:hover {
 					.project--image {
 						opacity:1;
+
 					}
 				}
 			}

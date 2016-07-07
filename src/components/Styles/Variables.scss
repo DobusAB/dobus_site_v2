@@ -52,6 +52,12 @@ $easing: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transform: translate(-50%, -50%);
 }
 
+@mixin vertical--centerer {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 
 @mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
 	  ::-webkit-scrollbar {

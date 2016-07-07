@@ -8,7 +8,7 @@ button {
 	padding:0.65em 2em;
 	border-radius:2em;
 	color:#fff;
-	font-size:1.2em;
+	font-size:1.4em;
 	font-weight:500;
 	font-family: $font;
 	position:relative;
@@ -24,7 +24,6 @@ button {
 			position:absolute;
 			display:block;
 			bottom:-50px;
-			transform:rotateX(100deg);
 			margin:auto;
 			left:0;
 			right:0;
@@ -36,7 +35,6 @@ button {
 			background-color: rgba(0, 0, 0, 0.35);
 			span {
 				bottom:-15px;
-				transform:rotateX(0deg);
 			}
 		}
 	}

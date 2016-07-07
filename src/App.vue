@@ -1,12 +1,14 @@
 <template>
-<div class="container">
-<menu></menu>
-  <router-view></router-view>
-</div>
+  <div class="container" v-bind:class="{'nav--project_open': this.$root.global.projectOpen}">
+    <menu></menu>
+      <router-view></router-view>
+    <sidfot></sidfot>
+  </div>
 </template>
 
 <script>
 import Menu from './components/Partials/Menu'
+import Footer from './components/Partials/Footer'
 export default {
   data () {
     return {
@@ -21,11 +23,12 @@ export default {
     }
   },
   components: {
-    menu: Menu
+    menu: Menu,
+    sidfot: Footer
   },
   ready: function () {}
 }
 
 </script>
 
-<style>
+

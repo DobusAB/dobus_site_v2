@@ -1,10 +1,12 @@
 <template>
-	<div class="project-container" v-if="data.length > 0" transition="expand" v-bind:style="{'background':data[0].custom_field.project_color}">
+	<div class="project-container" v-if="data.length > 0" transition="expand">
     <div class="project-inner">
-		<h1>{{{data[0].title.rendered}}}</h1>
-    {{{data[0].content.rendered}}}
-    <a v-link="{path: '/projects'}">Stäng</a>
-    <a v-on:click="NextProject">Nästa project</a>
+      <div class="project--intro flex align-middle" v-bind:style="{'background-image': 'url(' + data[0].custom_fields.project_featured_image + ')' }">
+        <h1>{{{data[0].title.rendered}}}</h1>
+      </div>
+      {{{data[0].content.rendered}}}
+      <a v-link="{path: '/projects'}">Stäng</a>
+      <a v-on:click="NextProject">Nästa project</a>
     </div>
 	</div>
 	

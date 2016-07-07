@@ -1,6 +1,7 @@
 .project-container {
 		max-height:100vh;
-		background-color:lightgray;
+		min-height:100vh;
+		background-color:#fff;
 		position:fixed;
 		width:100%;
 		z-index:2;
@@ -11,19 +12,26 @@
 		transition:all 0.6s cubic-bezier(0.86, 0, 0.07, 1);
 
 		.project-inner {
-			height:2000px;
 			display:flex;
+			width:100%;
 			justify-content: center;
 			align-items: center;
 			flex-direction: column;
-			color:#fff;
+			//color:#fff;
+
+
+			.project--intro {
+				height:80vh;
+				width:100%;
+				padding:$margin--large;
+				background-size:50%;
+				background-position:center;
+
+			}
 		}
-
 	}
-
-
 	.expand-transition {
-	 	transform:translateX(5%);
+	 	transform:translateX(0%);
 	}
 
 	.expand-leave {

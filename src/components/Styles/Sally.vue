@@ -29,6 +29,10 @@ html, body {
   margin: 0 auto;
   text-align: center;
   background-color: #fff;
+
+  &.nav--project_open {
+    overflow:hidden;
+  }
   //padding: 0 $column-gutter;
   //max-width: $device-lg;
 }

@@ -1,6 +1,0 @@
-<style lang="scss">
-	
-	
-
-
-</style>

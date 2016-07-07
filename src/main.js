@@ -4,8 +4,6 @@ import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 // import Style from '!css!sass!./components/Style.vue'
 require('./components/Styles/Style.vue')
-require('./components/Styles/Mixins.vue')
-require('./components/Styles/Navigation.vue')
 require('./components/Styles/Sally.vue')
 Vue.use(VueRouter)
 Vue.use(VueResource)
