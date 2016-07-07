@@ -45,18 +45,18 @@
 			display:inline-flex;
 			position:relative;
 			min-width:200px;
-			img {
-				position:absolute;
-				height:50px;
-				max-width:50%;
-				@include centerer;
-
-				@include desktop {
-					max-height:50px;
-					width:auto;
-
+			@include desktop {
+				.project--image {
+					opacity:0.5;
+					transition:all 0.2s;
+				}
+				&:hover {
+					.project--image {
+						opacity:1;
+					}
 				}
 			}
+
 			.project--image {
 				height:150px;
 				animation: hover 1.75s infinite;

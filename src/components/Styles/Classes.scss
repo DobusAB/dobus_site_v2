@@ -1,97 +1,93 @@
 
+button {
+	border:none;
+	outline:none;
+}
 
-
-
-	button {
-		border:none;
-		outline:none;
+.primary--button {
+	padding:0.65em 2em;
+	border-radius:2em;
+	color:#fff;
+	font-size:1.2em;
+	font-weight:500;
+	font-family: $font;
+	position:relative;
+	overflow:hidden;
+	background-color: rgba(0, 0, 0, 0.15);
+	span { 
+		display:none;
 	}
+	@include desktop {
 
-	.primary--button {
-
-		padding:0.8em 2em;
-		border-radius:2em;
-		color:#fff;
-		font-size:1.2em;
-		font-weight:500;
-		font-family: $font;
-		position:relative;
-		overflow:hidden;
-		background-color: rgba(118, 76, 41, 0.25);
-		span { 
-			display:none;
+		transition: background-color 0.2s;
+		span {
+			position:absolute;
+			display:block;
+			bottom:-50px;
+			transform:rotateX(100deg);
+			margin:auto;
+			left:0;
+			right:0;
+			transition:all 0.2s $easing;
 		}
-		@include desktop {
 
-			transition: background-color 0.2s;
+		&:hover {
+			cursor:pointer;
+			background-color: rgba(0, 0, 0, 0.35);
 			span {
-				position:absolute;
-				display:block;
-				bottom:-50px;
-				transform:rotateX(100deg);
-				margin:auto;
-				left:0;
-				right:0;
-				transition:all 0.2s $easing;
-			}
-
-			&:hover {
-				cursor:pointer;
-				background-color: rgba(118, 76, 41, 0.5);
-				span {
-					bottom:-15px;
-					transform:rotateX(0deg);
-				}
+				bottom:-15px;
+				transform:rotateX(0deg);
 			}
 		}
-		&.block{
+	}
+	&.block{
 
-		}
+	}
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.flex {
+	display:flex;
+
+	&.align-center {
+		justify-content: center;
 	}
 
-	.text-left {
-		text-align: left;
+	&.align-middle {
+		align-items: center;
 	}
 
-	.text-right {
-		text-align: left;
+	&.align-right {
+		justify-content: flex-end;
 	}
 
-	.text-center {
-		text-align: center;
+	&.align-left {
+		justify-content: flex-start;
 	}
 
-	.flex {
-		display:flex;
-
-		&.align-center {
-			justify-content: center;
-		}
-
-		&.align-middle {
-			align-items: center;
-		}
-
-		&.align-right {
-			justify-content: flex-end;
-		}
-
-		&.align-left {
-			justify-content: flex-start;
-		}
-
-		&.flow-vertical {
-			flex-direction: column;
-		}
-
-		&.flow-horizontal {
-			flex-direction: row;
-		}
-
-		&.full {
-			flex:1;
-		}
+	&.flow-vertical {
+		flex-direction: column;
 	}
+
+	&.flow-horizontal {
+		flex-direction: row;
+	}
+
+	&.full {
+		flex:1;
+	}
+}
 
 
 @keyframes hover {
