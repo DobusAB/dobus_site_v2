@@ -168,6 +168,7 @@
 					font-size:2.1em;
 					margin-bottom:0em;
 					margin-top:0em;
+					line-height:1;
 
 					@include desktop {
 						margin-top:0em;
@@ -195,6 +196,8 @@
 
 				.project--image_container {
 					height:250px;
+					animation: hover 1.75s infinite;
+					animation-direction: alternate;
 					background-position:center;
 					background-repeat:no-repeat;
 					background-size:contain;
@@ -203,6 +206,8 @@
 				.project--shadow {
 					width:200px;
 					height:15px;
+					animation: scale 1.75s infinite;
+					animation-direction: alternate;
 					background-color:black;
 					opacity: 0.2;
 					margin:2em auto;
