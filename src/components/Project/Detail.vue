@@ -11,8 +11,8 @@
           </svg>
       </div>
       <div class="project--section">
-        <!--<span class="intro--finger">
-        <svg width="50px" height="154px" viewBox="667 797 89 204" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <span class="intro--finger">
+        <svg width="90px" height="154px" viewBox="667 797 89 204" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs></defs>
             <g id="Finger" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(720.000000, 916.500000) rotate(-270.000000) translate(-720.000000, -916.500000) translate(635.500000, 891.500000)">
                 <g transform="translate(84.500000, 25.000000) rotate(-270.000000) translate(-84.500000, -25.000000) translate(59.500000, -59.500000)">
@@ -25,7 +25,7 @@
                 </g>
             </g>
         </svg>
-        </span>-->
+        </span>
         <h1>{{{data[0].title.rendered}}}</h1>
         <h4>{{{data[0].custom_field.project_description}}}</h4>
         <h2>{{{data[0].custom_field.project_intro}}}</h2>
