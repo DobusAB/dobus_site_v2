@@ -1,10 +1,10 @@
 
 <template>
-  <div class="page--intro flex align-left align-middle">
-      <h1>{{data.title.rendered}}</h1>
-  </div>
   <div v-if="data.content">
-  <projects :project="data.sub_pages"></projects>
+    <div class="page--intro flex align-left align-middle">
+        <h1>{{data.title.rendered}}</h1>
+    </div>
+    <projects :project="data.sub_pages"></projects>
   </div>
  <router-view></router-view>
 </template>
@@ -33,13 +33,13 @@ export default {
       (response) => {})
     }
   },
-  /* route: {
-    activate: function (transition) {
-      transition.next(transition)
+  route: {
+    data: function (transition) {
+      this.getProject()
     }
-  }, */
+  },
   ready: function () {
-    this.getProject()
+    // this.getProject()
   }
 }
 </script>

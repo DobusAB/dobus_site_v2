@@ -33,15 +33,7 @@
         </div>
       </div>
       <div class="row references--container" v-for="logo in logos">
-        <!-- <img src="http://placehold.it/250x100">
-        <img src="http://placehold.it/250x100">
-        <img src="http://placehold.it/250x100">
-        <img src="http://placehold.it/250x100">
-        <img src="http://placehold.it/250x100">
-        <img src="http://placehold.it/250x100">
-        <img src="http://placehold.it/250x100">
-        <img src="http://placehold.it/250x100"> -->
-        <img v-bind:src="logo.media_details.sizes.medium.source_url">
+        <img v-bind:src="logo.media_details.sizes.full.source_url" v-if="logo.media_details.sizes.full">
       </div>
     </div>
 </template>
@@ -62,7 +54,6 @@ export default {
     getLogos: function () {
       this.$http.get(Init.globalUrl() + 'index.php/wp-json/wp/v2/media?parent=1').then((response) => {
         this.logos = response.data
-        // console.log(response.data)
       },
       (response) => {})
     }
