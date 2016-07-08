@@ -7,6 +7,7 @@
 	@import 'Project';
 	@import 'Page';
 	@import 'Service';
+	@import 'About';
 	@import 'Footer';
 
 	body {

@@ -1,8 +1,19 @@
 <template>
-   <div class="page--intro flow-vertical flex align-left " v-if="data.title">
+   <div class="page--intro flex align-left align-middle" v-if="data.title">
       <h1>{{data.title.rendered}}</h1>
-      <p>{{{data.content.rendered}}}</p>
+      <!--<p>{{{data.content.rendered}}}</p>-->
   </div>
+   <div class="row about--container">
+        <div class="about--employee col-md-6 col-lg-4 col-xs-12" >
+          <div class="employee--image"></div>
+          <div class="employee--info">
+            <h2>Name Namesson</h2>
+            <h3>Befattning & sånt</h3>
+            <p>0730936515</p>
+            <p>albin@dobus.se</p>
+          </div>
+        </div>
+      </div>
 </template>
 
 <script>

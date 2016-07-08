@@ -6,7 +6,7 @@
 		min-height:85vh;
 
 		@include desktop {
-			padding:$margin--large $margin--medium;
+			padding:$margin--large $margin--large;
 		}
 
 		h1 {
