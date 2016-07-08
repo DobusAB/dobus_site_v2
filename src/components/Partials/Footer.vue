@@ -32,16 +32,8 @@
           <p><a href="">Nya projekt</a></p>
         </div>
       </div>
-      <div class="row references--container" v-for="logo in logos">
-        <!-- <img src="http://placehold.it/250x100">
-        <img src="http://placehold.it/250x100">
-        <img src="http://placehold.it/250x100">
-        <img src="http://placehold.it/250x100">
-        <img src="http://placehold.it/250x100">
-        <img src="http://placehold.it/250x100">
-        <img src="http://placehold.it/250x100">
-        <img src="http://placehold.it/250x100"> -->
-        <img v-bind:src="logo.media_details.sizes.medium.source_url">
+      <div class="row references--container flex">
+        <img v-bind:src="logo.media_details.sizes.full.source_url"  v-for="logo in logos">
       </div>
     </div>
 </template>
