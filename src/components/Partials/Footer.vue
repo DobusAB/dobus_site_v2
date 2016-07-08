@@ -32,6 +32,35 @@
           <p><a href="">Nya projekt</a></p>
         </div>
       </div>
+
+      <div class="row references--container">
+        <img v-bind:src="logo.media_details.sizes.full.source_url" v-if="logo.media_details.sizes.full" v-for="logo in logos">
     </div>
 </template>
+<script>
+import Init from '../Partials/Init'
+export default {
+  data () {
+    return {
+      // note: changing this line won't causes changes
+      // with hot-reload because the reloaded component
+      // preserves its current state and we are modifying
+      // its initial state.
+      msg: 'About',
+      logos: []
+    }
+  },
+  methods: {
+    getLogos: function () {
+      this.$http.get(Init.globalUrl() + 'index.php/wp-json/wp/v2/media?parent=1').then((response) => {
+        this.logos = response.data
+      },
+      (response) => {})
+    }
+  },
+  ready: function () {
+    this.getLogos()
+  }
+}
 
+</script>

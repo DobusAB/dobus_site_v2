@@ -7,7 +7,7 @@
          <svg width="156px" height="55px" class="section--overlap" viewBox="642 851 156 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <desc>Created with Sketch.</desc>
             <defs></defs>
-            <path d="M643,851 L648.00008,851 C656.836548,851 666.412122,857.750953 669.945053,865.850118 C669.945053,865.850118 680.275311,905.609375 717.99992,905.609375 C755.724529,905.609375 766.063401,865.8321 766.063401,865.8321 C769.34205,857.640558 779.16817,851 787.99976,851 L797.49984,851 L643,851 L643,851 Z" id="Combined-Shape" stroke="none" fill='{{item.custom_fields.project_color}}' fill-rule="evenodd"></path>
+            <path d="M643,851 L648.00008,851 C656.836548,851 666.412122,857.750953 669.945053,865.850118 C669.945053,865.850118 680.275311,905.609375 717.99992,905.609375 C755.724529,905.609375 766.063401,865.8321 766.063401,865.8321 C769.34205,857.640558 779.16817,851 787.99976,851 L797.49984,851 L643,851 L643,851 Z" id="Combined-Shape" stroke="none" fill='{{item.custom_field.project_color}}' fill-rule="evenodd"></path>
           </svg>
       </div>
       <div class="project--section">
@@ -38,7 +38,7 @@
           <p>{{{data[0].custom_field.project_solution_description}}}</p>
         </div>
         <div class="col-xs-12 col-md-6 case--image flex align-middle align-center">
-          <img src="{{data[0].custom_field.project_solution_image}}">
+          <img v-bind:src="data[0].custom_field.project_solution_image">
         </div>
          <svg width="156px" height="55px" class="section--overlap" viewBox="642 851 156 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <desc>Created with Sketch.</desc>
@@ -61,8 +61,7 @@
       </div>
     </div>
 	</div>
-	
-
+	<router-view></router-view>
 </template>
 <script>
 import Init from '../Partials/Init'
@@ -116,8 +115,11 @@ export default {
   route: {
     data: function (transition) {
       this.getDetailData()
-      this.getAllProjects()
+      // this.getAllProjects()
     },
+    /* activate: function (transition) {
+      // transition.next(transition)
+    }, */
     deactivate: function (transition) {
       this.$root.global.projectOpen = false
       transition.next(transition)

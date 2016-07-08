@@ -28,4 +28,27 @@
 			color:#fff;
 		}
 	}
+
+	.references--container{
+		margin-top:2.25em;
+		display:inline-flex;
+		width:100%;
+		//background-color:blue;
+		justify-content: space-between;
+		align-items:center;
+		img{
+			display:inline-block;
+			max-width:190px;
+		    max-height:70px;
+		    width: auto;
+		    height: auto;
+			opacity: 0.2;
+			padding:0em 2em;
+			margin-top:1em;
+
+			&:first-child {
+				border-left:none;			}
+		}
+
+	}
 }
