@@ -1,20 +1,18 @@
 <template>
 	<div class="project-container" v-if="data.length > 0" transition="expand">
     <div class="project-inner">
-      <div class="project--image flex flow-vertical align-center align-middle">
+      <div class="project--image flex flow-vertical align-center align-middle" v-bind:style="{background: data[0].custom_field.project_color}">
         <div class="project--image_container" v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_featured_image + ')' }"></div>
         <div class="project--shadow"></div>
          <svg width="156px" height="55px" class="section--overlap" viewBox="642 851 156 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <desc>Created with Sketch.</desc>
             <defs></defs>
-            <path d="M643,851 L648.00008,851 C656.836548,851 666.412122,857.750953 669.945053,865.850118 C669.945053,865.850118 680.275311,905.609375 717.99992,905.609375 C755.724529,905.609375 766.063401,865.8321 766.063401,865.8321 C769.34205,857.640558 779.16817,851 787.99976,851 L797.49984,851 L643,851 L643,851 Z" id="Combined-Shape" stroke="none" fill='{{item.custom_field.project_color}}' fill-rule="evenodd"></path>
+            <path d="M643,851 L648.00008,851 C656.836548,851 666.412122,857.750953 669.945053,865.850118 C669.945053,865.850118 680.275311,905.609375 717.99992,905.609375 C755.724529,905.609375 766.063401,865.8321 766.063401,865.8321 C769.34205,857.640558 779.16817,851 787.99976,851 L797.49984,851 L643,851 L643,851 Z" id="Combined-Shape" stroke="none" fill='{{data[0].custom_field.project_color }}' fill-rule="evenodd"></path>
           </svg>
       </div>
       <div class="project--section">
-        <span class="intro--finger">
+        <!--<span class="intro--finger">
         <svg width="50px" height="154px" viewBox="667 797 89 204" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
-            <desc>Created with Sketch.</desc>
             <defs></defs>
             <g id="Finger" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(720.000000, 916.500000) rotate(-270.000000) translate(-720.000000, -916.500000) translate(635.500000, 891.500000)">
                 <g transform="translate(84.500000, 25.000000) rotate(-270.000000) translate(-84.500000, -25.000000) translate(59.500000, -59.500000)">
@@ -27,7 +25,7 @@
                 </g>
             </g>
         </svg>
-        </span>
+        </span>-->
         <h1>{{{data[0].title.rendered}}}</h1>
         <h4>{{{data[0].custom_field.project_description}}}</h4>
         <h2>{{{data[0].custom_field.project_intro}}}</h2>
@@ -47,7 +45,7 @@
         </svg>
       </div>
 
-      <div class="next--project row">
+      <div class="next--project row" v-bind:style="{background: data[0].custom_field.project_color}">
         <div class="col-xs-12 col-md-6">
           <div class="project--image_container" v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_featured_image + ')' }"></div>
            <div class="project--shadow"></div>
