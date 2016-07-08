@@ -32,16 +32,44 @@
           <p><a href="">Nya projekt</a></p>
         </div>
       </div>
-      <div class="row references--container">
+      <div class="row references--container" v-for="logo in logos">
+        <!-- <img src="http://placehold.it/250x100">
         <img src="http://placehold.it/250x100">
         <img src="http://placehold.it/250x100">
         <img src="http://placehold.it/250x100">
         <img src="http://placehold.it/250x100">
         <img src="http://placehold.it/250x100">
         <img src="http://placehold.it/250x100">
-        <img src="http://placehold.it/250x100">
-        <img src="http://placehold.it/250x100">
+        <img src="http://placehold.it/250x100"> -->
+        <img v-bind:src="logo.media_details.sizes.medium.source_url">
       </div>
     </div>
 </template>
+<script>
+import Init from '../Partials/Init'
+export default {
+  data () {
+    return {
+      // note: changing this line won't causes changes
+      // with hot-reload because the reloaded component
+      // preserves its current state and we are modifying
+      // its initial state.
+      msg: 'About',
+      logos: []
+    }
+  },
+  methods: {
+    getLogos: function () {
+      this.$http.get(Init.globalUrl() + 'index.php/wp-json/wp/v2/media?parent=1').then((response) => {
+        this.logos = response.data
+        // console.log(response.data)
+      },
+      (response) => {})
+    }
+  },
+  ready: function () {
+    this.getLogos()
+  }
+}
 
+</script>

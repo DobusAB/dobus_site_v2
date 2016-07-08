@@ -33,11 +33,11 @@ export default {
       (response) => {})
     }
   },
-  route: {
+  /* route: {
     activate: function (transition) {
       transition.next(transition)
     }
-  },
+  }, */
   ready: function () {
     this.getProject()
   }

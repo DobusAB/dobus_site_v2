@@ -61,8 +61,7 @@
       </div>
     </div>
 	</div>
-	
-
+	<router-view></router-view>
 </template>
 <script>
 import Init from '../Partials/Init'
@@ -116,8 +115,11 @@ export default {
   route: {
     data: function (transition) {
       this.getDetailData()
-      this.getAllProjects()
+      // this.getAllProjects()
     },
+    /* activate: function (transition) {
+      // transition.next(transition)
+    }, */
     deactivate: function (transition) {
       this.$root.global.projectOpen = false
       transition.next(transition)
