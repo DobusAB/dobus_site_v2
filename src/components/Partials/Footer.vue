@@ -32,6 +32,16 @@
           <p><a href="">Nya projekt</a></p>
         </div>
       </div>
+      <div class="row references--container">
+        <img src="http://placehold.it/250x100">
+        <img src="http://placehold.it/250x100">
+        <img src="http://placehold.it/250x100">
+        <img src="http://placehold.it/250x100">
+        <img src="http://placehold.it/250x100">
+        <img src="http://placehold.it/250x100">
+        <img src="http://placehold.it/250x100">
+        <img src="http://placehold.it/250x100">
+      </div>
     </div>
 </template>
 

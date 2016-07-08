@@ -28,4 +28,20 @@
 			color:#fff;
 		}
 	}
+
+	.references--container{
+		margin-top:2em;
+		img{
+			//margin-left:1em;
+			padding:0em 1em;
+			border-right:1px solid white;
+			//border-right:2px solid green;
+			margin-top:1em;
+
+			&:first-child {
+				border-left:none;
+			}
+		}
+
+	}
 }
