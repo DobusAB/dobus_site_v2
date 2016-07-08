@@ -1,5 +1,7 @@
 <template>
-  <div class="landing--container flex align-center align-middle" v-if="!show"><h3 style="color:#000;">Loading data ... </h3></div>
+    <div class="loading--container flex align-center align-middle" v-if="!show">
+      <h3 style="color:#000;">Loading data ... </h3>
+    </div>
     <div class="landing--container flex align-center align-middle" v-if="show" v-bind:style="{background: featuredRandom.custom_field.project_color}">
       <div class="row">
           <div class="col-lg-7 bg landing--intro text-left flex align-middle">
