@@ -36,6 +36,10 @@ export default {
   route: {
     data: function (transition) {
       this.getProject()
+      // transition.next()
+    },
+    activation: function (transition) {
+
     }
   },
   ready: function () {
