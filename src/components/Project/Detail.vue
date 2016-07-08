@@ -52,7 +52,7 @@
           <div class="project--image_container" v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_featured_image + ')' }"></div>
            <div class="project--shadow"></div>
         </div>
-        <div class="col-xs-12 col-md-6 flex flow-vertical">
+        <div class="col-xs-12 col-md-6 flex align-center flow-vertical">
            <h1>{{{data[0].title.rendered}}}</h1>
            <h4>{{{data[0].custom_field.project_description}}}</h4>
             <button v-on:click="NextProject" class="primary--button">Se nästa projekt</button>
