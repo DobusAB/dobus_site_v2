@@ -19,7 +19,7 @@
 	}
 
 	@include desktop {
-		padding:$margin--large;
+		padding:$margin--medium $margin--large;
 	}
 
 	h1 {
@@ -112,7 +112,7 @@
 				animation-direction: alternate;
 
 				@include desktop {
-					height:300px;
+					height:250px;
 					margin-bottom:$margin--medium;
 				}
 
