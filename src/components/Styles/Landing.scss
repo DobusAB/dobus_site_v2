@@ -92,7 +92,7 @@
 					height:10px;
 					width:80%;
 					@include desktop {
-						width:70%;
+						width:50%;
 						height:20px;
 					}
 					@include tablet {
@@ -115,7 +115,7 @@
 						height:110px;
 
 						@include desktop {
-							height:350px;
+							height:280px;
 						}
 						@include tablet {
 							height:210px;

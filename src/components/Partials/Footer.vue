@@ -33,11 +33,12 @@
         </div>
       </div>
       <div class="row"> 
-        <h2>Våra partners</h2>
+        <!--<h2>Våra partners</h2>-->
       </div>
+      <!--
       <div class="row references--container">
         <img v-bind:src="logo.media_details.sizes.full.source_url" v-if="logo.media_details.sizes.full" v-for="logo in logos">
-    </div>
+    </div>-->
 </template>
 <script>
 import Init from '../Partials/Init'

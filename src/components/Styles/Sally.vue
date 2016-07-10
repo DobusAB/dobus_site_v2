@@ -66,7 +66,7 @@ html, body {
 
 [class*="col"] {
   width: 100%;
-  padding: 0 $column-gutter/2;
+  //padding: 0 $column-gutter/2;
 }
 
 @mixin col-size($col){

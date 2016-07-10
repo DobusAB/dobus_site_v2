@@ -4,13 +4,11 @@
       <!--<p>{{{data.content.rendered}}}</p>-->
   </div>
    <div class="row about--container">
-        <div class="about--employee col-md-6 col-lg-4 col-xs-12" >
-          <div class="employee--image"></div>
-          <div class="employee--info">
-            <h2>Name Namesson</h2>
-            <h3>Befattning & sånt</h3>
-            <p>0730936515</p>
-            <p>albin@dobus.se</p>
+        <div class="about--contact text-left col-md-6 col-lg-4 col-xs-12 flex align-middle align-center" >
+          <div class="contact--info">
+            <h2>Ekonomi</h2>
+            <h3><a href="">+46 730 93 65 15</a></h3>
+            <h3><a href="">albin@dobus.se</a></h3>
           </div>
         </div>
       </div>
