@@ -1,5 +1,5 @@
 <template>
-	<div class="project-container" v-if="data.length > 0" transition="expand">
+	<div id="projecttop" class="project-container" v-if="data.length > 0" transition="expand">
     <div class="project-inner">
       <div class="project--image flex flow-vertical align-center align-middle" v-bind:style="{background: data[0].custom_field.project_color}">
         <div class="project--image_container" v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_featured_image + ')' }"></div>
@@ -51,22 +51,21 @@
         </svg>
       </div>
 
-      <div class="next--project row" v-bind:style="{background: data[0].custom_field.project_color}">
+      <div class="next--project row" v-bind:style="{background: nextProject.custom_fields.project_color}" v-if="nextProject.post_title">
         <div class="col-xs-12 col-md-6">
-          <div class="project--image_container" v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_featured_image + ')' }"></div>
+          <div class="project--image_container" v-bind:style="{'background-image': 'url(' + nextProject.custom_fields.project_featured_image + ')' }"></div>
            <div class="project--shadow"></div>
         </div>
         <div class="col-xs-12 col-md-6 flex align-center flow-vertical">
            <span>Nästa projekt</span>
-           <h1>{{{data[0].title.rendered}}}</h1>
-           <h4>{{{data[0].custom_field.project_description}}}</h4>
-            <button v-on:click="NextProject" class="primary--button">Se nästa projekt</button>
+           <h1>{{{nextProject.post_title}}} {{nextProject.name}}</h1>
+           <h4>{{{nextProject.custom_fields.project_description}}}</h4>
+            <button v-on:click="NextProject(nextProject.post_name)" class="primary--button">Se nästa projekt</button>
         </div>
-
       </div>
+
     </div>
 	</div>
-	<router-view></router-view>
 </template>
 <script>
 import Init from '../Partials/Init'
@@ -78,7 +77,7 @@ export default {
       // preserves its current state and we are modifying
       // its initial state.
       data: [],
-      moreProjects: [],
+      nextProject: [],
       currentProjectIndex: 0
     }
   },
@@ -89,41 +88,50 @@ export default {
     getDetailData: function () {
       this.$http.get(Init.globalUrl() + 'index.php/wp-json/wp/v2/pages?filter[name]=' + this.$route.params.name).then((response) => {
         this.data = response.data
+        var scrollObject = document.getElementById('projecttop')
+        if (scrollObject) {
+          scrollObject.scrollTop = 0
+        }
+        // document.getElementById('projecttop').scrollTop = 0
       },
       (response) => {})
     },
     getAllProjects: function () {
+      var moreProjects = []
       this.$http.get(Init.globalUrl() + 'index.php/wp-json/wp/v2/pages/2').then((response) => {
         for (var i = 0; i < response.data.sub_pages.length; i++) {
           for (var x = 0; x < response.data.sub_pages[i].sub_pages.length; x++) {
-            this.moreProjects.push(response.data.sub_pages[i].sub_pages[x])
+            moreProjects.push(response.data.sub_pages[i].sub_pages[x])
           }
         }
-        console.log(this.moreProjects)
+        var projectLength = moreProjects.length
+        for (var y = 0; y < projectLength; y++) {
+          if (this.data[0].id === moreProjects[y].ID) {
+            this.currentProjectIndex = y
+          }
+        }
+        if (this.currentProjectIndex === (projectLength - 1)) {
+          this.currentProjectIndex = 0
+        } else {
+          this.currentProjectIndex += 1
+        }
+        this.nextProject = moreProjects[this.currentProjectIndex]
+        console.log(this.nextProject)
       },
       (response) => {})
     },
-    NextProject: function () {
-      var projectLength = this.moreProjects.length
-      for (var i = 0; i < projectLength; i++) {
-        if (this.data[0].id === this.moreProjects[i].ID) {
-          this.currentProjectIndex = i
-        }
-      }
-      if (this.currentProjectIndex === (projectLength - 1)) {
-        this.currentProjectIndex = 0
-        this.data = this.moreProjects[this.currentProjectIndex]
-      }
-      console.log(this.data)
+    NextProject: function (name) {
+      this.$router.go({name: 'project_by_name', params: { name: name }})
     }
   },
   route: {
     data: function (transition) {
       this.getDetailData()
-      // this.getAllProjects()
+      this.getAllProjects()
     },
     /* activate: function (transition) {
-      // transition.next(transition)
+      console.log('activate')
+      transition.next(transition)
     }, */
     deactivate: function (transition) {
       this.$root.global.projectOpen = false

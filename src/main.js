@@ -10,7 +10,8 @@ Vue.use(VueResource)
 // Vue.use(Style)
 /* eslint-disable no-new */
 var router = new VueRouter({
-  history: true
+  history: true,
+  saveScrollPosition: false
 })
 
 router.map({
@@ -41,5 +42,7 @@ router.map({
     component: require('./components/Process/Process.vue')
   }
 })
-
+/* router.afterEach(function () {
+  window.before(0, 0)
+}) */
 router.start(App, 'app')
