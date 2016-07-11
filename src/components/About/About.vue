@@ -1,4 +1,5 @@
 <template>
+  <loading :show.sync="show"></loading>
    <div class="page--intro flex align-left align-middle" v-if="data.title">
       <h1>{{data.title.rendered}}</h1>
       <!--<p>{{{data.content.rendered}}}</p>-->
@@ -16,6 +17,7 @@
 
 <script>
 import Init from '../Partials/Init'
+import Loading from '../Partials/Loading'
 export default {
   data () {
     return {
@@ -24,8 +26,12 @@ export default {
       // preserves its current state and we are modifying
       // its initial state.
       msg: 'About',
-      data: []
+      data: [],
+      show: false
     }
+  },
+  components: {
+    loading: Loading
   },
   router: {
     canReuse: true
@@ -33,7 +39,7 @@ export default {
   ready: function () {
     this.$http.get(Init.globalUrl() + 'index.php/wp-json/wp/v2/pages/4').then((response) => {
       this.data = response.data
-      console.log(response.data)
+      this.show = true
     },
     (response) => {})
   }
