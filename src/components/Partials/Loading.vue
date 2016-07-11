@@ -1,5 +1,5 @@
 <template>
-	<div class="loading--container flex align-center align-middle" v-bind:class="{ 'leave': show}">
+	<div class="loading--container flex align-center align-middle" v-bind:class="{'leave': show}">
       	<h3 style="color:#000;">Loading data ... </h3>
     </div>
 </template>
@@ -12,15 +12,12 @@ export default {
       // preserves its current state and we are modifying
       // its initial state.
       data: [],
-      moreProjects: [],
-      currentProjectIndex: 0
+      enter: false
     }
   },
   props: {
-    show: ''
+    show: false
   },
-  ready: function () {
-    console.log(this.show)
-  }
+  ready: function () {}
 }
 </script>
