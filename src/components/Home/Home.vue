@@ -1,7 +1,5 @@
 <template>
-    <div class="loading--container flex align-center align-middle" v-if="!show">
-      <h3 style="color:#000;">Loading data ... </h3>
-    </div>
+    <loading :show.sync="show"></loading>
     <div class="landing--container flex align-center align-middle" v-if="show" v-bind:style="{background: featuredRandom.custom_field.project_color}">
       <div class="row">
           <div class="col-lg-7 bg landing--intro text-left flex align-middle">
@@ -25,6 +23,7 @@
 
 <script>
 import Init from '../Partials/Init'
+import Loading from '../Partials/Loading'
 export default {
   data () {
     return {
@@ -38,6 +37,9 @@ export default {
       featured: [],
       featuredRandom: []
     }
+  },
+  components: {
+    loading: Loading
   },
   methods: {
     getPageData: function () {

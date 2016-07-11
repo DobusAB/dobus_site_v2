@@ -2,16 +2,13 @@ import Vue from 'vue'
 import App from './App'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
-// import Style from '!css!sass!./components/Style.vue'
 require('./components/Styles/Style.vue')
 require('./components/Styles/Sally.vue')
 Vue.use(VueRouter)
 Vue.use(VueResource)
-// Vue.use(Style)
 /* eslint-disable no-new */
 var router = new VueRouter({
-  history: true,
-  saveScrollPosition: false
+  history: true
 })
 
 router.map({

@@ -92,7 +92,6 @@ export default {
         if (scrollObject) {
           scrollObject.scrollTop = 0
         }
-        // document.getElementById('projecttop').scrollTop = 0
       },
       (response) => {})
     },
@@ -129,17 +128,10 @@ export default {
       this.getDetailData()
       this.getAllProjects()
     },
-    /* activate: function (transition) {
-      console.log('activate')
-      transition.next(transition)
-    }, */
     deactivate: function (transition) {
       this.$root.global.projectOpen = false
       transition.next(transition)
     }
-    /* activate: function (transition) {
-      transition.next(transition)
-    } */
   },
   ready: function () {
     this.$root.global.projectOpen = true
