@@ -9,6 +9,7 @@
 	@import 'Service';
 	@import 'About';
 	@import 'Footer';
+	@import 'Loading';
 
 	body {
 		margin:0;
