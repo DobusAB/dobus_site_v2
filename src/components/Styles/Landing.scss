@@ -9,6 +9,7 @@
 		z-index:9;
 		background-color:$dobus--primary;
 	}
+
 	.landing--container {
 		height:100vh;
 		//background-color:$dobus--primary;
@@ -43,6 +44,7 @@
 			height:30vh;
 			position:absolute;
 			bottom:0;
+			padding:$margin--small/2;
 			left:0;
 
 			@include desktop {
@@ -59,7 +61,9 @@
 					padding:$margin--medium;
 				}
 
-
+				.item--left {
+					padding:0.5em;
+				}
 				.item--right {
 				    display: flex;
 				    justify-content: center;
@@ -81,6 +85,7 @@
 						font-size:1.25em;
 						@include desktop {
 							font-size:2em;
+							line-height: 1.1;
 						}
 						@include tablet {
 							font-size:2em;
