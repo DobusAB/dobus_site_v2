@@ -1,6 +1,6 @@
 .loading--container {
 	background:blue;
-
+	pointer-events:none;
 
 	&.enter {
 		opacity:1;
