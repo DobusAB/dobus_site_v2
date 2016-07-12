@@ -2,9 +2,12 @@
 	padding:$margin--small/2;
 	color:#fff;
 	position:relative;
-
+	/*background-image: url(../../assets/app.svg);
+	background-position:center top;
+	background-repeat:no-repeat;*/
 	.section--overlap {
 		position:absolute;
+		display:none;
 		bottom:-40px;
 		height:40px;
 		left:0;
@@ -65,6 +68,9 @@
 				left:-$margin--large*1.2;
 				top:2.2em;
 				transform:rotate(0deg);
+				img {
+					height:100px;
+				}
 
 				svg {
 					transform:translateX(-1em);
@@ -78,6 +84,7 @@
 		margin-top:$margin--small;
 		margin-bottom:$margin--small;
 		display:inline-flex;
+		z-index:2;
 		@include desktop {
 			margin-top:$margin--small/2;
 			margin-bottom:$margin--small/2;

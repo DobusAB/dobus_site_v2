@@ -12,7 +12,8 @@
 
 	.landing--container {
 		height:100vh;
-		//background-color:$dobus--primary;
+		background: $dobus--primary url(../../assets/pattern_dobus.svg) repeat;
+		background-size:12%;
 		color:#fff;
 		padding:0em $margin--small/2;
 		@include desktop {
@@ -29,7 +30,7 @@
 				align-items:center;
 			}
 			h1 {
-				font-size:1.5em;
+				font-size:1.9em;
 				@include desktop {
 					font-size:3.25em;
 					line-height: 1.1;

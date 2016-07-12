@@ -1,7 +1,6 @@
 <template>
 	<div class="loading--container flex align-center align-middle enter" v-bind:class="{'leave': show}">
-      	<h3 style="color:#000;">Loading data ... </h3>
-    </div>
+  </div>
 </template>
 <script>
 export default {

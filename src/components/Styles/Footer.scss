@@ -1,7 +1,21 @@
 .footer {
 	padding:$margin--small $margin--small/1.5;
 	color:#fff;
+	position:relative;
 	background-color:$dobus--black;
+	&::after {
+		content: "";
+	    background: url(../../assets/wave.svg) 0 100% repeat-x;
+	    position: absolute;
+		left: -50%;
+		right: -50%;
+		z-index: 1;
+		height: 25px;
+		-webkit-transform: scale(0.5);
+		transform: scale(0.5);
+		top: -18px;
+		bottom: auto;
+	}
 
 	@include desktop {
 		padding: $margin--medium;

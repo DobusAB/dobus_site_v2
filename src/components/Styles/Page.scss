@@ -1,16 +1,19 @@
 .page--intro {
-		background-color:$dobus--primary;
-		padding:$margin--large $margin--small $margin--small $margin--small;
+		padding:$margin--small $margin--small $margin--small $margin--small;
 		text-align: center;
+		background: $dobus--primary url(../../assets/pattern_dobus.svg) repeat;
+		background-size:35%;
 		color:#fff;
 		min-height:85vh;
 
 		@include desktop {
 			padding:$margin--large $margin--large;
+			background-size:12%;
 		}
 
 		h1 {
-			font-size:2em;
+			font-size:2.3em;
+			line-height:1.1;
 			@include desktop {
 				font-size:3.5em;
 				line-height:1.2;

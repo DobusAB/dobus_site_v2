@@ -1,6 +1,6 @@
 <template>
     <loading :show.sync="show"></loading>
-    <div class="landing--container flex align-center align-middle" v-if="show" v-bind:style="{background: featuredRandom.custom_field.project_color}">
+    <div class="landing--container flex align-center align-middle" v-if="show">
       <div class="row">
           <div class="col-lg-7 bg landing--intro text-left flex align-middle">
             <h1 v-if="data.title">{{ data.title.rendered }}</h1>
