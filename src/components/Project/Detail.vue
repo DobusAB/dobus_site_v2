@@ -4,11 +4,6 @@
       <div class="project--image flex flow-vertical align-center align-middle" v-bind:style="{background: data[0].custom_field.project_color}">
         <div class="project--image_container" v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_featured_image + ')' }"></div>
         <div class="project--shadow"></div>
-         <svg width="156px" height="55px" class="section--overlap" viewBox="642 851 156 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <desc>Created with Sketch.</desc>
-            <defs></defs>
-            <path d="M643,851 L648.00008,851 C656.836548,851 666.412122,857.750953 669.945053,865.850118 C669.945053,865.850118 680.275311,905.609375 717.99992,905.609375 C755.724529,905.609375 766.063401,865.8321 766.063401,865.8321 C769.34205,857.640558 779.16817,851 787.99976,851 L797.49984,851 L643,851 L643,851 Z" id="Combined-Shape" stroke="none" fill='{{data[0].custom_field.project_color }}' fill-rule="evenodd"></path>
-          </svg>
       </div>
       <div class="project--section project--intro">
         <h1>{{{data[0].title.rendered}}}</h1>
@@ -23,11 +18,6 @@
         <div class="col-xs-12 col-md-6 case--image flex align-middle align-center">
           <img v-bind:src="data[0].custom_field.project_solution_image">
         </div>
-         <svg width="156px" height="55px" class="section--overlap" viewBox="642 851 156 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <desc>Created with Sketch.</desc>
-          <defs></defs>
-          <path d="M643,851 L648.00008,851 C656.836548,851 666.412122,857.750953 669.945053,865.850118 C669.945053,865.850118 680.275311,905.609375 717.99992,905.609375 C755.724529,905.609375 766.063401,865.8321 766.063401,865.8321 C769.34205,857.640558 779.16817,851 787.99976,851 L797.49984,851 L643,851 L643,851 Z" id="Combined-Shape" stroke="none" fill='' fill-rule="evenodd"></path>
-        </svg>
       </div>
 
        <div class="project--section row">
@@ -39,7 +29,6 @@
           <img v-bind:src="data[0].custom_field.project_solution_image_2">
         </div>
       </div>
-<!--
       <div class="project--section colored row">
         <div class="col-xs-12 col-md-6 text-left flex flow-vertical align-center"> 
           <h1>{{{data[0].custom_field.project_solution_title_3}}}</h1>
@@ -53,7 +42,7 @@
           <defs></defs>
           <path d="M643,851 L648.00008,851 C656.836548,851 666.412122,857.750953 669.945053,865.850118 C669.945053,865.850118 680.275311,905.609375 717.99992,905.609375 C755.724529,905.609375 766.063401,865.8321 766.063401,865.8321 C769.34205,857.640558 779.16817,851 787.99976,851 L797.49984,851 L643,851 L643,851 Z" id="Combined-Shape" stroke="none" fill='' fill-rule="evenodd"></path>
         </svg>
-      </div> -->
+      </div> 
 
       <div class="project--section colored row">
          <div class="col-xs-12 col-md-12 align-center align-middle"> 

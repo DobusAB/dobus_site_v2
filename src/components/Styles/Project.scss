@@ -112,7 +112,12 @@
 					font-size:1.2em;
 					font-weight:500;
 					color:#fff;
- 					}
+
+					@include desktop {
+						font-size:1.5em;
+						font-weight:500;
+					}
+				}
 				}
 
 				@include desktop {
