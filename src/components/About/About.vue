@@ -1,15 +1,16 @@
 <template>
-  <loading :show.sync="show"></loading>
-   <div class="page--intro flex align-left align-middle" v-if="data.title">
+  <!-- <loading :show.sync="show"></loading> -->
+   <div class="page--intro flex align-left align-middle" v-if="show">
       <h1>{{data.title.rendered}}</h1>
       <!--<p>{{{data.content.rendered}}}</p>-->
   </div>
-   <div class="row about--container">
-        <div class="about--contact text-left col-md-6 col-lg-4 col-xs-12 flex align-middle align-center" >
+   <div class="row about--container" v-if="show">
+        <div class="about--contact text-left col-md-6 col-lg-4 col-xs-12 flex align-middle align-center" v-for="sub in data.sub_pages">
           <div class="contact--info">
-            <h2>Ekonomi</h2>
-            <h3><a href="">+46 730 93 65 15</a></h3>
-            <h3><a href="">albin@dobus.se</a></h3>
+          <h3>{{sub.post_title}}</h3>
+            <h2>{{sub.custom_fields.work_title}}</h2>
+            <h3><a href="">{{sub.custom_fields.work_phone}}</a></h3>
+            <h3><a href="">{{sub.custom_fields.work_email}}</a></h3>
           </div>
         </div>
       </div>
