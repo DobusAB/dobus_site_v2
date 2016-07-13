@@ -41,7 +41,7 @@
           <p>{{{data[0].custom_field.project_solution_description_2}}}</p>
         </div>
         <div class="col-xs-12 col-md-6 case--image flex align-middle align-center">
-          <img v-bind:src="data[0].custom_field.project_solution_image_2">
+          <img v-bind:src="data[0].custom_field.project_solution_image"  v-lazyload:opt.fadein="data[0].custom_field.project_solution_image_2">
         </div>
       </div>
       <div class="project--section colored row">

@@ -2,10 +2,20 @@ import Vue from 'vue'
 import App from './App'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
+import VueHead from 'vue-head'
+import 'vue-lazyload-img'
+
 require('./components/Styles/Style.vue')
 require('./components/Styles/Sally.vue')
+
+Vue.use(VueHead)
 Vue.use(VueRouter)
 Vue.use(VueResource)
+Vue.use(Vue.lazyimg, {
+  fade: true,
+  nohori: true,
+  speed: 20
+})
 /* eslint-disable no-new */
 var router = new VueRouter({
   history: true

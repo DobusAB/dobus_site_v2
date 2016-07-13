@@ -12,10 +12,10 @@
         </div>
         <div class="col-xs-12 col-md-6 col-lg-3 text-left">
           <h2>Socialisera</h2>
-          <p><a href="#">Facebook</a></p>
-          <p><a href="#">Twitter</a></p>
-          <p><a href="#">LinkedIn</a></p>
-          <p><a href="#">Github</a></p>
+          <p><a href="https://www.facebook.com/dobuswebb/" target="_blank">Facebook</a></p>
+          <p><a href="https://twitter.com/dobuswebb" target="_blank">Twitter</a></p>
+          <p><a href="https://www.linkedin.com/company/dobus" target="_blank">LinkedIn</a></p>
+          <p><a href="https://github.com/DobusAB" target="_blank">Github</a></p>
         </div>
         <div class="col-xs-12 col-md-6 col-lg-3 text-left">
           <h2>Våra tjänster</h2>
