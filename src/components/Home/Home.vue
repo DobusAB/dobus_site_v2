@@ -5,7 +5,7 @@
           <div class="col-lg-7 bg landing--intro text-left flex align-middle">
             <h1 v-if="data.title">{{ data.title.rendered }}</h1>
           </div>
-          <div class="col-lg-5 bg landing--carousel flex align-middle">
+          <div class="col-lg-5 bg landing--carousel flex align-middle" v-on:click="goToProject">
             <div class="carousel--item row text-left">
               <div class="item--left col-xs-5 col-md-12">
                 <div class="item--image" v-bind:style="{'background-image': 'url(' + featuredRandom.custom_field.project_featured_image + ')' }"></div>
@@ -61,6 +61,10 @@ export default {
         this.show = true
       },
       (response) => {})
+    },
+    goToProject: function () {
+      console.log(this.featuredRandom)
+      this.$router.go({name: 'project_by_name', params: {name: this.featuredRandom.slug}})
     }
   },
   route: {
