@@ -28,22 +28,36 @@
 			flex-direction: column;
 			//color:#fff;
 			.project--image {
-				height:95vh;
+				height:90vh;
 				width:100%;
 				background-image: url(../../assets/pattern_dobus.svg);
 				background-size:15%;
 				position:relative;
 
+				@include tablet {
+					height:90vh;
+				}
+				@include desktop {
+					height:95vh;
+				}
+
 				.project--intro {
 					@include centerer;
 					color:#fff;
 					z-index:2;
-					width:70%;
+					width:85%;
 					h1 {
 					font-size:2.1em;
 					margin-bottom:0.25em;
 					margin-top:1.2em;
 					line-height:1;
+
+					@include tablet {
+						width:100%;
+						margin:0 auto;
+						margin-top:0em;
+						font-size:3em;
+					}
 
 					@include desktop {
 						width:100%;
@@ -55,6 +69,9 @@
 				h4 {
 					margin-top:1em;
 					font-weight:400;
+					@include tablet {
+						font-size:1.8em;
+					}
 					@include desktop {
 						font-size:1.8em;
 					}
@@ -64,6 +81,11 @@
 					margin-top:$margin--small/2;
 					font-weight:500;
 					font-size:1.2em;
+					@include tablet {
+						font-size:2.2em;
+						width:80%;
+						margin:$margin--small/2 auto $margin--small/2 auto;
+					}
 					@include desktop {
 						font-size:2.2em;
 						width:80%;
@@ -100,14 +122,16 @@
 			}
 
 			.project--section {
-				//padding:$margin--medium $margin--small/2;
 				position:relative;
 				width:100%;
 				padding-bottom:$margin--small;
 				padding-top: $margin--small;
-				display: flex;
-   				flex-direction: column-reverse;
+   				//flex-direction: column-reverse;
 
+   				@include tablet {
+					display: flex;
+					flex-direction: row;
+				}
 				@include desktop {
 					display: flex;
 					flex-direction: row;
@@ -168,6 +192,11 @@
 					font-weight:500;
 					color:#020202;
 
+					@include tablet {
+						font-size:1.3em;
+						font-weight:500;
+					}
+
 					@include desktop {
 						font-size:1.5em;
 						font-weight:500;
@@ -179,6 +208,14 @@
 					font-weight:700;
 					line-height:1.8em;
 					padding:$margin--small $margin--small/2;
+
+
+					@include tablet {
+						font-size:2.1em;
+						font-weight:700;
+						line-height:1.8em;
+						padding:$margin--small/2 $margin--small;
+					}
 
 					@include desktop {
 						font-size:2.5em;
@@ -224,6 +261,14 @@
 					margin-top:1.2em;
 					line-height:1;
 
+
+					@include tablet {
+						width:100%;
+						margin:0 auto;
+						margin-top:0em;
+						font-size:2.5em;
+					}
+
 					@include desktop {
 						width:100%;
 						margin:0 auto;
@@ -243,6 +288,11 @@
 					margin-top:$margin--small/2;
 					font-weight:500;
 					font-size:1.2em;
+					@include desktop {
+						font-size:2.2em;
+						width:80%;
+						margin:$margin--small/2 auto $margin--small/2 auto;
+					}
 					@include desktop {
 						font-size:2.2em;
 						width:80%;
@@ -309,6 +359,10 @@
 						line-height:1;
 						margin:0;
 
+						@include tablet {
+							font-size:2.8em;
+						}
+
 						@include desktop {
 							font-size:3.5em;
 						}
@@ -320,6 +374,9 @@
 						margin-top:0.2em;
 						@include desktop {
 							font-size:1.5em;
+						}
+						@include tablet {
+							font-size:1.4em;
 						}
 					}
 				}

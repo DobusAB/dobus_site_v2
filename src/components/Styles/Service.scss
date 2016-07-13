@@ -32,6 +32,10 @@
 		//background: url(../../assets/pattern_dobus.svg) repeat;
 		background-size:15%;
 		
+		@include tablet {
+			padding:$margin--medium $margin--medium;
+		}
+
 		@include desktop {
 			padding:$margin--large $margin--large;
 		}
@@ -40,6 +44,10 @@
 				font-size:2em;
 				line-height: 1;
 				margin-top: $margin--small/2;
+				@include tablet {
+					font-size:3em;
+					margin-top: $no-margin--top;
+				}
 				@include desktop {
 					font-size:3.5em;
 					margin-top: $no-margin--top;
@@ -50,7 +58,9 @@
 				font-size:1.1em;
 				margin-left:0em;
 				padding:0em;
-
+				@include tablet {
+					font-size:1.4em;
+				}
 				@include desktop {
 					font-size:1.5em;
 				}
@@ -68,6 +78,10 @@
 			padding:$margin--small $margin--small;
 			position:relative;
 			min-width:200px;
+			@include tablet {
+				padding:$margin--medium $margin--medium;
+				margin-top:0em;
+			}
 			@include desktop {
 				padding:$margin--large $margin--medium;
 				margin-top:0em;
@@ -108,6 +122,11 @@
 				animation: hover 1.75s infinite;
 				animation-direction: alternate;
 
+				@include tablet {
+					height:250px;
+					margin-bottom:$margin--small;
+				}
+
 				@include desktop {
 					height:250px;
 					margin-bottom:$margin--small;
@@ -147,6 +166,10 @@
 					line-height:1;
 					margin:0;
 
+					@include tablet {
+						font-size:2.8em;
+					}
+
 					@include desktop {
 						font-size:3.5em;
 					}
@@ -156,6 +179,9 @@
 					font-size:1em;
 					font-weight:500;
 					margin-top:0.2em;
+					@include tablet {
+						font-size:1.2em;
+					}
 					@include desktop {
 						font-size:1.5em;
 					}

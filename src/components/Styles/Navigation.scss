@@ -20,6 +20,7 @@
 		.nav--gradient {
 			position:fixed;
 			right:5%;
+			display:none;
 			z-index:99;
 			top:0;
 			height:$nav--height/1.2;
@@ -35,12 +36,14 @@
 		}
 
 		.nav--inner {
-			display:inline-flex;
 			align-items: center;
-			min-width:auto;
 
+			@include tablet {
+				display:inline-flex;
+			}
 			@include desktop {
 				min-width:100%;
+				display:inline-flex;
 				//height:85px;
 			}
 		}
