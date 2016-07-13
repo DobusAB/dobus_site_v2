@@ -17,6 +17,10 @@
 		font-family: $font ,sans-serif;
 		background-color:#fefefe;
 		-webkit-font-smoothing: antialiased;
+
+		&.project--open {
+			overflow:hidden;
+		}
 	}
 
 </style>
