@@ -30,6 +30,11 @@ export default {
       show: false
     }
   },
+  head: {
+    title: {
+      inner: 'Kontakta oss'
+    }
+  },
   components: {
     loading: Loading
   },

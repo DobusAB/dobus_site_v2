@@ -20,6 +20,11 @@ export default {
       show: false
     }
   },
+  head: {
+    title: {
+      inner: 'Jobba här'
+    }
+  },
   components: {
     loading: Loading
   },

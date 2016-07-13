@@ -15,9 +15,13 @@ export default {
       // with hot-reload because the reloaded component
       // preserves its current state and we are modifying
       // its initial state.
-      msg: 'Hello World',
       data: [],
       show: false
+    }
+  },
+  head: {
+    title: {
+      inner: 'Såhär jobbar vi'
     }
   },
   components: {

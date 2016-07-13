@@ -38,6 +38,11 @@ export default {
       featuredRandom: []
     }
   },
+  head: {
+    title: {
+      inner: 'Dobus'
+    }
+  },
   components: {
     loading: Loading
   },
