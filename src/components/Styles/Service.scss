@@ -38,6 +38,7 @@
 
 			h1 {
 				font-size:2em;
+				line-height: 1;
 				margin-top: $margin--small/2;
 				@include desktop {
 					font-size:3.5em;

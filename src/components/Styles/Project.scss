@@ -103,6 +103,11 @@
 				//padding:$margin--medium $margin--small/2;
 				position:relative;
 				width:100%;
+				padding-bottom:$margin--small;
+
+				@include desktop {
+					padding-bottom:0em;
+				}
 
 				.case--info{
 					
@@ -120,6 +125,9 @@
 					position:relative;
 					overflow:hidden;
 					height:320px;
+					background-size:contain;
+					background-position:center right;
+					background-repeat:no-repeat;
 
 					@include desktop {
 						height:650px;
@@ -128,13 +136,10 @@
 
 					img {
 						  height:100%;
-						  min-height:100%;
-						  max-width:100%;
+						  max-height:40%;
+						  max-width:60%;
 						  width: auto;
-						  right:0;
-						  bottom:0;
 						  height: auto;
-						  position:absolute;
 
 						@include desktop {
 							

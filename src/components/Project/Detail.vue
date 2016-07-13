@@ -25,8 +25,8 @@
           <h1>{{{data[0].custom_field.project_solution_title}}}</h1>
           <p>{{{data[0].custom_field.project_solution_description}}}</p>
         </div>
-        <div class="col-xs-12 col-md-6 case--image flex align-middle align-center">
-          <img v-bind:src="data[0].custom_field.project_solution_image">
+        <div class="col-xs-12 col-md-6 case--image flex align-middle align-center" v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_solution_image + ')' }">
+      
         </div>
       </div>
 
@@ -35,8 +35,8 @@
           <h1>{{{data[0].custom_field.project_solution_title_2}}}</h1>
           <p>{{{data[0].custom_field.project_solution_description_2}}}</p>
         </div>
-        <div class="col-xs-12 col-md-6 case--image flex align-middle align-center">
-          <img v-bind:src="data[0].custom_field.project_solution_image_2">
+        <div class="col-xs-12 col-md-6 case--image flex align-middle align-center" v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_solution_image_2 + ')' }">
+          
         </div>
       </div>
       <div class="project--section colored row">
@@ -44,8 +44,7 @@
           <h1>{{{data[0].custom_field.project_solution_title_3}}}</h1>
           <p>{{{data[0].custom_field.project_solution_description_3}}}</p>
         </div>
-        <div class="col-xs-12 col-md-6 case--image flex align-middle align-center">
-          <img v-bind:src="data[0].custom_field.project_solution_image_3">
+        <div class="col-xs-12 col-md-6 case--image flex align-middle align-center" v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_solution_image_3 + ')' }">
         </div>
       </div> 
 
