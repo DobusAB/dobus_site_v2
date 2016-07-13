@@ -2,10 +2,10 @@
     <loading :show.sync="show"></loading>
     <div class="landing--container flex align-center align-middle" v-if="show">
       <div class="row">
-          <div class="col-lg-7 bg landing--intro text-left flex align-middle">
+          <div class="col-lg-7 col-md-7 bg landing--intro text-left flex align-middle">
             <h1 v-if="data.title">{{ data.title.rendered }}</h1>
           </div>
-          <div class="col-lg-5 bg landing--carousel flex align-middle" v-on:click="goToProject">
+          <div class="col-lg-5 col-md-5 bg landing--carousel flex align-middle" v-on:click="goToProject">
             <div class="carousel--item row text-left">
               <div class="item--left col-xs-5 col-md-12">
                 <div class="item--image" v-bind:style="{'background-image': 'url(' + featuredRandom.custom_field.project_featured_image + ')' }"></div>

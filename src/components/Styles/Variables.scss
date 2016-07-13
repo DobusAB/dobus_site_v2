@@ -9,12 +9,19 @@ $dobus--black: #222222;
 
 $device-sm: 30em;
 $device-md: 40em;
+$device-md-landscape: 60em;
 $device-lg: 72em;
 
 
 //Media Queries 
 @mixin tablet {
-  @media (min-width: #{$device-md}) and (max-width: #{$device-lg - 0.1em}) {
+  @media (min-width: #{$device-md}) and (max-width: #{$device-md-landscape - 0.1em}) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape {
+  @media (min-width: #{$device-md-landscape }) and (max-width: #{$device-lg - 0.1em}) {
     @content;
   }
 }
