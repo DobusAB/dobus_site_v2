@@ -104,11 +104,11 @@
 				position:relative;
 				width:100%;
 				padding-bottom:$margin--small;
+				padding-top: $margin--small;
 				display: flex;
    				flex-direction: column-reverse;
 
 				@include desktop {
-					padding-bottom:0em;
 					display: flex;
 					flex-direction: row;
 				}
@@ -201,7 +201,7 @@
 					background: $dobus--primary url(../../assets/pattern_dobus.svg) repeat;
 					background-size:15%;
 					color:#fff;
-					
+
 					h1 {
 						margin-top:0em;
 					}
