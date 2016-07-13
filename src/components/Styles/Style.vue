@@ -18,7 +18,7 @@
 		background-color:#fefefe;
 		-webkit-font-smoothing: antialiased;
 
-		&.project--open {
+		&.project-open {
 			overflow:hidden;
 		}
 	}
