@@ -108,6 +108,11 @@
 				&:hover {
 					.project--image {
 						opacity:1;
+						transform:translateY(-1em);
+
+					}
+					.project--shadow {
+						transform:scale(0.9);
 
 					}
 				}
@@ -115,12 +120,12 @@
 
 			.project--image {
 				height:150px;
-				animation: hover 1.75s infinite;
-				animation-direction: alternate;
+				//animation: hover 1.75s infinite;
+				//animation-direction: alternate;
 
 				@include desktop {
 					height:250px;
-					margin-bottom:$margin--medium;
+					margin-bottom:$margin--small;
 				}
 
 				margin-bottom:$margin--small;
@@ -137,8 +142,9 @@
 				opacity: 0.2;
 				width:50%;
 				max-width:225px;
-				animation: scale 1.75s infinite;
-				animation-direction: alternate;
+				transition:all 0.4s;
+				//animation: scale 1.75s infinite;
+				//animation-direction: alternate;
 
 				@include desktop {
 					width:40%;

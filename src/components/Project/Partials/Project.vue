@@ -1,12 +1,8 @@
 <template>
 	<div class="service--section flex flow-vertical" v-bind:style="{background: item.custom_fields.project_color }"  v-for="item in project">
     <div class="service--header row flex text-left">
-        <span class="service--finger">      
-        </span>
-          <div>
+          <div class="col-xs-12 service--text">
             <h1>{{item.post_title}}</h1>
-          </div>
-          <div class="col-xs-12 col-md-7  service--text">
             {{{item.post_content}}}
           </div>
     </div>

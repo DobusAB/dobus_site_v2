@@ -2,15 +2,28 @@
 	<div id="projecttop" class="project-container" v-if="data.length > 0" transition="expand">
     <div class="project-inner">
       <div class="project--image flex flow-vertical align-center align-middle" v-bind:style="{background: data[0].custom_field.project_color}">
+        <div class="project--intro">
+          <h1>{{{data[0].title.rendered}}}</h1>
+          <h4>{{{data[0].custom_field.project_description}}}</h4>
+        </div>
         <div class="project--image_container" v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_featured_image + ')' }"></div>
         <div class="project--shadow"></div>
       </div>
-      <div class="project--section project--intro">
+      <!--<div class="project--section project--intro">
         <h1>{{{data[0].title.rendered}}}</h1>
         <h4>{{{data[0].custom_field.project_description}}}</h4>
         <hr>
         <h2>{{{data[0].custom_field.project_intro}}}</h2>
         <hr>
+      </div>-->
+      <div class="project--section row">
+        <div class="col-xs-12 col-md-6 text-left flex flow-vertical align-center"> 
+          <h1>Vårt uppdrag.</h1>
+          <p>{{{data[0].custom_field.project_intro}}}</p>
+        </div>
+        <div class="col-xs-12 col-md-6 case--image flex align-middle align-center">
+          <img v-bind:src="data[0].custom_field.project_logo">
+        </div>
       </div>
       <div class="project--section colored row">
         <div class="col-xs-12 col-md-6 text-left flex flow-vertical align-center"> 

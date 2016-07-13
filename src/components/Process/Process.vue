@@ -1,8 +1,7 @@
 <template>
     <loading :show.sync="show"></loading>
-     <div class="page--intro flow-vertical flex align-left" v-if="data.title">
+   <div class="page--intro flex align-left align-middle">
         <h1>{{data.title.rendered}}</h1>
-        <p>{{{data.content.rendered}}}</p>
     </div>
 </template>
 
