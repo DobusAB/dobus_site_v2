@@ -3,6 +3,7 @@ import App from './App'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 import VueHead from 'vue-head'
+import FastClick from 'fastclick'
 import 'vue-lazyload-img'
 
 require('./components/Styles/Style.vue')
@@ -16,6 +17,13 @@ Vue.use(Vue.lazyimg, {
   nohori: true,
   speed: 20
 })
+
+if ('addEventListener' in document) {
+  document.addEventListener('DOMContentLoaded', function () {
+    FastClick.attach(document.body)
+  }, false)
+}
+// Vue.use(Fastclick)
 /* eslint-disable no-new */
 var router = new VueRouter({
   history: true
