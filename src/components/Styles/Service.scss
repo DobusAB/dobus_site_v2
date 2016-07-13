@@ -9,16 +9,15 @@
 		width:100%;
 		top:-19px;
 
-			&::after {
+		&::after {
 			content: "";
 		    background: url(../../assets/wave.svg) 0 100% repeat-x;
 		    position: absolute;
 			left: -50%;
 			right: -50%;
 			z-index: 1;
-			height: 25px;
+			height: 20px;
 			opacity:0.1;
-			-webkit-transform: scale(0.5);
 			transform: scale(0.5);
 			top: auto;
 			bottom: -25px;
