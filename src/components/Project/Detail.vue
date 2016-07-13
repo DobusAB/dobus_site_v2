@@ -94,7 +94,8 @@ export default {
       // its initial state.
       data: [],
       nextProject: [],
-      currentProjectIndex: 0
+      currentProjectIndex: 0,
+      body: document.getElementsByTagName('body')[0]
     }
   },
   props: {
@@ -146,11 +147,13 @@ export default {
     },
     deactivate: function (transition) {
       this.$root.global.projectOpen = false
+      this.body.className = ''
       transition.next(transition)
     }
   },
   ready: function () {
     this.$root.global.projectOpen = true
+    this.body.classList.add('project-open')
   }
 }
 </script>
