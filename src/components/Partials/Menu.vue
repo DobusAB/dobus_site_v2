@@ -16,13 +16,16 @@
 			</svg>
 	  	 </div>
 	  	 <div v-link="{path: '/projects'}" class="nav--back">
-			<svg width="35px" height="35px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-			    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
-			    <desc>Created with Sketch.</desc>
+			<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+			<svg width="25px" height="25px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 			    <defs></defs>
-			    <g id="Back" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-			        <circle id="Combined-Shape" fill="#000000" cx="25" cy="25" r="25"></circle>
-			        <path d="M30.0012054,13.3556339 C29.5270268,12.8814554 28.7583839,12.8814554 28.2842054,13.3556339 L17.3556339,24.2842054 C16.8814554,24.7583839 16.8814554,25.5270268 17.3556339,26.0012054 L28.2842054,36.9297768 C28.5215982,37.1671696 28.8318482,37.2855625 29.1427054,37.2855625 C29.4535625,37.2855625 29.7638125,37.1671696 30.0012054,36.9297768 C30.4753839,36.4555982 30.4753839,35.6869554 30.0012054,35.2127768 L19.9311339,25.1427054 L30.0012054,15.0726339 C30.4753839,14.5984554 30.4753839,13.8298125 30.0012054,13.3556339 L30.0012054,13.3556339 Z" id="Shape" stroke="#FFFFFF" stroke-width="2" fill="#FFFFFF"></path>
+			    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+			        <g id="Tjänster-&amp;-Projekt-Copy-6" transform="translate(-1261.000000, -3125.000000)" stroke="#000000" stroke-width="5.59999957">
+			            <g id="Group-12" transform="translate(1279.000000, 3143.000000) scale(-1, 1) translate(-1279.000000, -3143.000000) translate(1264.000000, 3128.000000)">
+			                <path d="M0.566037736,14.7272727 L28.0997842,14.7272727" id="Path-36"></path>
+			                <polyline id="Path-37" points="14.1509434 0 29.5989795 14.8862893 14.1509434 29.7725787"></polyline>
+			            </g>
+			        </g>
 			    </g>
 			</svg>
 	  	 </div>

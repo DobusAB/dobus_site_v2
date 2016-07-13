@@ -1,127 +1,111 @@
 .service--section {
-	padding:$margin--small/2;
 	color:#fff;
 	position:relative;
-	/*background-image: url(../../assets/app.svg);
-	background-position:center top;
-	background-repeat:no-repeat;*/
-	.section--overlap {
-		position:absolute;
-		display:none;
-		bottom:-40px;
-		height:40px;
-		left:0;
-		z-index:2;
-		right:0;
-		margin:auto;
 
-		@include desktop {
-			height:55px;
-			bottom:-55px;
+
+	.service--top {
+		height:25px;
+		position:relative;
+		width:100%;
+		top:-19px;
+
+			&::after {
+			content: "";
+		    background: url(../../assets/wave.svg) 0 100% repeat-x;
+		    position: absolute;
+			left: -50%;
+			right: -50%;
+			z-index: 1;
+			height: 25px;
+			opacity:0.1;
+			-webkit-transform: scale(0.5);
+			transform: scale(0.5);
+			top: auto;
+			bottom: -25px;
 		}
 	}
 
-	@include desktop {
-		padding:$margin--medium $margin--large;
-	}
-
-	h1 {
-		font-size:1.75em;
-		margin-top: $margin--small/2;
-		@include desktop {
-			font-size:3em;
-			margin-top: $no-margin--top;
-		}
-	}
-
-	p {
-		font-size:1.1em;
-		margin-left:0em;
-		padding:0em;
-
-		@include desktop {
-			margin-left:$margin--small;
-			font-size:1.25em;
-		}
-	}
 
 	.service--header {
-		padding:$margin--small/2;
+		padding:$margin--small/2 $margin--small;
 		position:relative;
-		.service--text {
-			padding:0;
-		}
-		.service--finger {
-				position:absolute;
-				right:-$margin--small/2;
-				top:2.75em;
-				transform:rotate(180deg);
-				overflow:hidden;
-
-				svg {
-					transform:translateX(-2.5em);
-				}
-		}
+		//background: url(../../assets/pattern_dobus.svg) repeat;
+		background-size:15%;
+		
 		@include desktop {
-			.service--finger {
-				position:absolute;
-				left:-$margin--large*1.2;
-				top:2.2em;
-				transform:rotate(0deg);
-				img {
-					height:100px;
-				}
+			padding:$margin--large $margin--large;
+		}
 
-				svg {
-					transform:translateX(-1em);
+			h1 {
+				font-size:2em;
+				margin-top: $margin--small/2;
+				@include desktop {
+					font-size:3.5em;
+					margin-top: $no-margin--top;
 				}
 			}
-		}
+
+			p {
+				font-size:1.1em;
+				margin-left:0em;
+				padding:0em;
+
+				@include desktop {
+					font-size:1.5em;
+				}
+			}
+	
 	}
 
 
 	.service--content {
-		margin-top:$margin--small;
-		margin-bottom:$margin--small;
-		display:inline-flex;
 		z-index:2;
-		@include desktop {
-			margin-top:$margin--small/2;
-			margin-bottom:$margin--small/2;
-		}
+		background-color: rgba(0, 0, 0, 0.09);
+		position:relative;
 
 		.service--project {
-			width:100px !important;
-			display:inline-flex;
+			padding:$margin--small $margin--small;
 			position:relative;
 			min-width:200px;
-			margin-top:$margin--small;
-			&:first-child {
-				margin-top:0em;
-			}
 			@include desktop {
+				padding:$margin--large $margin--medium;
 				margin-top:0em;
+				transition:all 0.5s;
 				.project--image {
-					opacity:0.5;
-					transition:all 0.2s;
+					opacity:0.2;
+					transition:all 0.4s;
 				}
 				&:hover {
+					transform:translateX(-2.5em);
+					cursor:pointer;
 					.project--image {
-						opacity:1;
-						transform:translateY(-1em);
-
+						opacity:0.4;
+						transform:translateX(-2.5em);
 					}
-					.project--shadow {
-						transform:scale(0.9);
-
+					.project--intro{
+						transform:translate(-52.5%, -50%);
+					}
+					.project--arrow {
+						opacity: 1;
 					}
 				}
+			}
+
+			.project--arrow {
+				position:absolute;
+				height:100%;
+				width:100px;
+				opacity: 0;
+				right:0;
+				top:0;
+				transition:opacity 0.3s;
 			}
 
 			.project--image {
 				height:150px;
-				//animation: hover 1.75s infinite;
-				//animation-direction: alternate;
+				opacity:0.2;
+				animation: hover 1.75s infinite;
+				animation-direction: alternate;
 
 				@include desktop {
 					height:250px;
@@ -143,8 +127,8 @@
 				width:50%;
 				max-width:225px;
 				transition:all 0.4s;
-				//animation: scale 1.75s infinite;
-				//animation-direction: alternate;
+				animation: scale 1.75s infinite;
+				animation-direction: alternate;
 
 				@include desktop {
 					width:40%;
@@ -152,8 +136,29 @@
 				border-radius:50%;
 			}
 
-			button {
-				margin-top:2em;
+			.project--intro {
+				@include centerer;
+				width:80%;
+				transition:transform 0.4s;
+
+				h1 {
+					font-size:1.7em;
+					line-height:1;
+					margin:0;
+
+					@include desktop {
+						font-size:3.5em;
+					}
+				}
+
+				h4 {
+					font-size:1em;
+					font-weight:500;
+					margin-top:0.2em;
+					@include desktop {
+						font-size:1.5em;
+					}
+				}
 			}
 		}
 	}

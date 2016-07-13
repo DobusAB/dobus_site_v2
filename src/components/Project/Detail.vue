@@ -9,15 +9,9 @@
         <div class="project--image_container" v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_featured_image + ')' }"></div>
         <div class="project--shadow"></div>
       </div>
-      <!--<div class="project--section project--intro">
-        <h1>{{{data[0].title.rendered}}}</h1>
-        <h4>{{{data[0].custom_field.project_description}}}</h4>
-        <hr>
-        <h2>{{{data[0].custom_field.project_intro}}}</h2>
-        <hr>
-      </div>-->
+      
       <div class="project--section row">
-        <div class="col-xs-12 col-md-6 text-left flex flow-vertical align-center"> 
+        <div class="col-xs-12 col-md-6 text-left case--info flex flow-vertical align-center"> 
           <h1>Vårt uppdrag.</h1>
           <p>{{{data[0].custom_field.project_intro}}}</p>
         </div>
@@ -25,8 +19,9 @@
           <img v-bind:src="data[0].custom_field.project_logo">
         </div>
       </div>
+      
       <div class="project--section colored row">
-        <div class="col-xs-12 col-md-6 text-left flex flow-vertical align-center"> 
+        <div class="col-xs-12 col-md-6 text-left case--info  flex flow-vertical align-center"> 
           <h1>{{{data[0].custom_field.project_solution_title}}}</h1>
           <p>{{{data[0].custom_field.project_solution_description}}}</p>
         </div>
@@ -36,7 +31,7 @@
       </div>
 
        <div class="project--section row">
-        <div class="col-xs-12 col-md-6 text-left flex flow-vertical align-center"> 
+        <div class="col-xs-12 col-md-6 text-left case--info  flex flow-vertical align-center"> 
           <h1>{{{data[0].custom_field.project_solution_title_2}}}</h1>
           <p>{{{data[0].custom_field.project_solution_description_2}}}</p>
         </div>
@@ -45,41 +40,44 @@
         </div>
       </div>
       <div class="project--section colored row">
-        <div class="col-xs-12 col-md-6 text-left flex flow-vertical align-center"> 
+        <div class="col-xs-12 col-md-6 text-left case--info  flex flow-vertical align-center"> 
           <h1>{{{data[0].custom_field.project_solution_title_3}}}</h1>
           <p>{{{data[0].custom_field.project_solution_description_3}}}</p>
         </div>
         <div class="col-xs-12 col-md-6 case--image flex align-middle align-center">
           <img v-bind:src="data[0].custom_field.project_solution_image_3">
         </div>
-         <svg width="156px" height="55px" class="section--overlap" viewBox="642 851 156 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <desc>Created with Sketch.</desc>
-          <defs></defs>
-          <path d="M643,851 L648.00008,851 C656.836548,851 666.412122,857.750953 669.945053,865.850118 C669.945053,865.850118 680.275311,905.609375 717.99992,905.609375 C755.724529,905.609375 766.063401,865.8321 766.063401,865.8321 C769.34205,857.640558 779.16817,851 787.99976,851 L797.49984,851 L643,851 L643,851 Z" id="Combined-Shape" stroke="none" fill='' fill-rule="evenodd"></path>
-        </svg>
       </div> 
 
       <div class="project--section colored row">
          <div class="col-xs-12 col-md-12 align-center align-middle"> 
            <h2 class="project--results">{{{data[0].custom_field.project_results}}}</h2>
          </div>
-         <svg width="156px" height="55px" class="section--overlap" viewBox="642 851 156 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <desc>Created with Sketch.</desc>
-          <defs></defs>
-          <path d="M643,851 L648.00008,851 C656.836548,851 666.412122,857.750953 669.945053,865.850118 C669.945053,865.850118 680.275311,905.609375 717.99992,905.609375 C755.724529,905.609375 766.063401,865.8321 766.063401,865.8321 C769.34205,857.640558 779.16817,851 787.99976,851 L797.49984,851 L643,851 L643,851 Z" id="Combined-Shape" stroke="none" fill='' fill-rule="evenodd"></path>
-        </svg>
+
       </div>
 
-      <div class="next--project row" v-bind:style="{background: nextProject.custom_fields.project_color}" v-if="nextProject.post_title">
-        <div class="col-xs-12 col-md-6">
-          <div class="project--image_container" v-bind:style="{'background-image': 'url(' + nextProject.custom_fields.project_featured_image + ')' }"></div>
-           <div class="project--shadow"></div>
-        </div>
-        <div class="col-xs-12 col-md-6 flex align-center flow-vertical">
-           <span>Nästa projekt</span>
+      <div class="next--project row" v-on:click="NextProject(nextProject.post_name)" v-bind:style="{background: nextProject.custom_fields.project_color}" v-if="nextProject.post_title">
+        <div class="col-xs-12 text-center">
+          <div class="project--intro">
            <h1>{{{nextProject.post_title}}} {{nextProject.name}}</h1>
            <h4>{{{nextProject.custom_fields.project_description}}}</h4>
-            <button v-on:click="NextProject(nextProject.post_name)" class="primary--button">Se nästa projekt</button>
+          </div>
+          <div class="project--image_container" v-bind:style="{'background-image': 'url(' + nextProject.custom_fields.project_featured_image + ')' }"></div>
+           <div class="project--shadow"></div>
+           <div class="project--arrow flex align-middle align-center">
+            <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+              <svg width="25px" height="25px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs></defs>
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                      <g id="Tjänster-&amp;-Projekt-Copy-6" transform="translate(-1261.000000, -3125.000000)" stroke="#FFFFFF" stroke-width="5.59999957">
+                          <g id="Group-12" transform="translate(1264.000000, 3128.000000)">
+                              <path d="M0.566037736,14.7272727 L28.0997842,14.7272727" id="Path-36"></path>
+                              <polyline id="Path-37" points="14.1509434 0 29.5989795 14.8862893 14.1509434 29.7725787"></polyline>
+                          </g>
+                      </g>
+                  </g>
+              </svg>
+        </div>
         </div>
       </div>
 

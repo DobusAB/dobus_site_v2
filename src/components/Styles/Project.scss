@@ -30,6 +30,8 @@
 			.project--image {
 				height:95vh;
 				width:100%;
+				background-image: url(../../assets/pattern_dobus.svg);
+				background-size:15%;
 				position:relative;
 
 				.project--intro {
@@ -98,9 +100,46 @@
 			}
 
 			.project--section {
-				padding:$margin--medium $margin--small/2;
+				//padding:$margin--medium $margin--small/2;
 				position:relative;
 				width:100%;
+
+				.case--info{
+					
+					padding:$margin--small $margin--small;
+					
+					@include desktop {
+						padding:$margin--medium $margin--medium;
+					}
+				}
+
+
+				.case--image {
+					width:100%;
+					margin-top:2em;
+					position:relative;
+
+					@include desktop {
+						height:700px;
+						margin-top:0em;
+					}
+
+					img {
+						  max-width:90%;
+						  max-height:100%;
+						  min-height:200px;
+						  width: auto;
+						  right:0;
+						  bottom:0;
+						  height: auto;
+						  position:absolute;
+
+						@include desktop {
+							 max-width:80%;
+						}
+					}
+				}
+				
 
 				&.project--intro {
 					padding-top:2.5em;
@@ -112,7 +151,7 @@
 				p {
 					font-size:1.2em;
 					font-weight:500;
-					color:#565656;
+					color:#020202;
 
 					@include desktop {
 						font-size:1.5em;
@@ -124,11 +163,13 @@
 					font-size:1.5em;
 					font-weight:700;
 					line-height:1.8em;
+					padding:$margin--small $margin--small/2;
 
 					@include desktop {
 						font-size:2.5em;
 						font-weight:700;
 						line-height:1.8em;
+						padding:$margin--medium $margin--medium;
 					}
 
 					span {
@@ -142,6 +183,8 @@
 
 				&.colored {
 					background-color:$dobus--primary;
+					background: $dobus--primary url(../../assets/pattern_dobus.svg) repeat;
+					background-size:15%;
 					color:#fff;
 					.section--overlap {
 						fill:$dobus--primary;
@@ -161,34 +204,6 @@
 						font-weight:500;
 					}
 				}
-				}
-
-				@include desktop {
-					padding:$margin--medium $margin--large;
-				}
-
-				.case--image {
-					//height:200px;
-					width:100%;
-					margin-top:2em;
-					//padding:1.2em;
-					//background-color:blue;
-
-					@include desktop {
-						height:500px;
-						margin-top:0em;
-					}
-
-					img {
-						  max-width:90%;
-						  max-height:100%;
-						  width: auto;
-						  height: auto;
-
-						@include desktop {
-							 max-width:80%;
-						}
-					}
 				}
 
 				h1 {
@@ -237,21 +252,71 @@
 				text-align: center;
 				width:100%;
 				color:#fff;
+				position:relative;
 				text-align: center;
+
+				@include desktop {
+
+					&:hover {
+
+						cursor:pointer;
+						.project--intro{
+							transform:translate(-50%, -70%);
+						}
+						.project--image_container{
+							transform:translateY(-10em);
+						}
+						.project--arrow { 
+							opacity:1;
+						}
+					}
+				}
+
+				.project--arrow {
+					position:absolute;
+					bottom:0;
+					left:0;
+					width:100%;
+					opacity: 0;
+					height:100px;
+					transition:opacity 0.3s;
+
+					svg {
+						transform:rotate(90deg);
+					}
+				}
+
+				.project--intro {
+					@include centerer;
+					width:80%;
+					z-index:2;
+					transition:transform 0.4s;
+
+					h1 {
+						font-size:1.7em;
+						line-height:1;
+						margin:0;
+
+						@include desktop {
+							font-size:3.5em;
+						}
+					}
+
+					h4 {
+						font-size:1em;
+						font-weight:500;
+						margin-top:0.2em;
+						@include desktop {
+							font-size:1.5em;
+						}
+					}
+				}
 
 				@include desktop {
 					padding:$margin--large;
 					text-align: left;
 				}
 
-				.primary--button {
-					max-width:250px;
-					margin:0 auto;
-
-					@include desktop {
-						margin:0em;
-					}
-				}
 				span {
 					font-size:1.4em;
 					font-weight:500;
@@ -291,6 +356,7 @@
 
 				.project--image_container {
 					height:210px;
+					opacity:0.2;
 					animation: hover 1.75s infinite;
 					animation-direction: alternate;
 					background-position:center;
