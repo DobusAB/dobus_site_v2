@@ -1,5 +1,4 @@
 <template>
-    <loading :show.sync="show"></loading>
     <div class="landing--container flex align-center align-middle" v-if="show">
       <div class="row">
           <div class="col-lg-7 col-md-7 bg landing--intro text-left flex align-middle">
@@ -35,7 +34,8 @@ export default {
       show: false,
       data: [],
       featured: [],
-      featuredRandom: []
+      featuredRandom: [],
+      hidden: false
     }
   },
   head: {
@@ -47,18 +47,20 @@ export default {
     loading: Loading
   },
   methods: {
-    getPageData: function () {
+    getPageData: function (transition) {
       this.$http.get(Init.globalUrl() + 'index.php/wp-json/wp/v2/pages/37').then((response) => {
         this.data = response.data
-        this.getFeatured()
+        this.getFeatured(transition)
       },
       (response) => {})
     },
-    getFeatured: function () {
+    getFeatured: function (transition) {
       this.$http.get(Init.globalUrl() + 'index.php/wp-json/wp/v2/pages?filter[category_name]=featured').then((response) => {
         this.featured = response.data
         this.featuredRandom = this.featured[Math.floor(Math.random() * this.featured.length)]
         this.show = true
+        this.$root.global.loading = false
+        transition.next(transition)
       },
       (response) => {})
     },
@@ -68,10 +70,15 @@ export default {
     }
   },
   route: {
-    data: function (transition) {
-      this.getPageData()
+    activate: function (transition) {
+      this.getPageData(transition)
     },
-    canReuse: true
+    deactivate: function (transition) {
+      this.$root.global.loading = true
+      setTimeout(function () {
+        transition.next(transition)
+      }, 250)
+    }
   },
   ready: function () {
   }

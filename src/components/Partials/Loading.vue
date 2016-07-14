@@ -1,5 +1,5 @@
 <template>
-	<div class="loading--container flex align-center align-middle enter" v-bind:class="{'leave': show}">
+	<div class="loading--container flex align-center align-middle" v-bind:class="{'fadeIn' : show}">
   </div>
 </template>
 <script>

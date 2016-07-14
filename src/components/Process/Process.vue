@@ -1,5 +1,4 @@
 <template>
-    <loading :show.sync="show"></loading>
    <div class="page--intro flex align-left align-middle" v-if="show">
         <h1>{{data.title.rendered}}</h1>
     </div>
@@ -28,12 +27,25 @@ export default {
     loading: Loading
   },
   methods: {
-    getPageData: function () {
+    getPageData: function (transition) {
       this.$http.get(Init.globalUrl() + 'index.php/wp-json/wp/v2/pages/39').then((response) => {
         this.data = response.data
         this.show = true
+        this.$root.global.loading = false
+        transition.next(transition)
       },
       (response) => {})
+    }
+  },
+  route: {
+    activate: function (transition) {
+      this.getPageData(transition)
+    },
+    deactivate: function (transition) {
+      this.$root.global.loading = true
+      setTimeout(function () {
+        transition.next(transition)
+      }, 250)
     }
   },
   ready: function () {

@@ -1,6 +1,7 @@
 <template>
   <div class="container" v-bind:class="{'nav--project_open': this.$root.global.projectOpen}">
     <menu></menu>
+    <loading :show.sync="global.loading"></loading>
       <router-view></router-view>
     <sidfot></sidfot>
   </div>
@@ -9,6 +10,7 @@
 <script>
 import Menu from './components/Partials/Menu'
 import Footer from './components/Partials/Footer'
+import Loading from './components/Partials/Loading'
 export default {
   data () {
     return {
@@ -18,13 +20,15 @@ export default {
       // its initial state.
       msg: 'About',
       global: {
-        projectOpen: false
+        projectOpen: false,
+        loading: false
       }
     }
   },
   components: {
     menu: Menu,
-    sidfot: Footer
+    sidfot: Footer,
+    loading: Loading
   },
   ready: function () {}
 }
