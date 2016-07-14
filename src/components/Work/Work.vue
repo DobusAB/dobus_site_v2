@@ -44,7 +44,7 @@ export default {
         this.data = response.data
         this.show = true
         this.$root.global.loading = false
-        console.log(response.data)
+        // console.log(response.data)
         transition.next()
       },
       (response) => {})

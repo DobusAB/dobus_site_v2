@@ -6,7 +6,6 @@
 
 <script>
 import Init from '../Partials/Init'
-import Loading from '../Partials/Loading'
 export default {
   data () {
     return {
@@ -24,7 +23,6 @@ export default {
     }
   },
   components: {
-    loading: Loading
   },
   methods: {
     getPageData: function (transition) {
@@ -32,7 +30,7 @@ export default {
         this.data = response.data
         this.show = true
         this.$root.global.loading = false
-        transition.next(transition)
+        transition.next()
       },
       (response) => {})
     }

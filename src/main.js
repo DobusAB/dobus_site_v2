@@ -58,7 +58,14 @@ router.map({
   }
 })
 router.beforeEach(function (transition) {
-  window.scrollTo(0, 0)
-  transition.next()
+  if (transition.to.name === 'project_by_name' || transition.to.name === 'project') {
+    transition.next()
+  } else {
+    window.scrollTo(0, 0)
+    transition.next()
+  }
+  /* if (transition.to.name === 'projects') {
+    window.scrollTo(0, 0)
+  } */
 })
 router.start(App, 'app')
