@@ -125,6 +125,8 @@
 			.project--section {
 				position:relative;
 				width:100%;
+				background-position:center center;
+				background-size:cover;
 				padding-bottom:$margin--small;
 				padding-top: $margin--small;
    				//flex-direction: column-reverse;
@@ -203,7 +205,14 @@
 						font-weight:500;
 					}
 				}
+				.project--testimony {
+					height:600px;
+					color:#fff;
 
+					@include desktop {
+						height:700px;
+					}
+				}
 				.project--results {
 					font-size:1.5em;
 					font-weight:700;

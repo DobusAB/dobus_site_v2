@@ -49,21 +49,26 @@
       </div> 
 
        <div class="project--section row" v-if="data[0].custom_field.project_solution_title_4 || data[0].custom_field.project_solution_description_4">
-        <div class="col-xs-12 col-sm-6 text-left case--info  flex flow-vertical align-center"> 
-          <h1>{{{data[0].custom_field.project_solution_title_4}}}</h1>
-          <p>{{{data[0].custom_field.project_solution_description_4}}}</p>
+          <div class="col-xs-12 col-sm-6 text-left case--info  flex flow-vertical align-center"> 
+            <h1>{{{data[0].custom_field.project_solution_title_4}}}</h1>
+            <p>{{{data[0].custom_field.project_solution_description_4}}}</p>
+          </div>
+          <div class="col-xs-12 col-sm-6 case--image flex align-middle align-center" v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_solution_image_4 + ')' }">
+            
+          </div>
         </div>
-        <div class="col-xs-12 col-sm-6 case--image flex align-middle align-center" v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_solution_image_4 + ')' }">
-          
-        </div>
-      </div>
 
       <div class="project--section colored row" v-if="data[0].custom_field.project_results">
          <div class="col-xs-12 col-sm-12 align-center align-middle"> 
            <h2 class="project--results">{{{data[0].custom_field.project_results}}}</h2>
          </div>
-
       </div>
+
+      <div class="project--section row" v-if="data[0].custom_field.project_testimony || data[0].custom_field.project_testimony_image"  v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_testimony_image + ')' }">
+          <div class="col-xs-12 col-sm-12 text-center project--testimony flex flow-vertical align-center"> 
+            <h1>"{{{data[0].custom_field.project_testimony}}}"</h1>
+          </div>
+        </div>
 
       <div class="next--project row" v-on:click="NextProject(nextProject.post_name)" v-bind:style="{background: nextProject.custom_fields.project_color}" v-if="nextProject.post_title">
         <div class="col-xs-12 text-center">
