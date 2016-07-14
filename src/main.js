@@ -57,7 +57,8 @@ router.map({
     component: require('./components/Process/Process.vue')
   }
 })
-/* router.afterEach(function () {
-  window.before(0, 0)
-}) */
+router.beforeEach(function (transition) {
+  window.scrollTo(0, 0)
+  transition.next()
+})
 router.start(App, 'app')
