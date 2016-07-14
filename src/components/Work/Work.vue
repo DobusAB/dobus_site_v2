@@ -6,11 +6,11 @@
       <div class="row work--position" v-for="sub in data.sub_pages">
         <div class="col-xs-12 col-md-7 text-left work--description">
           <h1>{{sub.post_title}}</h1>
-          <p>{{sub.post_content}}</p>
+          <p>{{{sub.custom_fields.position_description }}}</p>
           <button class="primary--button yellow linkedin block">Ansök via LinkedIn</button>
           <button class="primary--button yellow">Ansök via Email</button>
         </div>
-        <div class="col-xs-12 col-md-5 work--image"></div>
+        <div class="col-xs-12 col-md-5 work--image" v-bind:style="{'background-image': 'url(' + sub.custom_fields.position_image + ')' }"></div>
       </div>
     </div>
 </template>
