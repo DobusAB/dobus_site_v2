@@ -3,10 +3,13 @@
 	pointer-events:none;
 	opacity:0;
 	transition:opacity 1s;
+	background: $dobus--primary url(../../assets/pattern_dobus.svg) repeat;
+	background-size:12%;
 
 	&.enter {
 		opacity:1;
 		transition:opacity 1s;
+		transition-delay:2s;
 	}
 
 	&.leave {
