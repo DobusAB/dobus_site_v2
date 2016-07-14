@@ -6,7 +6,7 @@
             {{{item.post_content}}}
           </div>
           <div class="col-lg-5 service--text flex align-middle align-center">
-             <image src="{{item.custom_fields.service_illustration.url}}"/>
+            {{{item.custom_fields.service_illustration}}}
           </div>
     </div>
     <div class="service--top"></div>
