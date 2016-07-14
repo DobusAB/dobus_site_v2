@@ -1,3 +1,6 @@
+
+
+
 .service--section {
 	color:#fff;
 	position:relative;
@@ -31,6 +34,17 @@
 		text-align: center;
 		//background: url(../../assets/pattern_dobus.svg) repeat;
 		background-size:15%;
+
+
+		img {
+			width:50%;
+			height:auto;
+
+			@include desktop {
+				width:55%;
+				height:auto;
+			}
+		}
 		
 		@include tablet {
 			padding:$margin--medium $margin--medium;

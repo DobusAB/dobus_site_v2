@@ -4,6 +4,11 @@ button {
 	outline:none;
 }
 
+img {
+	user-drag: none; 
+	user-select: none;
+}
+
 .primary--button {
 	padding:0.65em 2em;
 	border-radius:2em;
@@ -48,7 +53,7 @@ button {
 		}
 	}
 	&.block{
-		width:100%;
+		display:block;
 	}
 }
 
