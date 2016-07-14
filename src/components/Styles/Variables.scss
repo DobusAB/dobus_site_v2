@@ -11,6 +11,7 @@ $device-sm: 30em;
 $device-md: 40em;
 $device-md-landscape: 60em;
 $device-lg: 72em;
+$device-mega: 100em;
 
 
 //Media Queries 
@@ -27,7 +28,13 @@ $device-lg: 72em;
 }
 
 @mixin desktop {
-  @media (min-width: #{$device-lg}) {
+  @media (min-width: #{$device-lg}) and (max-width: #{$device-mega - 0.1em}) {
+    @content;
+  }
+}
+
+@mixin mega {
+  @media (min-width: #{$device-mega}) {
     @content;
   }
 }

@@ -1,6 +1,7 @@
 .footer {
 	padding:$margin--small $margin--small/1.5;
 	color:#fff;
+	z-index:2;
 	position:relative;
 	background-color:$dobus--black;
 	&::after {
@@ -16,7 +17,9 @@
 		top: -18px;
 		bottom: auto;
 	}
-
+	@include mega {
+		padding: $margin--medium $margin--large;
+	}
 	@include desktop {
 		padding: $margin--medium;
 	}
@@ -25,6 +28,9 @@
 		margin-top:0em;
 		@include desktop {
 			font-size:3.25em;
+		}
+		@include mega {
+			font-size:3.75em;
 		}
 	}
 

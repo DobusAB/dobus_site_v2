@@ -47,6 +47,11 @@
 				display:inline-flex;
 				//height:85px;
 			}
+			@include mega {
+				min-width:100%;
+				display:inline-flex;
+				//height:85px;
+			}
 		}
 
 
@@ -76,6 +81,14 @@
 					opacity:0.9;
 				}
 			}
+			@include mega {
+				margin-left:3em;
+
+				&:hover {
+					cursor:pointer;
+					opacity:0.9;
+				}
+			}
 		}
 
 		.nav--back {
@@ -93,6 +106,11 @@
 			margin-left:120px;
 
 			@include desktop {
+				justify-content: flex-end;
+    			width: 100%;
+			}
+
+			@include mega {
 				justify-content: flex-end;
     			width: 100%;
 			}
@@ -148,6 +166,16 @@
 						}
 					}
 					margin-right:4em;
+				}
+
+				@include mega {
+					&:hover {
+						color:#000;
+						span {
+							bottom:17.5px;
+						}
+					}
+					margin-right:5.5em;
 				}
 
 				&:nth-child(1){

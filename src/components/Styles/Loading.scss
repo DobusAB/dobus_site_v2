@@ -10,6 +10,9 @@
 	@include desktop {
 		background-size:12%;
 	}
+	@include mega {
+		background-size:12%;
+	}
 	 
 	@keyframes backgroundScroll {
 		from {background-position: 0% 0%;}
@@ -27,5 +30,5 @@
 	opacity:1;
 	transition:opacity .25s;
 	animation: backgroundScroll 1s cubic-bezier(1, 0, 0, 1) infinite;
-	animation-delay: 0.65s;
+	animation-delay: 0.9s;
 }

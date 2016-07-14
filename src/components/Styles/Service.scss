@@ -110,6 +110,11 @@
 			text-align: left;
 		}
 
+		@include mega {
+			padding:$margin--large*1.5 $margin--large*1.5;
+			text-align: left;
+		}
+
 			h1 {
 				font-size:2em;
 				line-height: 1.1;
@@ -120,6 +125,10 @@
 				}
 				@include desktop {
 					font-size:3.2em;
+					margin-top: $no-margin--top;
+				}
+				@include mega {
+					font-size:4em;
 					margin-top: $no-margin--top;
 				}
 			}
@@ -133,6 +142,9 @@
 				}
 				@include desktop {
 					font-size:1.5em;
+				}
+				@include mega {
+					font-size:1.8em;
 				}
 			}
 	
@@ -176,6 +188,31 @@
 				}
 			}
 
+			@include mega {
+			padding:$margin--large $margin--large;
+			margin-top:0em;
+			transition:all 0.5s;
+				.project--image {
+					opacity:0.2;
+					transition:all 0.4s;
+				}
+				&:hover {
+					transform:translateX(-2.5em);
+					cursor:pointer;
+					.project--image {
+						opacity:0.4;
+						transform:translateX(-2.5em);
+					}
+					.project--intro{
+						transform:translate(-52.5%, -50%);
+					}
+					.project--arrow {
+						opacity: 1;
+					}
+				}
+			}
+
+
 			.project--arrow {
 				position:absolute;
 				height:100%;
@@ -199,6 +236,11 @@
 
 				@include desktop {
 					height:250px;
+					margin-bottom:$margin--small;
+				}
+
+				@include mega {
+					height:350px;
 					margin-bottom:$margin--small;
 				}
 
@@ -243,6 +285,10 @@
 					@include desktop {
 						font-size:3.5em;
 					}
+
+					@include mega {
+						font-size:3.8em;
+					}
 				}
 
 				h4 {
@@ -254,6 +300,10 @@
 					}
 					@include desktop {
 						font-size:1.5em;
+					}
+
+					@include mega {
+						font-size:1.75em;
 					}
 				}
 			}
