@@ -1,12 +1,13 @@
 .work--position {
-
-	flex-direction:column-reverse;
-
+	
 	.work--description {
 		padding:$margin--small $margin--small; 
 
+		@include tablet {
+
+		}
 		@include desktop {
-			padding:$margin--medium $margin--large; 
+			padding:$margin--medium $margin--medium; 
 		}
 
 		h1 {
