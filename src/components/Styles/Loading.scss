@@ -4,35 +4,28 @@
 	opacity:0;
 	transition:opacity 1s;
 	background: $dobus--primary url(../../assets/pattern_dobus.svg) repeat;
-	background-size:12%;
+	background-size:35%;
 	background-position: 0% 0%;
-	animation: backgroundScroll 1s cubic-bezier(1, 0, 0, 1) infinite;
-	animation-delay: 0.7s;
 
-	&.enter {
-		opacity:1;
-		transition:opacity .25s;
-		//transition-delay:2s;
-	}
-
-	&.leave {
-		opacity:0;
-		transition:opacity .25s;
+	@include desktop {
+		background-size:12%;
 	}
 	 
 	@keyframes backgroundScroll {
 		from {background-position: 0% 0%;}
 		to {background-position: -150% 0%}
 	}
-
-	
 }
 
 .hide {
 	opacity:0;
 	transition:opacity .25s;
+	animation: none;
+	animation-delay: 0.7s;
 }
 .fadeIn {
 	opacity:1;
 	transition:opacity .25s;
+	animation: backgroundScroll 1s cubic-bezier(1, 0, 0, 1) infinite;
+	animation-delay: 0.65s;
 }

@@ -8,6 +8,7 @@
 	@import 'Page';
 	@import 'Service';
 	@import 'About';
+	@import 'Work';
 	@import 'Footer';
 	@import 'Loading';
 

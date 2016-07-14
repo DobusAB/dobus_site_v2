@@ -1,0 +1,53 @@
+.work--position {
+
+	flex-direction:column-reverse;
+
+	.work--description {
+		padding:$margin--small $margin--small; 
+
+		@include desktop {
+			padding:$margin--medium $margin--large; 
+		}
+
+		h1 {
+			font-size:2em;
+			margin-top:0em;
+
+			@include desktop {
+				font-size:3.5em;
+			}
+		}
+
+		p {
+			font-size:1em;
+			@include desktop {
+				font-size:1.5em;
+			}
+		}
+
+		a {
+			text-decoration: none;
+			font-size:1.2em;
+			font-weight:600;
+			color:#000;
+			opacity:0.6;
+			@include desktop {
+				font-size:2em;
+				margin-top:1em;
+			}
+		}
+	}
+
+	.work--image {
+		background-color: blue;
+		background-image: url(https://media.giphy.com/media/o0vwzuFwCGAFO/giphy.gif);
+		background-size:cover;
+		background-repeat:no-repeat;
+		height:275px;
+
+		@include desktop {
+			flex:1;
+			height:auto;
+		}
+	}
+}

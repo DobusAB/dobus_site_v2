@@ -28,6 +28,7 @@
 	.service--header {
 		padding:$margin--small/2 $margin--small;
 		position:relative;
+		text-align: center;
 		//background: url(../../assets/pattern_dobus.svg) repeat;
 		background-size:15%;
 		
@@ -37,18 +38,19 @@
 
 		@include desktop {
 			padding:$margin--large $margin--large;
+			text-align: left;
 		}
 
 			h1 {
 				font-size:2em;
-				line-height: 1;
+				line-height: 1.1;
 				margin-top: $margin--small/2;
 				@include tablet {
 					font-size:3em;
 					margin-top: $no-margin--top;
 				}
 				@include desktop {
-					font-size:3.5em;
+					font-size:3.2em;
 					margin-top: $no-margin--top;
 				}
 			}

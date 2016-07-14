@@ -1,7 +1,7 @@
 <template>
 	<div class="service--section flex flow-vertical" v-bind:style="{background: item.custom_fields.project_color }"  v-for="item in project">
     <div class="service--header row flex text-left">
-          <div class="col-xs-12 col-md-8 margin-auto service--text text-center">
+          <div class="col-xs-12 col-md-12 col-lg-7 service--text">
             <h1>{{item.post_title}}</h1>
             {{{item.post_content}}}
           </div>

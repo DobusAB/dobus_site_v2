@@ -192,17 +192,15 @@
 				}
 				p {
 					font-size:1.2em;
-					font-weight:500;
+					font-weight:400;
 					color:#020202;
 
 					@include tablet {
 						font-size:1.3em;
-						font-weight:500;
 					}
 
 					@include desktop {
 						font-size:1.5em;
-						font-weight:500;
 					}
 				}
 				.project--testimony {
@@ -255,12 +253,11 @@
 
 					p {
 					font-size:1.2em;
-					font-weight:500;
+					font-weight:400;
 					color:#fff;
 
 					@include desktop {
 						font-size:1.5em;
-						font-weight:500;
 					}
 				}
 				}
@@ -308,14 +305,6 @@
 						width:80%;
 						margin:$margin--small/2 auto $margin--small/2 auto;
 					}
-				}
-
-				hr {
-					border-width: 0 0 10px 0;
-					margin:$margin--small/2 auto;
-					opacity:0.1;
-					width:70%;
- 					border-image: url(../../assets/dot.svg) 35% round;
 				}
 			}
 

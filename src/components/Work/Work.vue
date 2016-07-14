@@ -2,6 +2,17 @@
      <div class="page--intro flex align-left align-middle" v-if="show">
         <h1>{{data.title.rendered}}</h1>
     </div>
+    <div class="positions--container">
+      <div class="row work--position">
+        <div class="col-xs-12 col-md-7 text-left work--description">
+          <h1>Frontendutvecklare</h1>
+          <p>Nu söker vi en frontend-utvecklare som gärna hade döpt sin förstfödde till Javascript. På Dobus blir du inte bara en kugge i maskineriet utan en resurs som bidrar med dina förnuftiga och ambitiösa idéer, där vi gemensamt formar företaget och våra digitala projekt.</p>
+          <button class="primary--button yellow linkedin block">Ansök via LinkedIn</button>
+          <button class="primary--button yellow">Ansök via Email</button>
+        </div>
+        <div class="col-xs-12 col-md-5 work--image"></div>
+      </div>
+    </div>
 </template>
 
 <script>
@@ -33,6 +44,7 @@ export default {
         this.data = response.data
         this.show = true
         this.$root.global.loading = false
+        console.log(response.data)
         transition.next()
       },
       (response) => {})
