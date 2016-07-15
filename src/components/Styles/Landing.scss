@@ -14,6 +14,7 @@
 		height:100vh;
 		background: $dobus--primary url(../../assets/pattern_dobus.svg) repeat;
 		background-size:35%;
+		position:relative;
 		@include desktop {
 			background-size:12%;
 		}
@@ -94,7 +95,7 @@
 
 				.item--right {
 				    display: flex;
-				    padding:$margin--small $margin--small/6;
+				    padding:$margin--small/2 $margin--small/6;
 
 				    @include desktop {
 				    	padding:$margin--medium 0em;

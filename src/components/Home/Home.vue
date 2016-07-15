@@ -6,11 +6,11 @@
           </div>
           <div class="col-xs-12 bg landing--carousel flex align-middle" v-on:click="goToProject">
             <div class="carousel--item row text-left">
-              <div class="item--left col-xs-6">
+              <div class="item--left col-xs-4 col-md-6 ">
               
                   <img class="item--image" v-bind:src="featuredRandom.custom_field.project_feature_image">
               </div>
-              <div class="item--right col-xs-6 align-left align-center">
+              <div class="item--right col-xs-8 col-md-6 align-left align-center">
                 <span>Utvalt case</span>
                 <h2 v-if="featured">{{ featuredRandom.title.rendered }}</h2>
                 <div class="project--arrow flex align-middle align-center">
