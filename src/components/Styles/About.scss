@@ -1,67 +1,107 @@
-.about--container {
-	.about--contact  {
-		overflow:hidden;
-		padding:1em 0em;
-		background-size:contain;
-		background-position:150% 20%;
-		background-repeat:no-repeat;
-
+.about--employee{
+	position:relative;
+	padding:$margin--medium $margin--small; 
 		@include desktop {
-			padding:1.5em 3em;
-			background-position:80% 50px;
-			transition:background-position 0.2s;
-
-			&:hover {
-				background-position:80% 20px;
-			}
+			padding:$margin--large $margin--large;
 		}
-		.contact--info {
-			padding:$margin--small $margin--small;
+		@include mega {
+			padding:$margin--large*1.5 $margin--large;
+		}
 
-			@include desktop {
-				padding:$margin--large $margin--medium;
-			}
+		img {
+			position:absolute;
+			right:0;
+			bottom:0;
+		}
 
-			h2 {
-				font-size:3em;
-				opacity: 1;
-				margin-top:0em;
-				font-weight:600;
-				margin-bottom:0.2em;
-			}
-			p {
-				font-size:1em;
-				width:80%;
-				@include desktop {
-					font-size:1.5em;
-					width:50%;
-				}
-				@include mega {
-					font-size:1.5em;
-					width:30%;
-				}
-			}
 
-			h3 {
-				font-size:1.2em;
-				font-weight:800;
+		.about--description {
+
+			color:#fff;
+			z-index:2;
+			position:relative;
+
+
+			h1 {
+				font-size:2em;
 				margin-top:0em;
 				margin-bottom:0em;
 
 				@include desktop {
-					font-size:1.5em;
+					font-size:3.5em;
 				}
-
-				a {
-					color:#000;
-					text-decoration: none;
-
-					&:hover {
-						text-decoration: underline;
-					}
+				@include mega {
+					font-size:3.5em;
 				}
 			}
 
+			span {
+				font-size:1.2em;
+				opacity: 0.8;
+				@include desktop {
+					font-size:1.5em;
+				}
+
+				@include mega {
+					font-size:1.5em;
+				}
+			}
+
+			p {
+				font-size:1em;
+				@include desktop {
+					font-size:1.5em;
+				}
+				@include mega {
+					font-size:1.5em;
+				}
+			}
+
+			a {
+				text-decoration: none;
+				font-size:1.5em;
+				position:relative;
+				font-weight:600;
+				margin-top:0.8em;
+				display:block;
+				color:#fff;
+
+				span {
+					opacity:0;
+					@include vertical--centerer;
+					position:absolute;
+					margin-left:10px;
+					transition: all 0.25s;
+		
+				}
+				@include desktop {
+					font-size:1.7em;
+					margin-top:1em;
+					&:hover {
+						span {
+							//transition: opacity 1s;
+							transition: all 0.25s;
+							opacity:1;
+							margin-left:25px;
+						}
+					}
+				}
+				@include mega {
+					font-size:1.7em;
+					margin-top:1em;
+					&:hover {
+						span {
+							//transition: opacity 1s;
+							transition: all 0.25s;
+							opacity:1;
+							margin-left:25px;
+						}
+					}
+				}
+			}
+		}
+
+		@include desktop {
+			
 		}
 	}
-}

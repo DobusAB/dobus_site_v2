@@ -37,6 +37,26 @@
 		overflow:hidden;
 
 		&:hover{
+				//Webb
+
+				#box_x5F_1 {
+				transform:translate(188.000000px, 96.000000px);
+				}
+				#box_x5F_2 {
+					transform: translate(237.000000px, 68.000000px);
+				}
+				#box_x5F_3 {
+					transform: translate(140.000000px, 68.000000px);
+				}
+				#box_x5F_4 {
+					transform: translate(188.000000px, 40.000000px);
+				}
+				#box_x5F_5 {
+					transform: translate(92.000000px, 40.000000px);
+				}
+				#box_x5F_6 {
+					transform: translate(140.000000px, 12.000000px);
+				}
 
 				// Digital Design 
 				#back_x5F_end {
@@ -67,6 +87,39 @@
 			width:50%;
 			height:auto;
 			overflow:visible;
+
+			//Webbutveckling 
+
+			#box_x5F_1 {
+				transform:translate(188.000000px, -700.000000px);
+				transition: all 0.75s;
+				transition-delay: 0.1s;
+			}
+			#box_x5F_2 {
+				transform: translate(237.000000px, -700.000000px);
+				transition: all 0.75s;
+				transition-delay: 0.2s;
+			}
+			#box_x5F_3 {
+				transform: translate(140.000000px, -700.000000px);
+				transition: all 0.75s;
+				transition-delay: 0.3s;
+			}
+			#box_x5F_4 {
+				transform: translate(188.000000px, -700.000000px);
+				transition: all 0.75s;
+				transition-delay: 0.4s;
+			}
+			#box_x5F_5 {
+				transform: translate(92.000000px, -700.000000px);
+				transition: all 0.75s;
+				transition-delay: 0.5s;
+			}
+			#box_x5F_6 {
+				transform: translate(140.000000px, -700.000000px);
+				transition: all 0.75s;
+				transition-delay: 0.6s;
+			}
 			
 			// Digital Design 
 
