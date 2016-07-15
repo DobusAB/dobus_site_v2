@@ -47,7 +47,6 @@ export default {
     }
   },
   ready: function () {
-    this.getPageData()
   }
 }
 </script>

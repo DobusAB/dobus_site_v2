@@ -8,7 +8,7 @@
             <div class="carousel--item row text-left">
               <div class="item--left col-xs-6">
               
-                  <img class="item--image" src="{{featuredRandom.custom_field.project_feature_image}}">
+                  <img class="item--image" v-bind:src="featuredRandom.custom_field.project_feature_image">
               </div>
               <div class="item--right col-xs-6 align-left align-center">
                 <span>Utvalt case</span>

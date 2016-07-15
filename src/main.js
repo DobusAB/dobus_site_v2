@@ -64,8 +64,9 @@ router.beforeEach(function (transition) {
     window.scrollTo(0, 0)
     transition.next()
   }
-  /* if (transition.to.name === 'projects') {
-    window.scrollTo(0, 0)
-  } */
+})
+
+router.redirect({
+  '*': '/'
 })
 router.start(App, 'app')
