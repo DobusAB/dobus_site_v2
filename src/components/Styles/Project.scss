@@ -40,6 +40,9 @@
 				@include desktop {
 					height:95vh;
 				}
+				@include mega {
+					height:95vh;
+				}
 
 				.project--intro {
 					@include centerer;
@@ -65,6 +68,13 @@
 						margin-top:0em;
 						font-size:3.5em;
 					}
+
+					@include mega {
+						width:100%;
+						margin:0 auto;
+						margin-top:0em;
+						font-size:3.5em;
+					}
 				}
 				h4 {
 					margin-top:1em;
@@ -74,6 +84,9 @@
 					}
 					@include desktop {
 						font-size:1.8em;
+					}
+					@include mega {
+						font-size:2em;
 					}
 				}
 
@@ -88,6 +101,11 @@
 					}
 					@include desktop {
 						font-size:2.2em;
+						width:80%;
+						margin:$margin--small/2 auto $margin--small/2 auto;
+					}
+					@include mega {
+						font-size:2.5em;
 						width:80%;
 						margin:$margin--small/2 auto $margin--small/2 auto;
 					}
@@ -140,6 +158,11 @@
 					flex-direction: row;
 				}
 
+				@include mega {
+					display: flex;
+					flex-direction: row;
+				}
+
 				.case--info{
 					
 					padding:$margin--small/2 $margin--small;
@@ -150,6 +173,9 @@
 					
 					@include desktop {
 						padding:$margin--medium $margin--medium $margin--medium $margin--large;
+					}
+					@include mega {
+						padding:$margin--large $margin--medium $margin--large $margin--large*1.5;
 					}
 				}
 
@@ -166,6 +192,11 @@
 
 					@include desktop {
 						height:650px;
+						margin-top:0em;
+					}
+
+					@include mega {
+						height:800px;
 						margin-top:0em;
 					}
 
@@ -189,6 +220,9 @@
 					@include desktop {
 						padding-top:7.5em;
 					}
+					@include mega {
+						padding-top:7.5em;
+					}
 				}
 				p {
 					font-size:1.2em;
@@ -202,12 +236,18 @@
 					@include desktop {
 						font-size:1.5em;
 					}
+					@include mega {
+						font-size:1.5em;
+					}
 				}
 				.project--testimony {
 					height:600px;
 					color:#fff;
 
 					@include desktop {
+						height:700px;
+					}
+					@include mega {
 						height:700px;
 					}
 				}
@@ -230,6 +270,13 @@
 						font-weight:700;
 						line-height:1.8em;
 						padding:$margin--medium/2 $margin--medium;
+					}
+
+					@include mega {
+						font-size:2.5em;
+						font-weight:700;
+						line-height:1.8em;
+						padding:$margin--large/2 $margin--large/2;
 					}
 
 					span {
@@ -259,6 +306,9 @@
 					@include desktop {
 						font-size:1.5em;
 					}
+					@include mega {
+						font-size:1.5em;
+					}
 				}
 				}
 
@@ -277,6 +327,13 @@
 					}
 
 					@include desktop {
+						width:100%;
+						margin:0 auto;
+						margin-top:0em;
+						font-size:3.5em;
+					}
+
+					@include mega {
 						width:100%;
 						margin:0 auto;
 						margin-top:0em;
@@ -305,6 +362,11 @@
 						width:80%;
 						margin:$margin--small/2 auto $margin--small/2 auto;
 					}
+					@include mega {
+						font-size:2.2em;
+						width:80%;
+						margin:$margin--small/2 auto $margin--small/2 auto;
+					}
 				}
 			}
 
@@ -317,6 +379,23 @@
 				text-align: center;
 
 				@include desktop {
+
+					&:hover {
+
+						cursor:pointer;
+						.project--intro{
+							transform:translate(-50%, -70%);
+						}
+						.project--image_container{
+							transform:translateY(-10em);
+						}
+						.project--arrow { 
+							opacity:1;
+						}
+					}
+				}
+
+				@include mega {
 
 					&:hover {
 
@@ -365,12 +444,19 @@
 						@include desktop {
 							font-size:3.5em;
 						}
+
+						@include mega {
+							font-size:3.5em;
+						}
 					}
 
 					h4 {
 						font-size:1em;
 						font-weight:500;
 						margin-top:0.2em;
+						@include mega {
+							font-size:1.5em;
+						}
 						@include desktop {
 							font-size:1.5em;
 						}
@@ -381,6 +467,11 @@
 				}
 
 				@include desktop {
+					padding:$margin--large;
+					text-align: left;
+				}
+
+				@include mega {
 					padding:$margin--large;
 					text-align: left;
 				}
@@ -402,11 +493,18 @@
 						margin-top:0em;
 						font-size:2.0em;
 					}
+					@include mega {
+						margin-top:0em;
+						font-size:2.0em;
+					}
 				}
 				h4 {
 					margin-top:0.4em;
 					font-weight:400;
 					@include desktop {
+						font-size:1.5em;
+					}
+					@include mega {
 						font-size:1.5em;
 					}
 				}
@@ -416,6 +514,11 @@
 					font-weight:500;
 					font-size:1.2em;
 					@include desktop {
+						font-size:2em;
+						width:80%;
+						margin:$margin--small auto;
+					}
+					@include mega {
 						font-size:2em;
 						width:80%;
 						margin:$margin--small auto;

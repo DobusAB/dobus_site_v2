@@ -18,21 +18,38 @@
 		.contact--info {
 			padding:$margin--small $margin--small;
 
+			@include desktop {
+				padding:$margin--large $margin--medium;
+			}
+
 			h2 {
-				font-size:1.25em;
-				opacity: 0.5;
+				font-size:3em;
+				opacity: 1;
 				margin-top:0em;
-				margin-bottom:1em;
+				font-weight:600;
+				margin-bottom:0.2em;
+			}
+			p {
+				font-size:1em;
+				width:80%;
+				@include desktop {
+					font-size:1.5em;
+					width:50%;
+				}
+				@include mega {
+					font-size:1.5em;
+					width:30%;
+				}
 			}
 
 			h3 {
-				font-size:2em;
+				font-size:1.2em;
 				font-weight:800;
 				margin-top:0em;
 				margin-bottom:0em;
 
 				@include desktop {
-					font-size:2.2em;
+					font-size:1.5em;
 				}
 
 				a {
@@ -45,12 +62,6 @@
 				}
 			}
 
-			p {
-				font-size:1.2em;
-				font-weight:500;
-				margin-top:0em;
-				margin-bottom:0em;
-			}
 		}
 	}
 }

@@ -4,9 +4,10 @@
       <!--<p>{{{data.content.rendered}}}</p>-->
   </div>
    <div class="row about--container" v-if="show">
-        <div class="about--contact text-left col-md-6 col-lg-6 col-xs-12 flex align-left align-center" v-for="sub in data.sub_pages" v-bind:style="{'background-image': 'url(' + sub.custom_fields.work_image + ')' }">
+        <div class="about--contact text-left col-xs-12 flex align-left align-center" v-for="sub in data.sub_pages" v-bind:style="{'background-image': 'url(' + sub.custom_fields.work_image + ')' }">
           <div class="contact--info">
             <h2>{{sub.custom_fields.work_title}}</h2>
+            <p>{{sub.custom_fields.work_description}}</p>
             <h3><a href="">{{sub.custom_fields.work_phone}}</a></h3>
             <h3><a href="">{{sub.custom_fields.work_email}}</a></h3>
           </div>

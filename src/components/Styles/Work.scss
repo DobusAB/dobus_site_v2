@@ -9,6 +9,9 @@
 		@include desktop {
 			padding:$margin--large $margin--large;
 		}
+		@include mega {
+			padding:$margin--large*1.5 $margin--large;
+		}
 
 		.work--description {
 
@@ -25,6 +28,9 @@
 				@include desktop {
 					font-size:3.5em;
 				}
+				@include mega {
+					font-size:3.5em;
+				}
 			}
 
 			span {
@@ -33,11 +39,18 @@
 				@include desktop {
 					font-size:1.5em;
 				}
+
+				@include mega {
+					font-size:1.5em;
+				}
 			}
 
 			p {
 				font-size:1em;
 				@include desktop {
+					font-size:1.5em;
+				}
+				@include mega {
 					font-size:1.5em;
 				}
 			}
@@ -71,12 +84,24 @@
 						}
 					}
 				}
+				@include mega {
+					font-size:1.7em;
+					margin-top:1em;
+					&:hover {
+						span {
+							//transition: opacity 1s;
+							transition: all 0.25s;
+							opacity:1;
+							margin-left:25px;
+						}
+					}
+				}
 			}
 		}
 
 		.work--overlay {
 			position:absolute;
-			opacity:.8;
+			opacity:0.65;
 			top:0;
 			left:0;
 			width:100%;

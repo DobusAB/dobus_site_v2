@@ -5,7 +5,7 @@
     <div class="positions--container">
       <div class="row work--position" v-for="sub in data.sub_pages">
         <div class="col-xs-12 col-md-12 work--image" v-bind:style="{'background-image': 'url(' + sub.custom_fields.position_image + ')' }">
-          <div class="col-xs-12 col-md-8 text-center margin-auto work--description">
+          <div class="col-xs-12 col-md-8 text-left  work--description">
             <h1>{{sub.post_title}}</h1>
             <span>Sista ansökning: 25/7</span>
             <p>{{{sub.custom_fields.position_description }}}</p>
