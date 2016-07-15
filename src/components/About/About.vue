@@ -1,15 +1,14 @@
 <template>
    <div class="page--intro flex align-left align-middle" v-if="show">
       <h1>{{data.title.rendered}}</h1>
-      <!--<p>{{{data.content.rendered}}}</p>-->
   </div>
 
       <div class="about--container" v-if="show">
       <div class="row about--employee" v-for="sub in data.sub_pages" v-bind:style="{background: sub.custom_fields.work_color }">
           <div class="col-xs-12 col-md-8 text-left about--description">
             <h1>{{sub.post_title}}</h1>
-             <p>{{sub.custom_fields.work_title}}</p>
-            <p>{{sub.custom_fields.work_description}}</p>
+             <h2>{{sub.custom_fields.work_title}}</h2>
+            <!-- <p>{{sub.custom_fields.work_description}}</p>-->
             <a href="">{{sub.custom_fields.work_phone}}
               <span><?xml version="1.0" encoding="UTF-8" standalone="no"?>
                     <svg width="25px" height="25px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
