@@ -1,13 +1,11 @@
 .loading--container {
 	background:$dobus--primary;
 	pointer-events:none;
-	opacity:1;
+	opacity:0;
 	transition:opacity 1s;
 	background: $dobus--primary url(../../assets/pattern_dobus.svg) repeat;
 	background-size:35%;
 	background-position: 0% 0%;
-
-	animation: backgroundScroll 1s cubic-bezier(1, 0, 0, 1) infinite;
 
 	@include desktop {
 		background-size:12%;
