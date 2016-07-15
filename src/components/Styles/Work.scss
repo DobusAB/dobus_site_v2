@@ -41,14 +41,14 @@
 	}
 
 	.work--image {
-		background-color: blue;
+		filter: brightness(0.2);
 		background-size:cover;
 		background-repeat:no-repeat;
 		height:275px;
 
 		@include desktop {
-			flex:1;
-			height:auto;
+			
+			height:700px;
 		}
 	}
 }

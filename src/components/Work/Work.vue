@@ -10,7 +10,7 @@
           <button class="primary--button yellow linkedin block" v-link="{sub.custom_fields.position_link}">Ansök via LinkedIn</button>
           <button class="primary--button yellow">Ansök via Email</button>
         </div>
-        <div class="col-xs-12 col-md-4 work--image" v-bind:style="{'background-image': 'url(' + sub.custom_fields.position_image + ')' }"></div>
+        <div class="col-xs-12 col-md-12 work--image" v-bind:style="{'background-image': 'url(' + sub.custom_fields.position_image + ')' }"></div>
       </div>
     </div>
 </template>
