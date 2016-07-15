@@ -93,8 +93,6 @@ export default {
         transition.next(transition)
       }, 250)
     }
-  },
-  ready: function () {
   }
 }
 </script>

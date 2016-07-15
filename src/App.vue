@@ -21,7 +21,7 @@ export default {
       msg: 'About',
       global: {
         projectOpen: false,
-        loading: false
+        loading: true
       }
     }
   },
