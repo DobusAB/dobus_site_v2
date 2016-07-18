@@ -104,15 +104,12 @@
 
 			@include desktop {
 				&:hover {
-					//height:200px;
-					//width:200px;
-					margin-left:2em;
+					/*height:200px;
+					width:100px;
+					margin-left:3em;
+					border-radius:0%;
+					transform: translate(-50%, -100px);*/
 					cursor:pointer;
-					//border-radius:0%;
-					//transform: translate(-50%, -100px);
-
-					height:65px;
-					width:65px;
 				}
 			}
 

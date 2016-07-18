@@ -25,10 +25,11 @@ html, body {
   font-size: 16px;
 }
 
+
 .container {
   margin: 0 auto;
   text-align: center;
-  background-color: #fff;
+  //background-color: #fff;
 
   &.nav--project_open {
     overflow:hidden;

@@ -10,7 +10,7 @@
 		-webkit-overflow-scrolling: touch;
 		right:0;
 		transform:translateX(100%);
-		transition:all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+		transition:all 1s $soft--easing;
 
 		.section--overlap {
 			position:absolute;

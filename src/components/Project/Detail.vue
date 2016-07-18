@@ -20,7 +20,7 @@
         </div>
       </div>
       
-      <div class="project--section colored row" v-if="data[0].custom_field.project_solution_title || data[0].custom_field.project_solution_description">
+      <div class="project--section colored row" v-if="data[0].custom_field.project_solution_title || data[0].custom_field.project_solution_description" >
         <div class="col-xs-12 col-sm-6 text-left case--info  flex flow-vertical align-center"> 
           <h1>{{{data[0].custom_field.project_solution_title}}}</h1>
           <p>{{{data[0].custom_field.project_solution_description}}}</p>

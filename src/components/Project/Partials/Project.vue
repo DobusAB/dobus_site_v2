@@ -16,11 +16,11 @@
         </div>
         <div class="project--shadow"></div>
         <div class="project--intro">
-
+          <img src="{{{sub.custom_fields.project_thumbnail_logo}}}">
           <h1>{{{sub.post_title}}}</h1>
           <h4>{{{sub.custom_fields.project_description}}}</h4>
-          <hr class="dobus--border">
-          <img src="{{{sub.custom_fields.project_thumbnail_logo}}}">
+         <!-- <hr class="dobus--border">-->
+          
         </div>
         <div class="project--arrow flex align-middle align-center">
         <?xml version="1.0" encoding="UTF-8" standalone="no"?>

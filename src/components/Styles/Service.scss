@@ -1,9 +1,19 @@
-
-
+// Tillfälligt experiment 
+.container {
+    background: $dobus--primary url(../../assets/pattern_dobus.svg) repeat;
+    background-size:12%;
+}
 
 .service--section {
 	color:#fff;
 	position:relative;
+	animation: fadeIn 0.75s cubic-bezier(.23,1,.32,1);
+	animation-delay: 0s;
+
+	@keyframes fadeIn {
+	   0% {opacity: 1; bottom: -200px;}
+	   100% {opacity: 1; bottom: 0px;} 
+	} 
 
 
 	.service--top {
@@ -245,7 +255,7 @@
 				transition:all 0.5s;
 				.project--image {
 					opacity:0.2;
-					transition:all 0.4s;
+					transition:all 0.4s $soft--easing;
 				}
 				&:hover {
 					transform:translateX(-2.5em);
@@ -266,10 +276,10 @@
 			@include mega {
 			padding:$margin--large $margin--large;
 			margin-top:0em;
-			transition:all 0.5s;
+			transition:all 0.5s $soft--easing;
 				.project--image {
 					opacity:0.2;
-					transition:all 0.4s;
+					transition:all 0.4s $soft--easing;
 				}
 				&:hover {
 					transform:translateX(-2.5em);
@@ -297,7 +307,7 @@
 				border-radius:50%;
 				background-color:rgba(0,0,0,0.1);
 				right:25px;
-				transition:opacity 0.3s;
+				transition:opacity 0.3s $soft--easing;
 			}
 
 			.project--image {
@@ -335,7 +345,7 @@
 				opacity: 0.2;
 				width:50%;
 				max-width:225px;
-				transition:all 0.4s;
+				transition:all 0.4s $soft--easing;
 				animation: scale 1.75s infinite;
 				animation-direction: alternate;
 
@@ -348,7 +358,7 @@
 			.project--intro {
 				@include centerer;
 				width:80%;
-				transition:transform 0.4s;
+				transition:transform 0.4s $soft--easing;
 				hr {
 					width:20%;
 				}
@@ -356,8 +366,9 @@
 					max-height:80px;
 					max-width:200px;
 					width:auto;
+					display:none;
 					height:auto;
-					margin-top:0.5em;
+					margin-bottom:0.5em;
 				}
 				h1 {
 					font-size:1.7em;
