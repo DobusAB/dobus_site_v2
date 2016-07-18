@@ -104,11 +104,15 @@
 
 			@include desktop {
 				&:hover {
-					height:200px;
-					width:200px;
-					margin-left:-1em;
+					//height:200px;
+					//width:200px;
+					margin-left:2em;
 					cursor:pointer;
+					//border-radius:0%;
 					//transform: translate(-50%, -100px);
+
+					height:65px;
+					width:65px;
 				}
 			}
 
@@ -117,7 +121,7 @@
 			}
 			border-radius:50%;
 			transform:translateY(100px);
-			transition:all 0.6s $easing;
+			transition:all 0.4s $easing;
 		}
 
 		.nav--links {
