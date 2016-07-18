@@ -60,9 +60,10 @@ img {
 .dobus--border {
   border-style: dotted;
   border-width: 0px 0px 8px 0px;
-  border-color: rgba (0, 0, 0, 0.2); 
-  border-image-source: url(../../assets/dot.svg);
+  border-color: rgba (255, 255, 255, 0.2); 
+  border-image-source: url(../../assets/dot-white.svg);
   border-image-slice: 33% 33%;
+  opacity:0.4;
   border-image-repeat: round;
 
 }

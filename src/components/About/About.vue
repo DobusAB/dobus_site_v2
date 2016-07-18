@@ -9,7 +9,7 @@
             <h1>{{sub.post_title}}</h1>
              <h2>{{sub.custom_fields.work_title}}</h2>
             <!-- <p>{{sub.custom_fields.work_description}}</p>-->
-            <a href="">{{sub.custom_fields.work_phone}}
+            <a href="tel:{{sub.custom_fields.work_phone}}">{{sub.custom_fields.work_phone}}
               <span><?xml version="1.0" encoding="UTF-8" standalone="no"?>
                     <svg width="25px" height="25px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <defs></defs>
@@ -24,7 +24,7 @@
                     </svg>
                 </span>
             </a>
-            <a href="">{{sub.custom_fields.work_email}}
+            <a href="mailto:{{sub.custom_fields.work_email}}?Subject=Hej!" target="_top">{{sub.custom_fields.work_email}}
                <span>
                <?xml version="1.0" encoding="UTF-8" standalone="no"?>
                     <svg width="25px" height="25px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

@@ -349,7 +349,16 @@
 				@include centerer;
 				width:80%;
 				transition:transform 0.4s;
-
+				hr {
+					width:30%;
+				}
+				img {
+					max-height:80px;
+					max-width:200px;
+					width:auto;
+					height:auto;
+					margin-top:0.5em;
+				}
 				h1 {
 					font-size:1.7em;
 					line-height:1;
@@ -371,6 +380,7 @@
 				h4 {
 					font-size:1em;
 					font-weight:500;
+					margin-bottom:0.5em;
 					margin-top:0.2em;
 					@include tablet {
 						font-size:1.2em;

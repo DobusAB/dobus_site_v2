@@ -71,7 +71,7 @@
 			@include vertical--centerer;
 			margin-left:1.75em;
 			transform:translateY(-50%);
-			transition:all 0.3s $easing;
+			transition:all 0.6s $easing;
 
 			@include desktop {
 				margin-left:2em;
@@ -102,12 +102,22 @@
 			height:50px;
 			width:50px;
 
+			@include desktop {
+				&:hover {
+					height:200px;
+					width:200px;
+					margin-left:-1em;
+					cursor:pointer;
+					//transform: translate(-50%, -100px);
+				}
+			}
+
 			svg {
 				fill:#fff;
 			}
 			border-radius:50%;
 			transform:translateY(100px);
-			transition:all 0.3s $easing;
+			transition:all 0.6s $easing;
 		}
 
 		.nav--links {

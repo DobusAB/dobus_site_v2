@@ -7,7 +7,7 @@
         <div class="col-xs-12 col-md-12 work--image" v-bind:style="{'background-image': 'url(' + sub.custom_fields.position_image + ')' }">
           <div class="col-xs-12 col-md-8 text-left  work--description">
             <h1>{{sub.post_title}}</h1>
-            <span>Sista ansökning: 25/7</span>
+            <span>Sista ansökning: {{{sub.custom_fields.position_date }}}</span>
             <p>{{{sub.custom_fields.position_description }}}</p>
             <a href="">Ansök via LinkedIn 
               <span><?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -24,7 +24,7 @@
                     </svg>
                 </span>
             </a>
-            <a href="">Ansök via Mail
+            <a href="mailto:info@dobus.se?Subject={{{sub.post_title}}}" target="_top">Ansök via Mail
                <span>
                <?xml version="1.0" encoding="UTF-8" standalone="no"?>
                     <svg width="25px" height="25px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
