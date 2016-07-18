@@ -150,6 +150,8 @@
    				//flex-direction: column-reverse;
 
    				@include tablet {
+   					padding-bottom:$margin--medium;
+					padding-top: $margin--medium;
 					display: flex;
 					flex-direction: row;
 				}
@@ -312,6 +314,10 @@
 					font-weight:400;
 					color:#fff;
 
+					@include tablet {
+						font-size:1.3em;
+					}
+
 					@include desktop {
 						font-size:1.5em;
 					}
@@ -423,6 +429,7 @@
 
 				.project--arrow {
 					position:absolute;
+					background-color: rgba(0,0,0,0.1);
 					bottom:0;
 					left:0;
 					width:100%;

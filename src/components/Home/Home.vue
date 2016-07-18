@@ -10,12 +10,12 @@
               
                   <img class="item--image" v-bind:src="featuredRandom.custom_field.project_feature_image">
               </div>
-              <div class="item--right col-xs-8 col-md-6 align-left align-center">
+              <div class="item--right col-xs-8 col-md-5 flex align-left align-center">
                 <span>Utvalt case</span>
                 <h2 v-if="featured">{{ featuredRandom.title.rendered }}</h2>
                 <div class="project--arrow flex align-middle align-center">
                   <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-                    <svg width="25px" height="25px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <svg width="20px" height="20px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <defs></defs>
                         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
                             <g id="Tjänster-&amp;-Projekt-Copy-6" transform="translate(-1261.000000, -3125.000000)" stroke="#FFFFFF" stroke-width="5.59999957">

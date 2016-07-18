@@ -15,7 +15,7 @@
           <h1>Vårt uppdrag.</h1>
           <p>{{{data[0].custom_field.project_intro}}}</p>
         </div>
-        <div class="col-xs-12 col-sm-6 case--image flex align-middle align-center">
+        <div class="col-xs-10 margin-auto col-sm-4 case--image flex align-middle align-center">
           <img v-bind:src="data[0].custom_field.project_logo">
         </div>
       </div>
@@ -25,7 +25,7 @@
           <h1>{{{data[0].custom_field.project_solution_title}}}</h1>
           <p>{{{data[0].custom_field.project_solution_description}}}</p>
         </div>
-        <div class="col-xs-12 col-sm-6 case--image flex align-middle align-center" v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_solution_image + ')' }">
+        <div class="col-xs-10 margin-auto col-sm-4 case--image flex align-middle align-left" v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_solution_image + ')' }">
       
         </div>
       </div>
@@ -35,7 +35,7 @@
           <h1>{{{data[0].custom_field.project_solution_title_2}}}</h1>
           <p>{{{data[0].custom_field.project_solution_description_2}}}</p>
         </div>
-        <div class="col-xs-12 col-sm-6 case--image flex align-middle align-center" v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_solution_image_2 + ')' }">
+        <div class="col-xs-10 margin-auto col-sm-4 case--image flex align-middle align-center" v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_solution_image_2 + ')' }">
           
         </div>
       </div>
@@ -44,7 +44,7 @@
           <h1>{{{data[0].custom_field.project_solution_title_3}}}</h1>
           <p>{{{data[0].custom_field.project_solution_description_3}}}</p>
         </div>
-        <div class="col-xs-12 col-sm-6 case--image flex align-middle align-center" v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_solution_image_3 + ')' }">
+        <div class="col-xs-10 margin-auto col-sm-4 case--image flex align-middle align-center" v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_solution_image_3 + ')' }">
         </div>
       </div> 
 
@@ -53,7 +53,7 @@
             <h1>{{{data[0].custom_field.project_solution_title_4}}}</h1>
             <p>{{{data[0].custom_field.project_solution_description_4}}}</p>
           </div>
-          <div class="col-xs-12 col-sm-6 case--image flex align-middle align-center" v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_solution_image_4 + ')' }">
+          <div class="col-xs-10 margin-auto col-sm-4 case--image flex align-middle align-center" v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_solution_image_4 + ')' }">
             
           </div>
         </div>

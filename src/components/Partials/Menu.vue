@@ -17,10 +17,10 @@
 	  	 </div>
 	  	 <div v-link="{path: '/projects'}" class="nav--back">
 			<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-			<svg width="25px" height="25px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<svg width="20px" height="20px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 			    <defs></defs>
 			    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-			        <g id="Tjänster-&amp;-Projekt-Copy-6" transform="translate(-1261.000000, -3125.000000)" stroke="#000000" stroke-width="5.59999957">
+			        <g id="Tjänster-&amp;-Projekt-Copy-6" transform="translate(-1261.000000, -3125.000000)" stroke="#fff" stroke-width="5.59999957">
 			            <g id="Group-12" transform="translate(1279.000000, 3143.000000) scale(-1, 1) translate(-1279.000000, -3143.000000) translate(1264.000000, 3128.000000)">
 			                <path d="M0.566037736,14.7272727 L28.0997842,14.7272727" id="Path-36"></path>
 			                <polyline id="Path-37" points="14.1509434 0 29.5989795 14.8862893 14.1509434 29.7725787"></polyline>

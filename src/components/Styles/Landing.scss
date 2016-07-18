@@ -78,27 +78,54 @@
 				padding:0em;
 				flex-direction:row;
 				transition:transform 0.3s;
-				&:hover {
+
+				@include desktop {
+
+					&:hover {
 					transform:translateX(-100px);
 					cursor:pointer;
+						.item--right {
+							.project--arrow {
+								opacity:1 !important;
+							}
+						}
 
-					.item--right {
-						.project--arrow {
-							opacity:1 !important;
+						.item--image {
+							transform:translateX(-25px);
 						}
 					}
 
-					.item--image {
-						transform:translateX(-25px);
+				}
+
+
+				@include mega {
+
+					&:hover {
+					transform:translateX(-100px);
+					cursor:pointer;
+						.item--right {
+							.project--arrow {
+								opacity:1 !important;
+							}
+						}
+
+						.item--image {
+							transform:translateX(-25px);
+						}
 					}
+
 				}
 
 				.item--right {
 				    display: flex;
 				    padding:$margin--small/2 $margin--small/6;
 
+				    @include tablet {
+				    	padding:$margin--small 0em;
+				    }
+
 				    @include desktop {
-				    	padding:$margin--medium 0em;
+				    	padding:$margin--small 0em;
 				    }
 				     @include mega {
 				    	padding:$margin--medium 0em;
@@ -143,15 +170,18 @@
 						}
 					}
 
-					.project--arrow {
-						position:absolute;
-						height:100%;
-						width:100px;
-						opacity: 0;
-						right:0;
-						top:0;
-						transition:opacity 0.3s;
-					}
+					
+			.project--arrow {
+				//position:absolute;
+				height:75px;
+				width:75px;
+				@include vertical--centerer;
+				opacity: 0;
+				border-radius:50%;
+				background-color:rgba(0,0,0,0.1);
+				right:25px;
+				transition:opacity 0.3s;
+			}
 				}
 
 				.item--left {
@@ -170,6 +200,13 @@
 						background-repeat:no-repeat;
 						animation: fadeIn 1s;
 						animation-delay: 0s;
+
+						@include tablet {
+							height:240px;
+							bottom:0;
+							top:auto;
+							right:5em;
+						}
 
 						@include desktop {
 							height:240px;
