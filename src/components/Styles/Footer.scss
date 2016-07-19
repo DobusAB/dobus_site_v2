@@ -11,13 +11,13 @@
 	transition:transform 1s;
 
 	@keyframes fadeIn {
-	   0% {opacity: 1; transform:translateY(300px);}
+	   0% {opacity: 1; transform:translateY(100px);}
 	   100% {opacity: 1; transform:translateY(0px);} 
 	} 
 
 	&.fadeIn {
 		transition:transform 2s;
-		transform:translateY(300px);
+		transform:translateY(100px);
 	}
 	&::after {
 		content: "";

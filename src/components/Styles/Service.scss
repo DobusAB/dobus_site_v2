@@ -2,9 +2,9 @@
 	color:#fff;
 	position:relative;
 	animation-name: fadeIn;
-	animation-duration: 1.25s;
+	animation-duration: 0.5s;
 	animation-delay: 0s;
-	transition:transform 1s;
+	transition:transform 0.5s;
 
 	@keyframes fadeIn {
 	   0% {opacity: 1; transform:translateY(300px);}
