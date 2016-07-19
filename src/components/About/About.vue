@@ -1,6 +1,6 @@
 <template>
    <div class="page--intro flex align-left align-middle" v-if="show">
-      <h1>{{data.title.rendered}}</h1>
+      <h1 v-bind:class="{'fadeIn' : this.$root.global.loading}">{{data.title.rendered}}</h1>
   </div>
 
       <div class="about--container" v-if="show">

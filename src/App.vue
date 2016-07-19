@@ -3,8 +3,8 @@
     <menu></menu>
    <!-- <loading :show.sync="global.loading"></loading>-->
       <router-view></router-view>
-    <sidfot></sidfot>
   </div>
+  <sidfot></sidfot>
 </template>
 
 <script>

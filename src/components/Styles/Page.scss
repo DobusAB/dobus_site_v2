@@ -4,6 +4,7 @@
 		//background: $dobus--primary url(../../assets/pattern_dobus.svg) repeat; Tog bort tillfälligt för att testa.
 		background-size:35%;
 		color:#fff;
+		opacity:1;
 		min-height:95vh;
 
 		@include desktop {
@@ -19,6 +20,20 @@
 		h1 {
 			font-size:2.3em;
 			line-height:1.1;
+			transition:opacity 0.5s;
+			opacity:1;
+			animation: fadeInText 0.75s cubic-bezier(.23,1,.32,1);
+
+			@keyframes fadeInText {
+			   0% {opacity: 0;}
+			   100% {opacity: 1;} 
+			} 
+
+
+			&.fadeIn { 
+				opacity:0;
+			}
+
 			@include tablet {
 				font-size:3.5em;
 				line-height:1.2;

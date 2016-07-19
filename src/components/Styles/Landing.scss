@@ -51,6 +51,19 @@
 			h1 {
 				font-size:1.9em;
 				margin-bottom:2em;
+				transition:opacity 0.5s;
+				opacity:1;
+				animation: fadeInText 0.75s cubic-bezier(.23,1,.32,1);
+
+				@keyframes fadeInText {
+				   0% {opacity: 0;}
+				   100% {opacity: 1;} 
+				} 
+
+
+				&.fadeIn { 
+					opacity:0;
+				}
 				@include mega {
 					font-size:4.0em;
 					line-height: 1.2;

@@ -1,6 +1,6 @@
 <template>
      <div class="page--intro flex align-left align-middle" v-if="show">
-        <h1>{{data.title.rendered}}</h1>
+        <h1 v-bind:class="{'fadeIn' : this.$root.global.loading}">{{data.title.rendered}}</h1>
     </div>
     <div class="positions--container">
       <div class="row work--position" v-for="sub in data.sub_pages">

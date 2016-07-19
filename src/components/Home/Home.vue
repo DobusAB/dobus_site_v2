@@ -2,7 +2,7 @@
     <div class="landing--container flex align-center align-middle" v-if="show">
       <div class="row">
           <div class="col-xs-12 col-md-10 col-lg-10 bg landing--intro margin-auto text-center flex align-middle">
-            <h1 v-if="data.title">{{ data.title.rendered }}</h1>
+            <h1 v-bind:class="{'fadeIn' : this.$root.global.loading}">{{ data.title.rendered }}</h1>
           </div>
           <div class="col-xs-12 bg landing--carousel flex align-middle" v-on:click="goToProject">
             <div class="carousel--item row text-left">

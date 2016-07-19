@@ -1,8 +1,7 @@
-
 <template>
-  <div v-if="show">
+  <div>
     <div class="page--intro flex align-left align-middle">
-        <h1>{{data.title.rendered}}</h1>
+        <h1 v-bind:class="{'fadeIn' : this.$root.global.loading}">{{data.title.rendered}}</h1>
     </div>
     <projects :project="data.sub_pages"></projects>
   </div>
