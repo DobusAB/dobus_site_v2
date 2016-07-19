@@ -1,7 +1,7 @@
 <template>
-  <div class="container" v-bind:class="{'nav--project_open': this.$root.global.projectOpen}">
+  <div class="container" v-bind:class="{'nav--project_open': this.$root.global.projectOpen, 'fadeIn' : global.loading}">
     <menu></menu>
-    <loading :show.sync="global.loading"></loading>
+   <!-- <loading :show.sync="global.loading"></loading>-->
       <router-view></router-view>
     <sidfot></sidfot>
   </div>

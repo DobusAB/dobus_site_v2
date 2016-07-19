@@ -17,23 +17,20 @@
 		from {background-position: 0% 0%;}
 		to {background-position: -108% 0%}
 	}
-	@include desktop {
-		@keyframes backgroundScroll {
-		from {background-position: 0% 0%;}
-		to {background-position: -150% 0%}
-		}
-	}
 }
 
+
+@keyframes backgroundScroll {
+	from {background-position: 0% 0%;}
+	to {background-position: -150% 0%}
+}
+
+
 .hide {
-	opacity:0;
-	transition:opacity .25s;
 	animation: none;
 	animation-delay: 0.7s;
 }
 .fadeIn {
-	opacity:1;
-	transition:opacity .25s;
 	animation: backgroundScroll 1s cubic-bezier(1, 0, 0, 1) infinite;
 	animation-delay: 0.9s;
 }
