@@ -59,10 +59,23 @@ router.map({
   }
 })
 router.beforeEach(function (transition) {
-  if (transition.to.name === 'project_by_name' || transition.to.name === 'project') {
+  if (transition.to.name === 'project_by_name') {
     transition.next()
+  } else if (transition.from.name === 'project_by_name') {
+    if (transition.to.name === 'project') {
+      transition.next()
+    } else {
+      animatedScrollTo(
+        document.body,
+        0,
+        500,
+        function () {
+          window.scrollTo(0, 0)
+          transition.next()
+        }
+      )
+    }
   } else {
-    /* window.scrollTo(0, 0) */
     animatedScrollTo(
       document.body,
       0,
