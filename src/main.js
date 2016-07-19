@@ -57,12 +57,12 @@ router.map({
     component: require('./components/Process/Process.vue')
   }
 })
-router.beforeEach(function (transition) {
+router.afterEach(function (transition) {
   if (transition.to.name === 'project_by_name' || transition.to.name === 'project') {
-    transition.next()
+    // transition.next()
   } else {
     window.scrollTo(0, 0)
-    transition.next()
+    // transition.next()
   }
 })
 
