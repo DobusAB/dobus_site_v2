@@ -17,7 +17,7 @@
 
 	&.fadeIn {
 		transition:transform 2s;
-		transform:translateY(20px);
+		transform:translateY(16px);
 	}
 	&::after {
 		content: "";

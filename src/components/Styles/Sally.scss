@@ -36,18 +36,33 @@ html, body {
     @include mega {
       background-size:12%;
     }
-  //background-color: #fff;
 
-  &.fadeIn {
+    &.fadeIn {
     overflow:hidden;
     animation: backgroundScroll 1s cubic-bezier(1, 0, 0, 1) infinite;
     animation-delay: 0.75s;
   }
 
-  @keyframes backgroundScroll {
+ @keyframes backgroundScroll {
     from {background-position: 0% 0%;}
-    to {background-position: -150% 0%}
+    to {background-position: -108% 0%}
   }
+  //background-color: #fff;
+  @include desktop {
+       @keyframes backgroundScroll {
+        from {background-position: 0% 0%;}
+        to {background-position: -150% 0%}
+      }
+  }
+
+    @include mega {
+       @keyframes backgroundScroll {
+        from {background-position: 0% 0%;}
+        to {background-position: -150% 0%}
+      }
+  }
+  
+  
 
   &.nav--project_open {
     overflow:hidden;

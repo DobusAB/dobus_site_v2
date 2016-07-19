@@ -69,12 +69,13 @@
 			height:40px;
 			position:absolute;
 			@include vertical--centerer;
-			margin-left:1.75em;
-			transform:translateY(-50%);
+			margin-left:1em;
+			transform:translateY(-50%) scale(0.75);
 			transition:all 0.6s $easing;
 
 			@include desktop {
 				margin-left:2em;
+				transform:translateY(-50%) scale(0.85);
 
 				&:hover {
 					cursor:pointer;
@@ -83,6 +84,7 @@
 			}
 			@include mega {
 				margin-left:3em;
+				transform:translateY(-50%) scale(1);
 
 				&:hover {
 					cursor:pointer;
@@ -171,28 +173,36 @@
 				}
 
 				@include desktop {
+					&:nth-child(1){
+						margin-left:2em;
+					}
 					&:hover {
 						color:#000;
 						span {
 							bottom:17.5px;
 						}
 					}
-					margin-right:4em;
+					margin-right:3em;
 				}
 
 				@include mega {
+					&:nth-child(1){
+						margin-left:2em;
+					}
 					&:hover {
 						color:#000;
 						span {
 							bottom:17.5px;
 						}
 					}
-					margin-right:5.5em;
+					margin-right:4.5em;
 				}
 
 				&:nth-child(1){
-					margin-left:2em;
+					margin-left:1em;
 				}
+
+				
  			}
 	}
 }
