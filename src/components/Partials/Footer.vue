@@ -62,7 +62,7 @@ export default {
     }
   },
   ready: function () {
-    this.getLogos()
+    // this.getLogos()
   }
 }
 
