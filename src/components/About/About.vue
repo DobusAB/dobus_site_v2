@@ -3,7 +3,7 @@
       <h1 v-bind:class="{'fadeIn' : this.$root.global.loading}">{{data.title.rendered}}</h1>
   </div>
 
-      <div class="about--container" v-if="show">
+      <div class="about--container" v-bind:class="{'fadeIn' : this.$root.global.loading}" v-if="show">
       <div class="row about--employee" v-for="sub in data.sub_pages" v-bind:style="{background: sub.custom_fields.work_color }">
           <div class="col-xs-12 col-md-8 text-left about--description">
             <h1>{{sub.post_title}}</h1>

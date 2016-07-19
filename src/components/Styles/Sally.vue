@@ -31,6 +31,20 @@ html, body {
   text-align: center;
   //background-color: #fff;
 
+  &.fadeIn {
+    animation: backgroundScroll 1s cubic-bezier(1, 0, 0, 1) infinite;
+    animation-delay: 0.75s;
+    h1 {
+      transition:opacity 0.5s;
+      opacity:1;
+    }
+  }
+
+  @keyframes backgroundScroll {
+    from {background-position: 0% 0%;}
+    to {background-position: -150% 0%}
+  }
+
   &.nav--project_open {
     overflow:hidden;
   }

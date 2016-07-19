@@ -1,5 +1,5 @@
 	
-
+	/*
 	.loading--container {
 		height:100vh;
 		width:100%;
@@ -8,7 +8,7 @@
 		left:0;
 		z-index:9;
 		background-color:$dobus--primary;
-	}
+	}*/
 
 	.landing--container {
 		height:100vh;
@@ -59,8 +59,6 @@
 				   0% {opacity: 0;}
 				   100% {opacity: 1;} 
 				} 
-
-
 				&.fadeIn { 
 					opacity:0;
 				}
@@ -85,7 +83,13 @@
 			bottom:0;
 			left:0;
 			transition:transform 0.5s cubic-bezier(.23,1,.32,1);
-
+			transition:opacity 0.5s;
+		
+			&.fadeIn {
+				transition:transform 0.5s cubic-bezier(.23,1,.32,1);
+				transform:translateY(300px);
+			}
+			
 			.carousel--item {
 				width:100%;
 				padding:0em;
@@ -213,6 +217,7 @@
 						background-repeat:no-repeat;
 						animation: fadeIn 0.75s cubic-bezier(.23,1,.32,1);
 						animation-delay: 0s;
+
 
 						@include tablet {
 							height:240px;

@@ -1,3 +1,20 @@
+.positions--container {
+	animation-name: fadeIn;
+	animation-duration: 1.25s;
+	animation-delay: 0s;
+	transition:transform 1s;
+
+	@keyframes fadeIn {
+	   0% {opacity: 1; transform:translateY(300px);}
+	   100% {opacity: 1; transform:translateY(0px);} 
+	} 
+
+	&.fadeIn {
+		transition:transform 2s;
+		transform:translateY(300px);
+	}
+}
+
 .work--position {
 
 	.work--image {

@@ -2,7 +2,7 @@
      <div class="page--intro flex align-left align-middle" v-if="show">
         <h1 v-bind:class="{'fadeIn' : this.$root.global.loading}">{{data.title.rendered}}</h1>
     </div>
-    <div class="positions--container">
+    <div class="positions--container" v-bind:class="{'fadeIn' : this.$root.global.loading}">
       <div class="row work--position" v-for="sub in data.sub_pages">
         <div class="col-xs-12 col-md-12 work--image" v-bind:style="{'background-image': 'url(' + sub.custom_fields.position_image + ')' }">
           <div class="col-xs-12 col-md-8 text-left  work--description">

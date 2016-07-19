@@ -4,10 +4,9 @@
           <div class="col-xs-12 col-md-10 col-lg-10 bg landing--intro margin-auto text-center flex align-middle">
             <h1 v-bind:class="{'fadeIn' : this.$root.global.loading}">{{ data.title.rendered }}</h1>
           </div>
-          <div class="col-xs-12 bg landing--carousel flex align-middle" v-on:click="goToProject">
+          <div class="col-xs-12 bg landing--carousel flex align-middle" v-on:click="goToProject" v-bind:class="{'fadeIn' : this.$root.global.loading}">
             <div class="carousel--item row text-left">
               <div class="item--left col-xs-4 col-md-6 ">
-              
                   <img class="item--image" v-bind:src="featuredRandom.custom_field.project_feature_image">
               </div>
               <div class="item--right col-xs-8 col-md-5 flex align-left align-center">
