@@ -62,43 +62,6 @@
 			 }
 			 .nav--back {
 				transform:translateY(-50%);
-			
-
-			@include mega {
-				&:hover {
-					height:50px;
-					width:50px;
-					margin-left:2.5em;
-					svg {
-						height:20px;
-					}
-					height:200px;
-					width:100px;
-
-					margin-left:3em;
-					border-radius:0%;
-					transform: translate(-50%, -100px);
-					cursor:pointer;
-				}
-			}
-
-			@include desktop {
-				&:hover {
-					height:50px;
-					width:50px;
-					margin-left:2.5em;
-					svg {
-						height:20px;
-					}
-					height:200px;
-					width:100px;
-
-					margin-left:3em;
-					border-radius:0%;
-					transform: translate(-50%, -100px);
-					cursor:pointer;
-				}
-			}
 			}
 		}
 
