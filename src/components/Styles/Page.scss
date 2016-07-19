@@ -1,20 +1,21 @@
 .page--intro {
 		padding:$margin--small $margin--small $margin--small $margin--small;
 		text-align: center;
-		//background: $dobus--primary url(../../assets/pattern_dobus.svg) repeat; Tog bort tillfälligt för att testa.
 		background-size:35%;
 		color:#fff;
 		opacity:1;
-		min-height:95vh;
+		min-height:90vh;
 
 		@include desktop {
 			padding:$margin--large $margin--large;
 			background-size:12%;
+			min-height:95vh;
 		}
 
 		@include mega {
 			padding:$margin--large $margin--large;
 			background-size:12%;
+			min-height:95vh;
 		}
 
 		h1 {

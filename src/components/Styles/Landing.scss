@@ -12,15 +12,7 @@
 
 	.landing--container {
 		height:100vh;
-		background: $dobus--primary url(../../assets/pattern_dobus.svg) repeat;
-		background-size:35%;
 		position:relative;
-		@include desktop {
-			background-size:12%;
-		}
-		@include mega {
-			background-size:12%;
-		}
 		color:#fff;
 		padding:0em $margin--small/2;
 		@include mega {
@@ -89,7 +81,7 @@
 				transition:transform 0.5s cubic-bezier(.23,1,.32,1);
 				transform:translateY(300px);
 			}
-			
+
 			.carousel--item {
 				width:100%;
 				padding:0em;

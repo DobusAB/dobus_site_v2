@@ -21,6 +21,7 @@ $column-gutter: 1.4rem;
 
 html, body {
   font-size: 16px;
+  background: $dobus--primary;
 }
 
 
@@ -28,15 +29,19 @@ html, body {
   margin: 0 auto;
   text-align: center;
   background: $dobus--primary url(../../assets/pattern_dobus.svg) repeat;
-  background-size:12%;
+  background-size:35%;
   min-height:100vh;
+  @include desktop {
+      background-size:12%;
+    }
+    @include mega {
+      background-size:12%;
+    }
   //background-color: #fff;
 
   &.fadeIn {
     animation: backgroundScroll 1s cubic-bezier(1, 0, 0, 1) infinite;
     animation-delay: 0.75s;
-    overflow:hidden;
-    max-height:50vh;
     h1 {
       transition:opacity 0.5s;
       opacity:1;
