@@ -5,6 +5,7 @@ import VueResource from 'vue-resource'
 import VueHead from 'vue-head'
 import FastClick from 'fastclick'
 import 'vue-lazyload-img'
+import animatedScrollTo from 'animated-scrollto'
 
 require('./components/Styles/Style.vue')
 require('./components/Styles/Sally.vue')
@@ -57,12 +58,20 @@ router.map({
     component: require('./components/Process/Process.vue')
   }
 })
-router.afterEach(function (transition) {
+router.beforeEach(function (transition) {
   if (transition.to.name === 'project_by_name' || transition.to.name === 'project') {
-    // transition.next()
+    transition.next()
   } else {
-    window.scrollTo(0, 0)
-    // transition.next()
+    /* window.scrollTo(0, 0) */
+    animatedScrollTo(
+      document.body,
+      0,
+      500,
+      function () {
+        window.scrollTo(0, 0)
+        transition.next()
+      }
+    )
   }
 })
 
