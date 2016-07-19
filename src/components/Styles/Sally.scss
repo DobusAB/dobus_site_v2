@@ -21,7 +21,6 @@ $column-gutter: 1.4rem;
 
 html, body {
   font-size: 16px;
-  background: $dobus--primary;
 }
 
 
@@ -42,10 +41,6 @@ html, body {
   &.fadeIn {
     animation: backgroundScroll 1s cubic-bezier(1, 0, 0, 1) infinite;
     animation-delay: 0.75s;
-    h1 {
-      transition:opacity 0.5s;
-      opacity:1;
-    }
   }
 
   @keyframes backgroundScroll {
@@ -56,8 +51,6 @@ html, body {
   &.nav--project_open {
     overflow:hidden;
   }
-  //padding: 0 $column-gutter;
-  //max-width: $device-lg;
 }
 
 .container:after, .row:after {

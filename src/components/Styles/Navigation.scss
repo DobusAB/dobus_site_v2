@@ -62,6 +62,43 @@
 			 }
 			 .nav--back {
 				transform:translateY(-50%);
+			
+
+			@include mega {
+				&:hover {
+					height:50px;
+					width:50px;
+					margin-left:2.5em;
+					svg {
+						height:20px;
+					}
+					height:200px;
+					width:100px;
+
+					margin-left:3em;
+					border-radius:0%;
+					transform: translate(-50%, -100px);
+					cursor:pointer;
+				}
+			}
+
+			@include desktop {
+				&:hover {
+					height:50px;
+					width:50px;
+					margin-left:2.5em;
+					svg {
+						height:20px;
+					}
+					height:200px;
+					width:100px;
+
+					margin-left:3em;
+					border-radius:0%;
+					transform: translate(-50%, -100px);
+					cursor:pointer;
+				}
+			}
 			}
 		}
 
@@ -97,24 +134,14 @@
 			justify-content: center;
 			align-items:center;
 			@include vertical--centerer;
-			margin-left:2.5em;
+			margin-left:1.5em;
 			background-color:$dobus--black;
-			height:50px;
-			width:50px;
-
-			@include desktop {
-				&:hover {
-					/*height:200px;
-					width:100px;
-					margin-left:3em;
-					border-radius:0%;
-					transform: translate(-50%, -100px);*/
-					cursor:pointer;
-				}
-			}
+			height:40px;
+			width:40px;
 
 			svg {
 				fill:#fff;
+				height:15px;
 			}
 			border-radius:50%;
 			transform:translateY(100px);
@@ -125,7 +152,7 @@
 			
 			display:inline-flex;
 			white-space: nowrap;
-			margin-left:120px;
+			margin-left:100px;
 
 			@include desktop {
 				justify-content: flex-end;

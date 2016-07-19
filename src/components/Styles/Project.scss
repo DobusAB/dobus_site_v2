@@ -78,16 +78,18 @@
 				}
 				h4 {
 					margin-top:1em;
-					font-weight:400;
+					font-weight:500;
 					@include tablet {
 						font-size:1.8em;
+						margin-top:0.25em;
 					}
 					@include desktop {
 						margin-top:0.25em;
-						font-size:1.8em;
+						font-size:1.75em;
 					}
 					@include mega {
-						font-size:2em;
+						font-size:1.75em;
+						margin-top:0.25em;
 					}
 				}
 
@@ -434,8 +436,19 @@
 					bottom:0;
 					left:0;
 					width:100%;
-					opacity: 0;
-					height:100px;
+					opacity: 1;
+
+					@include desktop {
+						opacity: 0;
+						height:100px;
+					}
+
+					@include mega {
+						opacity: 0;
+						height:100px;
+					}
+
+					height:60px;
 					transition:opacity 0.3s;
 
 					svg {
