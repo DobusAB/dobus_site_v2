@@ -1,5 +1,5 @@
 <template>
- <div class="footer">
+ <div class="footer" v-bind:class="{'fadeIn' : this.$root.global.loading}">
       <div class="row">
         <h1>Nämen hej!</h1>
       </div>

@@ -8,19 +8,20 @@
 .service--section {
 	color:#fff;
 	position:relative;
-	animation: fadeIn 0.75s cubic-bezier(.23,1,.32,1);
+	animation-name: fadeIn;
+	animation-duration: 1.25s;
 	animation-delay: 0s;
+	transition:transform 1s;
 
 	@keyframes fadeIn {
-	   0% {opacity: 1; bottom: -200px;}
-	   100% {opacity: 1; bottom: 0px;} 
+	   0% {opacity: 1; transform:translateY(300px);}
+	   100% {opacity: 1; transform:translateY(0px);} 
 	} 
 
 	&.fadeIn {
 		transition:transform 2s;
 		transform:translateY(300px);
 	}
- 
 
 	.service--top {
 		height:25px;

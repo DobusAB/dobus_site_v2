@@ -4,6 +4,21 @@
 	z-index:1;
 	position:relative;
 	background-color:$dobus--black;
+
+	animation-name: fadeIn;
+	animation-duration: 1.25s;
+	animation-delay: 0s;
+	transition:transform 1s;
+
+	@keyframes fadeIn {
+	   0% {opacity: 1; transform:translateY(300px);}
+	   100% {opacity: 1; transform:translateY(0px);} 
+	} 
+
+	&.fadeIn {
+		transition:transform 2s;
+		transform:translateY(300px);
+	}
 	&::after {
 		content: "";
 	    background: url(../../assets/wave.svg) 0 100% repeat-x;
