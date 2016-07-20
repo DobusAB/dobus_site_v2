@@ -1,7 +1,7 @@
 <template>
-	<div id="projecttop" class="project-container" v-if="data.length > 0" transition="expand">
+	<div id="projecttop" class="project-container" v-if="data.length > 0" transition="expand" v-bind:style="{background: data[0].custom_field.project_color}">
     <div class="project-inner">
-      <div class="project--image flex flow-vertical align-center align-middle" v-bind:style="{background: data[0].custom_field.project_color}">
+      <div class="project--image flex flow-vertical align-center align-middle">
         <div class="project--intro">
           <h1>{{{data[0].title.rendered}}}</h1>
           <h4>{{{data[0].custom_field.project_description}}}</h4>
@@ -9,54 +9,51 @@
         <div class="project--image_container" v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_featured_image + ')' }"></div>
         <div class="project--shadow"></div>
       </div>
-      
-      <div class="project--section row" v-if="data[0].custom_field.project_intro">
-        <div class="col-xs-12 col-sm-6 text-left case--info flex flow-vertical align-center"> 
-          <h1>Vårt uppdrag.</h1>
-          <p>{{{data[0].custom_field.project_intro}}}</p>
-        </div>
-        <div class="col-xs-10 margin-auto col-sm-4 case--image flex align-middle align-center">
-          <img v-bind:src="data[0].custom_field.project_logo">
-        </div>
+
+      <div class="project--section colored row" v-if="data[0].custom_field.project_intro">
+         <div class="col-xs-12 col-sm-12 align-center align-middle"> 
+           <h2 class="project--description">{{{data[0].custom_field.project_intro}}}</h2>
+         </div>
       </div>
       
       <div class="project--section colored row" v-if="data[0].custom_field.project_solution_title || data[0].custom_field.project_solution_description" >
-        <div class="col-xs-12 col-sm-6 text-left case--info  flex flow-vertical align-center"> 
+        <div class="col-xs-12 text-center case--image  flex flow-vertical align-center"> 
+          <img class="margin-auto" v-bind:src="data[0].custom_field.project_solution_image">
+        </div>
+        <div class="col-xs-12 text-center case--info  flex flow-vertical align-center"> 
           <h1>{{{data[0].custom_field.project_solution_title}}}</h1>
           <p>{{{data[0].custom_field.project_solution_description}}}</p>
         </div>
-        <div class="col-xs-10 margin-auto col-sm-4 case--image flex align-middle align-left" v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_solution_image + ')' }">
-      
-        </div>
       </div>
 
-       <div class="project--section row" v-if="data[0].custom_field.project_solution_title_2 || data[0].custom_field.project_solution_description_2">
-        <div class="col-xs-12 col-sm-6 text-left case--info  flex flow-vertical align-center"> 
+      <div class="project--section colored row" v-if="data[0].custom_field.project_solution_title_2 || data[0].custom_field.project_solution_description_2" >
+        <div class="col-xs-12 text-center case--image  flex flow-vertical align-center"> 
+          <img class="margin-auto" v-bind:src="data[0].custom_field.project_solution_image_2">
+        </div>
+        <div class="col-xs-12 text-center case--info  flex flow-vertical align-center"> 
           <h1>{{{data[0].custom_field.project_solution_title_2}}}</h1>
           <p>{{{data[0].custom_field.project_solution_description_2}}}</p>
         </div>
-        <div class="col-xs-10 margin-auto col-sm-4 case--image flex align-middle align-center" v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_solution_image_2 + ')' }">
-          
-        </div>
       </div>
-      <div class="project--section colored row" v-if="data[0].custom_field.project_solution_title_3 || data[0].custom_field.project_solution_title_3">
-        <div class="col-xs-12 col-sm-6 text-left case--info  flex flow-vertical align-center"> 
+      <div class="project--section colored row" v-if="data[0].custom_field.project_solution_title_3 || data[0].custom_field.project_solution_description_3" >
+        <div class="col-xs-12 text-center case--image  flex flow-vertical align-center"> 
+          <img class="margin-auto" v-bind:src="data[0].custom_field.project_solution_image_3">
+        </div>
+        <div class="col-xs-12 text-center case--info  flex flow-vertical align-center"> 
           <h1>{{{data[0].custom_field.project_solution_title_3}}}</h1>
           <p>{{{data[0].custom_field.project_solution_description_3}}}</p>
         </div>
-        <div class="col-xs-10 margin-auto col-sm-4 case--image flex align-middle align-center" v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_solution_image_3 + ')' }">
-        </div>
       </div> 
 
-       <div class="project--section row" v-if="data[0].custom_field.project_solution_title_4 || data[0].custom_field.project_solution_description_4">
-          <div class="col-xs-12 col-sm-6 text-left case--info  flex flow-vertical align-center"> 
-            <h1>{{{data[0].custom_field.project_solution_title_4}}}</h1>
-            <p>{{{data[0].custom_field.project_solution_description_4}}}</p>
-          </div>
-          <div class="col-xs-10 margin-auto col-sm-4 case--image flex align-middle align-center" v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_solution_image_4 + ')' }">
-            
-          </div>
+      <div class="project--section colored row" v-if="data[0].custom_field.project_solution_title_4 || data[0].custom_field.project_solution_description_4" >
+        <div class="col-xs-12 text-center case--image  flex flow-vertical align-center"> 
+          <img class="margin-auto" v-bind:src="data[0].custom_field.project_solution_image_4">
         </div>
+        <div class="col-xs-12 text-center case--info  flex flow-vertical align-center"> 
+          <h1>{{{data[0].custom_field.project_solution_title_4}}}</h1>
+          <p>{{{data[0].custom_field.project_solution_description_4}}}</p>
+        </div>
+      </div> 
 
       <div class="project--section colored row" v-if="data[0].custom_field.project_results">
          <div class="col-xs-12 col-sm-12 align-center align-middle"> 
