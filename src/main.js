@@ -84,6 +84,7 @@ router.beforeEach(function (transition) {
         transition.next()
       }
     )
+    transition.next()
   }
 })
 
