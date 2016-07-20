@@ -69,10 +69,10 @@ router.beforeEach(function (transition) {
         0,
         500,
         function () {
-          window.scrollTo(0, 0)
-          transition.next()
+          // window.scrollTo(0, 0)
         }
       )
+      transition.next()
     }
   } else {
     animatedScrollTo(
@@ -80,8 +80,8 @@ router.beforeEach(function (transition) {
       0,
       500,
       function () {
-        window.scrollTo(0, 0)
-        transition.next()
+        // window.scrollTo(0, 0)
+        // transition.next()
       }
     )
     transition.next()
