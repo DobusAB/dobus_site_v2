@@ -56,49 +56,58 @@
 		@include mega {
 
 			&:hover{
-					//Webb
-
-					#box_x5F_1 {
-					transform:translate(188.000000px, 96.000000px);
+				#glödlampa_tänd {
+					animation: flicker 1s infinite alternate;
+					@keyframes flicker {
+						0% {
+							opacity:1;
+						}
+						100% {
+							opacity:0;
+						}
 					}
-					#box_x5F_2 {
-						transform: translate(237.000000px, 68.000000px);
-					}
-					#box_x5F_3 {
-						transform: translate(140.000000px, 68.000000px);
-					}
-					#box_x5F_4 {
-						transform: translate(188.000000px, 40.000000px);
-					}
-					#box_x5F_5 {
-						transform: translate(92.000000px, 40.000000px);
-					}
-					#box_x5F_6 {
-						transform: translate(140.000000px, 12.000000px);
-					}
-
-					// Digital Design 
-					#back_x5F_end {
-						transform: translateX(27.000000px) translateY(100.000000px);
-					}
-
-					#Phone_x5F_top {
-						transform: translateX(0.000000px) translateY(-100.000000px);
-					}
-					// Rocket Illustration
-					#raket{
-						transition:all 0.8s;
-						transform:translateY(-700.00000px) translateX(150.00000px);
-					}
-					#raket_x5F_skugga {
-						transition:all 0.4s;
-						opacity:0.4;
-					}
-					#knapp {
-						transform:translateY(230.00000px) translateX(40.00000px);
-					}
-
 				}
+				#box_x5F_1 {
+				transform:translate(188.000000px, 96.000000px);
+				}
+				#box_x5F_2 {
+					transform: translate(237.000000px, 68.000000px);
+				}
+				#box_x5F_3 {
+					transform: translate(140.000000px, 68.000000px);
+				}
+				#box_x5F_4 {
+					transform: translate(188.000000px, 40.000000px);
+				}
+				#box_x5F_5 {
+					transform: translate(92.000000px, 40.000000px);
+				}
+				#box_x5F_6 {
+					transform: translate(140.000000px, 12.000000px);
+				}
+
+				// Digital Design 
+				#back_x5F_end {
+					transform: translateX(27.000000px) translateY(100.000000px);
+				}
+
+				#Phone_x5F_top {
+					transform: translateX(0.000000px) translateY(-100.000000px);
+				}
+				// Rocket Illustration
+				#raket{
+					transition:all 0.8s;
+					transform:translateY(-700.00000px) translateX(150.00000px);
+				}
+				#raket_x5F_skugga {
+					transition:all 0.4s;
+					opacity:0.4;
+				}
+				#knapp {
+					transform:translateY(230.00000px) translateX(40.00000px);
+				}
+
+			}
 
 		}
 		@include desktop {
@@ -366,7 +375,7 @@
 		position:relative;
 
 		.service--project {
-			padding:$margin--small $margin--small;
+			padding:$margin--medium $margin--small;
 			position:relative;
 			min-width:200px;
 			@include tablet {
