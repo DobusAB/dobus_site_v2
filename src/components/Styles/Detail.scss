@@ -1,0 +1,593 @@
+.project-container {
+		max-height:100vh;
+		min-height:100vh;
+		background-color:#fff;
+		position:fixed;
+		width:100%;
+		z-index:2;
+		top:0;
+		overflow:scroll;
+		-webkit-overflow-scrolling: touch;
+		right:0;
+		transform:translateX(100%);
+		transition:all 1s $soft--easing;
+
+		.section--overlap {
+			position:absolute;
+			bottom:-55px;
+			left:0;
+			right:0;
+			z-index:2;
+			margin:auto;
+		}
+
+		.project-inner {
+			display:flex;
+			width:100%;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			//color:#fff;
+			.project--image {
+				height:90vh;
+				width:100%;
+				background-size:15%;
+				position:relative;
+
+				@include tablet {
+					height:90vh;
+				}
+				@include desktop {
+					height:95vh;
+				}
+				@include mega {
+					height:95vh;
+				}
+
+				.project--intro {
+					@include centerer;
+					color:#fff;
+					z-index:2;
+					width:85%;
+					h1 {
+					font-size:2.1em;
+					margin-bottom:0.25em;
+					margin-top:1.2em;
+					line-height:1;
+
+					@include tablet {
+						width:100%;
+						margin:0 auto;
+						margin-top:0em;
+						font-size:3em;
+					}
+
+					@include desktop {
+						width:100%;
+						margin:0 auto;
+						margin-top:0em;
+						font-size:3.5em;
+					}
+
+					@include mega {
+						width:100%;
+						margin:0 auto;
+						margin-top:0em;
+						font-size:3.5em;
+					}
+				}
+				h4 {
+					margin-top:1em;
+					font-weight:500;
+					@include tablet {
+						font-size:1.8em;
+						margin-top:0.25em;
+					}
+					@include desktop {
+						margin-top:0.25em;
+						font-size:1.75em;
+					}
+					@include mega {
+						font-size:1.75em;
+						margin-top:0.25em;
+					}
+				}
+
+				h2 {
+					margin-top:$margin--small/2;
+					font-weight:500;
+					font-size:1.2em;
+					@include tablet {
+						font-size:2.2em;
+						width:80%;
+						margin:$margin--small/2 auto $margin--small/2 auto;
+					}
+					@include desktop {
+						font-size:2.2em;
+						width:80%;
+						margin:$margin--small/2 auto $margin--small/2 auto;
+					}
+					@include mega {
+						font-size:2.5em;
+						width:80%;
+						margin:$margin--small/2 auto $margin--small/2 auto;
+					}
+				}
+				}
+
+				.project--image_container {
+					height:40%;
+					width:70%;
+					opacity:0.5;
+					z-index:1;
+					background-size:contain;
+					position:relative;
+					background-position:center;
+					background-repeat:no-repeat;
+					animation: hover 1.75s infinite;
+					animation-direction: alternate;
+				}
+
+				.project--shadow {
+					width:60%;
+					max-width:250px;
+					height:15px;
+					margin-top:2.5em;
+					border-radius:50%;
+					opacity: 0.2;
+					background-color:black;
+					animation: scale 1.75s infinite;
+					animation-direction: alternate;
+
+				}
+
+			}
+
+			.project--section {
+				position:relative;
+				width:100%;
+				background-position:center center;
+				background-size:cover;
+				padding-bottom:$margin--small;
+				padding-top: $margin--small;
+   				//flex-direction: column-reverse;
+
+   				@include tablet {
+   					padding-bottom:$margin--medium;
+					padding-top: $margin--medium;
+					display: flex;
+					flex-direction: row;
+				}
+				@include desktop {
+					display: flex;
+					flex-direction: row;
+				}
+
+				@include mega {
+					display: flex;
+					flex-direction: row;
+				}
+
+				.case--info{
+					
+					padding:$margin--small/2 $margin--small;
+
+					h1 {
+						margin-top:0em;
+					}
+					
+					@include desktop {
+						padding:$margin--medium $margin--medium $margin--medium $margin--large;
+					}
+					@include mega {
+						padding:$margin--large $margin--medium $margin--large $margin--large*1.5;
+					}
+				}
+
+
+				.case--image {
+					width:80%;
+					//margin-top:2em;
+					position:relative;
+					overflow:hidden;
+					height:320px;
+					background-size:contain;
+					background-position:center center;
+					background-repeat:no-repeat;
+
+					@include desktop {
+						height:650px;
+						margin-top:0em;
+					}
+
+					@include mega {
+						height:800px;
+						margin-top:0em;
+						background-position:left center;
+					}
+
+					img {
+						  height:100%;
+						  max-height:40%;
+						  max-width:60%;
+						  width: auto;
+						  height: auto;
+
+						@include desktop {
+							
+						}
+					}
+				}
+				
+
+				&.project--intro {
+					padding-top:2.5em;
+
+					@include desktop {
+						padding-top:7.5em;
+					}
+					@include mega {
+						padding-top:7.5em;
+					}
+				}
+				p {
+					font-size:1.2em;
+					font-weight:400;
+					color:#020202;
+
+					@include tablet {
+						font-size:1.3em;
+					}
+
+					@include desktop {
+						font-size:1.5em;
+					}
+					@include mega {
+						font-size:1.5em;
+					}
+				}
+				.project--testimony {
+					height:600px;
+					color:#fff;
+
+					@include desktop {
+						height:700px;
+					}
+					@include mega {
+						height:700px;
+					}
+				}
+				.project--results {
+					font-size:1.5em;
+					font-weight:700;
+					line-height:1.8em;
+					padding:$margin--small $margin--small/2;
+
+
+					@include tablet {
+						font-size:2.1em;
+						font-weight:700;
+						line-height:1.8em;
+						padding:$margin--small/2 $margin--small;
+					}
+
+					@include desktop {
+						font-size:2.5em;
+						font-weight:700;
+						line-height:1.8em;
+						padding:$margin--medium/2 $margin--medium;
+					}
+
+					@include mega {
+						font-size:2.5em;
+						font-weight:700;
+						line-height:1.8em;
+						padding:$margin--large/2 $margin--large/2;
+					}
+
+					span {
+						background-color: rgba(0, 0, 0, 0.1);
+						padding:0em 0.3em;
+						word-break: nowrap;
+						white-space: pre;
+						border-radius:5px;
+					}
+				}
+
+				&.colored {
+					background-color:$dobus--primary;
+					background: $dobus--primary url(../../assets/pattern_dobus.svg) repeat;
+					background-size:35%;
+					color:#fff;
+
+					@include desktop {
+						background-size:15%;
+					}
+
+					@include mega {
+						background-size:15%;
+					}
+
+					h1 {
+						margin-top:0em;
+					}
+
+					p {
+					font-size:1.2em;
+					font-weight:500;
+					color:#fff;
+
+					@include tablet {
+						font-size:1.3em;
+					}
+
+					@include desktop {
+						font-size:1.5em;
+					}
+					@include mega {
+						font-size:1.5em;
+					}
+				}
+				}
+
+				h1 {
+					font-size:2.1em;
+					margin-bottom:0.25em;
+					margin-top:1.2em;
+					line-height:1;
+
+
+					@include tablet {
+						width:100%;
+						margin:0 auto;
+						margin-top:0em;
+						font-size:2.5em;
+					}
+
+					@include desktop {
+						width:100%;
+						margin:0 auto;
+						margin-top:0em;
+						font-size:3.5em;
+					}
+
+					@include mega {
+						width:100%;
+						margin:0 auto;
+						margin-top:0em;
+						font-size:3.5em;
+					}
+				}
+				h4 {
+					margin-top:1em;
+					font-weight:400;
+					@include desktop {
+						font-size:1.8em;
+					}
+				}
+
+				h2 {
+					margin-top:$margin--small/2;
+					font-weight:500;
+					font-size:1.2em;
+					@include desktop {
+						font-size:2.2em;
+						width:80%;
+						margin:$margin--small/2 auto $margin--small/2 auto;
+					}
+					@include desktop {
+						font-size:2.2em;
+						width:80%;
+						margin:$margin--small/2 auto $margin--small/2 auto;
+					}
+					@include mega {
+						font-size:2.2em;
+						width:80%;
+						margin:$margin--small/2 auto $margin--small/2 auto;
+					}
+				}
+			}
+
+			.next--project {
+				padding:$margin--medium $margin--small/2;
+				text-align: center;
+				width:100%;
+				color:#fff;
+				position:relative;
+				text-align: center;
+
+				@include desktop {
+
+					&:hover {
+
+						cursor:pointer;
+						.project--intro{
+							transform:translate(-50%, -70%);
+						}
+						.project--image_container{
+							transform:translateY(-10em);
+						}
+						.project--arrow { 
+							opacity:1;
+						}
+					}
+				}
+
+				@include mega {
+
+					&:hover {
+
+						cursor:pointer;
+						.project--intro{
+							transform:translate(-50%, -70%);
+						}
+						.project--image_container{
+							transform:translateY(-10em);
+						}
+						.project--arrow { 
+							opacity:1;
+						}
+					}
+				}
+
+				.project--arrow {
+					position:absolute;
+					background-color: rgba(0,0,0,0.1);
+					bottom:0;
+					left:0;
+					width:100%;
+					opacity: 1;
+
+					@include desktop {
+						opacity: 0;
+						height:100px;
+					}
+
+					@include mega {
+						opacity: 0;
+						height:100px;
+					}
+
+					height:60px;
+					transition:opacity 0.3s;
+
+					svg {
+						transform:rotate(90deg);
+					}
+				}
+
+				.project--intro {
+					@include centerer;
+					width:80%;
+					z-index:2;
+					transition:transform 0.4s;
+
+					h1 {
+						font-size:1.7em;
+						line-height:1;
+						margin:0;
+
+						@include tablet {
+							font-size:2.8em;
+						}
+
+						@include desktop {
+							font-size:3.5em;
+						}
+
+						@include mega {
+							font-size:3.5em;
+						}
+					}
+
+					h4 {
+						font-size:1em;
+						font-weight:500;
+						margin-top:0.2em;
+						@include mega {
+							font-size:1.5em;
+						}
+						@include desktop {
+							font-size:1.5em;
+						}
+						@include tablet {
+							font-size:1.4em;
+						}
+					}
+				}
+
+				@include desktop {
+					padding:$margin--large;
+					text-align: left;
+				}
+
+				@include mega {
+					padding:$margin--large;
+					text-align: left;
+				}
+
+				span {
+					font-size:1.4em;
+					font-weight:500;
+					margin-bottom:0.2em;
+					color:#000;
+					opacity: 0.3;
+				}
+				h1 {
+					font-size:2.1em;
+					margin-bottom:0em;
+					margin-top:0em;
+					line-height:1.25;
+
+					@include desktop {
+						margin-top:0em;
+						font-size:2.0em;
+					}
+					@include mega {
+						margin-top:0em;
+						font-size:2.0em;
+					}
+				}
+				h4 {
+					margin-top:0.4em;
+					font-weight:400;
+					@include desktop {
+						font-size:1.5em;
+					}
+					@include mega {
+						font-size:1.5em;
+					}
+				}
+
+				h2 {
+					margin-top:$margin--small/2;
+					font-weight:500;
+					font-size:1.2em;
+					@include desktop {
+						font-size:2em;
+						width:80%;
+						margin:$margin--small auto;
+					}
+					@include mega {
+						font-size:2em;
+						width:80%;
+						margin:$margin--small auto;
+					}
+				}
+
+				.project--image_container {
+					height:210px;
+					opacity:0.2;
+					animation: hover 1.75s infinite;
+					animation-direction: alternate;
+					background-position:center;
+					background-repeat:no-repeat;
+					background-size:contain;
+				}
+
+				.project--shadow {
+					width:200px;
+					height:15px;
+					animation: scale 1.75s infinite;
+					animation-direction: alternate;
+					background-color:black;
+					opacity: 0.2;
+					margin:2em auto;
+					border-radius:50%;
+				}
+			}
+		}
+	}
+	.expand-transition {
+	 	transform:translateX(0%);
+	}
+
+	.expand-leave {
+		transform:translateX(100%);
+	}
+
+	/* .expand-enter defines the starting state for entering */
+	/* .expand-leave defines the ending state for leaving */
+	.expand-enter {
+		transform:translateX(100%);
+	}

@@ -2,11 +2,11 @@
 
 	@import 'Variables';
 	@import 'Classes';
-	@import 'Navigation';
-	@import 'Landing';
-	@import 'Project';
+	@import 'Menu';
+	@import 'Home';
+	@import 'Detail';
 	@import 'Page';
-	@import 'Service';
+	@import 'Project';
 	@import 'About';
 	@import 'Work';
 	@import 'Footer';

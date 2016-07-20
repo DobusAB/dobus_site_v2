@@ -8,7 +8,6 @@ import 'vue-lazyload-img'
 import animatedScrollTo from 'animated-scrollto'
 
 require('./components/Styles/Style.vue')
-require('./components/Styles/Sally.vue')
 
 Vue.use(VueHead)
 Vue.use(VueRouter)

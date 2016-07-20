@@ -13,8 +13,14 @@ $device-md-landscape: 60em;
 $device-lg: 72em;
 $device-mega: 100em;
 
-
 //Media Queries 
+
+@mixin mobile-landscape {
+  @media (min-width: #{$device-sm}) and (max-width: #{$device-md-landscape - 0.1em}) and (orientation: landscape){
+    @content;
+  }
+}
+
 @mixin tablet {
   @media (min-width: #{$device-md}) and (max-width: #{$device-md-landscape - 0.1em}) {
     @content;
@@ -28,7 +34,7 @@ $device-mega: 100em;
 }
 
 @mixin desktop {
-  @media (min-width: #{$device-lg}) and (max-width: #{$device-mega - 0.1em}) {
+  @media (min-width: #{$device-lg}) and (max-width: #{$device-mega - 0.1em}) and (orientation: landscape) {
     @content;
   }
 }

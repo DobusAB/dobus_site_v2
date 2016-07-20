@@ -1,29 +1,9 @@
 *, *:after, *:before {
   box-sizing: border-box;
 }
-
-$device-sm: 30em;
-$device-md: 50em;
-$device-lg: 72em;
-$column-gutter: 1.4rem;
-
-@mixin tablet {
-  @media (min-width: #{$device-md}) and (max-width: #{$device-lg - 1px}) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media (min-width: #{$device-lg}) {
-    @content;
-  }
-}
-
 html, body {
   font-size: 16px;
 }
-
-
 .container {
   margin: 0 auto;
   text-align: center;
@@ -31,42 +11,35 @@ html, body {
   background-size:35%;
   min-height:100vh;
   @include desktop {
-      background-size:12%;
-    }
-    @include mega {
-      background-size:12%;
-    }
-
-    &.fadeIn {
+    background-size:12%;
+  }
+  @include mega {
+    background-size:12%;
+  }
+  &.fadeIn {
     overflow:hidden;
     animation: backgroundScroll 1s cubic-bezier(1, 0, 0, 1) infinite;
     animation-delay: 0.75s;
   }
-
- @keyframes backgroundScroll {
+  @keyframes backgroundScroll {
     from {background-position: 0% 0%;}
     to {background-position: -108% 0%}
   }
-  //background-color: #fff;
   @include desktop {
        @keyframes backgroundScroll {
         from {background-position: 0% 0%;}
         to {background-position: -150% 0%}
-      }
+    }
   }
-
-    @include mega {
-       @keyframes backgroundScroll {
-        from {background-position: 0% 0%;}
-        to {background-position: -150% 0%}
-      }
+  @include mega {
+      @keyframes backgroundScroll {
+      from {background-position: 0% 0%;}
+      to {background-position: -150% 0%}
+    }
   }
-  
-  
-
   &.nav--project_open {
     overflow:hidden;
-  }
+    }
 }
 
 .container:after, .row:after {
