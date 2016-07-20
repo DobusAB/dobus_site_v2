@@ -86,7 +86,6 @@ router.beforeEach(function (transition) {
     )
   }
 })
-
 router.redirect({
   '*': '/'
 })
