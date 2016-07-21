@@ -54,6 +54,14 @@ export default {
   head: {
     title: {
       inner: 'Dobus'
+    },
+    meta: {
+      // Basic meta
+      name: {
+        'application-name': 'Name of my application',
+        description: 'A description of the page',
+        'test': 'fsdafadsfasdf'
+      }
     }
   },
   components: {
