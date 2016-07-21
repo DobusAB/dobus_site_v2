@@ -9,6 +9,11 @@ img {
 	user-select: none;
 }
 
+.text--tilted {
+	transform: rotate(-2deg);
+	transform-origin: left top 0;
+}
+
 .primary--button {
 	padding:0.65em 2em;
 	border-radius:2em;

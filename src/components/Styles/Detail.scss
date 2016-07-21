@@ -10,7 +10,6 @@
 		right:0;
 		transform:translateX(100%);
 		transition:all 1s $soft--easing;
-		
 		.project-inner {
 			display:flex;
 			width:100%;
@@ -255,7 +254,7 @@
 					}
 
 					@include mega {
-						height:400px;
+						height:600px;
 						margin-top:0em
 					}
 

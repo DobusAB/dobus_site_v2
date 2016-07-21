@@ -11,6 +11,7 @@
       </div>
 
       <div class="project--section colored row" v-if="data[0].custom_field.project_intro">
+      <div class="description--top"></div>
          <div class="col-xs-12 col-sm-12 align-center align-middle"> 
            <h2 class="project--description">{{{data[0].custom_field.project_intro}}}</h2>
          </div>

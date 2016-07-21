@@ -366,7 +366,7 @@
 		position:relative;
 
 		.service--project {
-			padding:$margin--small $margin--small;
+			padding:$margin--medium*1.25 $margin--small;
 			position:relative;
 			min-width:200px;
 			@include tablet {

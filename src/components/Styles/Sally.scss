@@ -7,7 +7,7 @@ html, body {
 .container {
   margin: 0 auto;
   text-align: center;
-  background: $dobus--primary url(../../assets/pattern_dobus.svg) repeat;
+  background: $dobus--primary;
   background-size:35%;
   min-height:100vh;
   @include desktop {
