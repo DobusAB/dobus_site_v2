@@ -3,22 +3,8 @@
 	color:#fff;
 	z-index:1;
 	position:relative;
+	text-align:center;
 	background-color:$dobus--black;
-
-	animation-name: fadeIn;
-	animation-duration: 1.25s;
-	animation-delay: 0s;
-	transition:transform 1s;
-
-	@keyframes fadeIn {
-	   0% {opacity: 1; transform:translateY(20px);}
-	   100% {opacity: 1; transform:translateY(0px);} 
-	} 
-
-	&.fadeIn {
-		transition:transform 1s;
-		transform:translateY(20px);
-	}
 	&::after {
 		content: "";
 	    background: url(../../assets/wave.svg) 0 100% repeat-x;
@@ -33,72 +19,40 @@
 		bottom: auto;
 	}
 	@include mega {
-		padding: $margin--medium $margin--large;
+		padding: $margin--large;
+		text-align: left;
 	}
 	@include desktop {
-		padding: $margin--medium;
+		padding: $margin--medium*1.5;
+		text-align: left;
 	}
-	h1 {
-		font-size:2.25em;
-		margin-top:0em;
-		@include desktop {
-			font-size:3.25em;
-		}
-		@include mega {
-			font-size:3.75em;
-		}
-	}
-
 	p {
 		font-size:1.2em;
 		opacity: 0.5;
 		margin:0.5em 0em 0.5em 0em; 
 		font-weight:500;
 		transition:opacity 0.2s;
-		&:hover {
-			opacity: 1;
+		@include mega{
+			font-size:1.45em;
+		}
+		@include desktop {
+			font-size:1.2em
+		}
+	    @include tablet {
+	        font-size:1.2em
+	    }
+	 	@include tablet-landscape {
+	    	font-size:1.2em
+	  	}
+		@include mobile-landscape {
+			font-size:1.2em
 		}
 		a {
 			text-decoration: none;
 			color:#fff;
-		}
-	}
-
-	.references--container{
-		//margin-top:3em;
-		//display:block;
-		display:none;
-		margin-top:0.5em;
-		margin-left:1em;
-
-		@include desktop {
-			display:inline-flex;
-			padding-top:2em;
-			margin-left:0em;
-		}
-		//border-top:1px solid #313131;
-		width:100%;
-		//background-color:blue;
-		justify-content: space-between;
-		align-items:center;
-		img{
-			display:block;
-			max-width:125px;
-		    max-height:70px;
-		    width: auto;
-		    height: auto;
-			opacity: 0.2;
-			margin-top:1.5em;
-
-			@include desktop {
-				padding:0em 2em;
-				max-width:190px;
-		    	max-height:70px;
+			&:hover {
+				opacity: 1;
 			}
-
-			&:first-child {
-				border-left:none;			}
 		}
-
 	}
 }

@@ -1,6 +1,7 @@
 <style lang="scss">
 
 	@import 'Variables';
+	@import 'Fonts';
 	@import 'Classes';
 	@import 'Menu';
 	@import 'Home';

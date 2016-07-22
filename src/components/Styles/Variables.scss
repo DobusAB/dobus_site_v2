@@ -1,11 +1,13 @@
 
 //Color Variables
-
 $dobus--primary: #FFC400;
-$dobus--black: #222222;
+$dobus--black: #161616;
+$web--color: #FE74B3;
+$app--color: #B076B9;
+$design--color: #FE825B;
+$transparent: rgba(0,0,0,0.0);
 
 //Media Query Widths 
-
 $device-sm: 30em;
 $device-md: 40em;
 $device-md-landscape: 60em;
@@ -13,7 +15,6 @@ $device-lg: 72em;
 $device-mega: 100em;
 
 //Media Queries 
-
 @mixin mobile-landscape {
   @media (min-width: #{$device-sm}) and (max-width: #{$device-md-landscape - 0.1em}) and (orientation: landscape){
     @content;
@@ -45,39 +46,27 @@ $device-mega: 100em;
 }
 
 //General Style Variables 
-
-
 $font: "brandon-grotesque";
 $nav--height: 85px;
-	
 $margin--small: 2.5em;
 $margin--medium: 5em;
 $margin--large: 10em;
-
 $no-margin--top: 0em;
-
 $easing: cubic-bezier(0.86, 0, 0.07, 1);
-
 $soft--easing: cubic-bezier(.23,1,.32,1);
 
-//Hover Styles & Effects 
-
 //Mixins 
-
 @mixin centerer {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 @mixin vertical--centerer {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
-
-
 @mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
 	  ::-webkit-scrollbar {
 	      width:  $size;
@@ -100,128 +89,5 @@ $soft--easing: cubic-bezier(.23,1,.32,1);
 	    scrollbar-track-color: $background-color;
 	  }
 	}
-
 @include scrollbars(0em, slategray);
-
-
-
-h1 {
-  text-transform:uppercase;
-  font-weight:900;
-  font-style: italic;
-  letter-spacing: 0.05em;
-  margin:1.5em auto 0em auto;
-  font-size:1.9em;
-  margin-bottom:2em;
-  transition:opacity 0.5s;
-  opacity:1;
-  animation: fadeInText 0.75s cubic-bezier(.23,1,.32,1);
-
-  @include mega {
-    font-size:4.0em;
-    line-height: 1.2;
-  }
-  @include desktop {
-    font-size:3.75em;
-    width:70%;
-    line-height: 1.2em;
-  }
-  @include tablet {
-    font-size:3.25em;
-  }
-  @include tablet-landscape {
-    font-size:2.8em;
-  }
-  @include mobile-landscape {
-    font-size:1.5em;
-  }
-
-  @keyframes fadeInText {
-     0% {opacity: 0;}
-     100% {opacity: 1;} 
-  } 
-  &.fadeIn { 
-    opacity:0;
-  }
-}
-
-h2 {
-  text-transform:uppercase;
-  font-weight:900;
-  font-style: italic;
-  letter-spacing: 0.05em;
-  margin:1.5em auto 0em auto;
-  font-size:1.9em;
-  margin-bottom:2em;
-  transition:opacity 0.5s;
-  opacity:1;
-  animation: fadeInText 0.75s cubic-bezier(.23,1,.32,1);
-
-  @include mega {
-    font-size:4.0em;
-    line-height: 1.2;
-  }
-  @include desktop {
-    font-size:2.75em;
-    width:40%;
-    line-height: 1.2em;
-  }
-  @include tablet {
-    font-size:3.25em;
-  }
-  @include tablet-landscape {
-    font-size:2.8em;
-  }
-  @include mobile-landscape {
-    font-size:1.5em;
-  }
-
-  @keyframes fadeInText {
-     0% {opacity: 0;}
-     100% {opacity: 1;} 
-  } 
-  &.fadeIn { 
-    opacity:0;
-  }
-}
-
-h3 {
-  text-transform:uppercase;
-  font-weight:900;
-  font-style: italic;
-  letter-spacing: 0.05em;
-  margin:1.5em auto 0em auto;
-  font-size:1em;
-  margin-bottom:2em;
-  transition:opacity 0.5s;
-  opacity:1;
-  animation: fadeInText 0.75s cubic-bezier(.23,1,.32,1);
-
-  @include mega {
-    font-size:4.0em;
-    line-height: 1.2;
-  }
-  @include desktop {
-    font-size:1.5em;
-    width:40%;
-    line-height: 1.2em;
-  }
-  @include tablet {
-    font-size:3.25em;
-  }
-  @include tablet-landscape {
-    font-size:2.8em;
-  }
-  @include mobile-landscape {
-    font-size:1.5em;
-  }
-
-  @keyframes fadeInText {
-     0% {opacity: 0;}
-     100% {opacity: 1;} 
-  } 
-  &.fadeIn { 
-    opacity:0;
-  }
-}
 

@@ -3,7 +3,7 @@
 	color:#fff;
 	.landing--intro {
 		height:100vh;
-		padding:0em $margin--small/2;
+		padding:0em $margin--small/4;
 		@include mega {
 			padding:0em $margin--large*1.5;
 		}
@@ -16,50 +16,60 @@
 		@include tablet-landscape {
 			padding:0em $margin--medium;
 		}
-		@include desktop {
-			height:100vh;
-			align-items:center;
-		}
-		@include mega {
-			height:100vh;
-			align-items:center;
-		}
+
 	}
 
 	.landing--project {
-		padding:$margin--large $margin--medium;
+		padding:$margin--medium $margin--small;
 		position:relative;
-
-		&:hover {
-			div {
-				clip-path: circle(100% at center);
-			}
-		}
-
+		@include mask--hover;
 		h2 {
 			margin-top:0.5em;
 			position:relative;
 			z-index:2;
 		}
-
 		h3 {
 			margin-bottom:0em;
 			position:relative;
 			z-index:2;
 		}
-
-		div {
-			width:100%;
-			height:100%;
-			//opacity:0.2;
-			background-color: blue;
-			z-index:1;
-
-			clip-path: circle(10% at center);
-
-			transition:clip-path 1s cubic-bezier(0.77, 0, 0.175, 1);
-
-			@include centerer;
+		@include mega {
+			padding:$margin--large $margin--large*1.5;
+		}
+		@include desktop {
+			padding:$margin--large;
+		}
+		@include tablet {
+			padding:$margin--large $margin--small;
+		}
+		@include tablet-landscape {
+			padding:$margin--large $margin--medium;
+		}
+	}
+	.landing--about {
+		padding:$margin--small*1.5 $margin--small;
+		position:relative;
+		@include mega {
+			padding:$margin--large*2 $margin--large*1.5;
+		}
+		@include desktop {
+			padding:$margin--large*2;
+		}
+		@include tablet {
+			padding:$margin--large $margin--small;
+		}
+		@include tablet-landscape {
+			padding:$margin--large $margin--medium;
+		}
+		h2 {
+			margin-top:0.5em;
+			position:relative;
+			z-index:2;
+		}
+		h3 {
+			margin-bottom:0em;
+			position:relative;
+			z-index:2;
 		}
 	}
 }

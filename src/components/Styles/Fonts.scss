@@ -1,0 +1,158 @@
+h1 {
+  text-transform:uppercase;
+  font-weight:900;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  margin:1.5em auto 0em auto;
+  font-size:1.5em;
+  margin-bottom:2em;
+  transition:opacity 0.5s;
+  opacity:1;
+  animation: fadeInText 0.75s cubic-bezier(.23,1,.32,1);
+  position:relative;
+  line-height: 1.65em;
+  z-index:2;
+  @include mega {
+    font-size:3.75em;
+    width:60%;
+    line-height: 1.6em;
+  }
+  @include desktop {
+    font-size:3.75em;
+    width:73%;
+    line-height: 1.6em;
+  }
+  @include tablet {
+    font-size:3em;
+  }
+  @include tablet-landscape {
+    font-size:2.8em;
+    width:72.5%;
+  }
+  @include mobile-landscape {
+    font-size:1.5em;
+  }
+  mark {
+    background-color:$transparent;
+    padding:0em 0.4em;
+    white-space: nowrap;
+    background-size: 200% 100%;
+    background-color:none;
+    transition: background-position 1s cubic-bezier(0.77, 0, 0.175, 1);
+    border-radius:50px;
+    animation: markerAnimation 1.25s;
+    animation-fill-mode: forwards;
+    width:0%;
+    color:#fff;
+    &:nth-child(1) {
+       background-image: linear-gradient(to left, $app--color 50% ,$transparent 50%);
+       animation-delay:.5s;
+    }
+    &:nth-child(2) {
+       background-image: linear-gradient(to left, $web--color 50% ,$transparent 50%);
+       animation-delay:.75s;
+    }
+    &:nth-child(3) {
+       background-image: linear-gradient(to left, $design--color 50% ,$transparent 50%);
+       animation-delay:1s;
+    }
+    @keyframes markerAnimation {
+      0% {
+        background-position: 0% 100%;
+      }
+      100% {
+        background-position: -100% 100%;
+      }
+    }
+  }
+}
+
+h2 {
+  text-transform:uppercase;
+  font-weight:900;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  margin:1.5em auto 0em auto;
+  font-size:1.4em;
+  margin-bottom:2em;
+  transition:opacity 0.5s;
+  opacity:1;
+
+  @include mega {
+    font-size:3em;
+    width:42%;
+    line-height: 1.2em;
+  }
+  @include desktop {
+    font-size:2.75em;
+    width:55%;
+    line-height: 1.2em;
+  }
+  @include tablet {
+    font-size:2.5em;
+    width:75%;
+  }
+  @include tablet-landscape {
+    font-size:2.5em;
+    width:60%;
+  }
+  @include mobile-landscape {
+    font-size:1.5em;
+    width:60%;
+  }
+}
+
+h3 {
+  text-transform:uppercase;
+  font-weight:900;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  margin:1.5em auto 0em auto;
+  font-size:1em;
+  margin-bottom:2em;
+  transition:opacity 0.5s;
+  opacity:1;
+  animation: fadeInText 0.75s cubic-bezier(.23,1,.32,1);
+  @include mega {
+    font-size:1.5em;
+    line-height: 1.2;
+  }
+  @include desktop {
+    font-size:1.5em;
+    width:40%;
+    line-height: 1.2em;
+  }
+  @include tablet {
+    font-size:1.5em;
+  }
+  @include tablet-landscape {
+    font-size:1.5em;
+
+  }
+  @include mobile-landscape {
+    font-size:1em;
+  }
+}
+
+h4 {
+  font-size:1.4em;
+  margin-top:1em;
+  margin-bottom:0.5em;
+  @include mega {
+    font-size:1.75em;
+    line-height: 1.2;
+  }
+  @include desktop {
+    font-size:1.5em;
+    line-height: 1.2em;
+  }
+  @include tablet {
+    font-size:1.5em;
+  }
+  @include tablet-landscape {
+    font-size:1.75em;
+  }
+  @include mobile-landscape {
+    font-size:1.5em;
+  }
+}
