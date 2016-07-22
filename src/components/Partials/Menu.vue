@@ -1,8 +1,6 @@
 <template>
 	<div class="nav--primary row align-middle" v-bind:class="{'nav--project_open': this.$root.global.projectOpen}">
-	  <div class="nav--gradient"></div>
-	  <div class="nav--inner">
-	  	 <div class="nav--logo" v-link="{ name: 'start' }">
+	  	 <div class="nav--logo col-xs-12 col-md-2" v-link="{ name: 'start' }">
 			<svg width="119px" height="31px" viewBox="0 0 119 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 			    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-weight="700" font-family="BrandonGrotesque-BlackItalic, Brandon Grotesque" letter-spacing="1.99999976" font-size="36" font-style="italic">
 			        <g id="Desktop-HD-Copy-2" transform="translate(-104.000000, -57.000000)" fill="#FFFFFF">
@@ -13,7 +11,25 @@
 			    </g>
 			</svg>
 	  	 </div>
-	  	 <div v-link="{path: '/projects'}" class="nav--back">
+	  	 <div class="nav--links col-xs-12 col-md-10 flow--horizontal">
+	  	  <div class="nav--links--inner">
+		      <a v-link="{ name: 'project', activeClass: 'nav--active' }" class="flex align-middle">
+		      	<mark>Vad vi gör</mark>
+		      </a>
+		      <a v-link="{ name: 'about', activeClass: 'nav--active' }" class="flex align-middle">
+		      	<mark>Kontakta oss</mark>
+		      </a>
+		      <a v-link="{ name: 'work', activeClass: 'nav--active' }" class="flex align-middle">
+		      	<mark>Jobba här</mark>
+		      </a>
+		    </div>
+	     </div>
+	  </div>
+	  
+    </div>	
+</template>
+
+<!--   	 <div v-link="{path: '/projects'}" class="nav--back">
 			<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 			<svg width="20px" height="20px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 			    <defs></defs>
@@ -26,23 +42,4 @@
 			        </g>
 			    </g>
 			</svg>
-	  	 </div>
-	  	 <div class="nav--links">
-		      <a v-link="{ name: 'project', activeClass: 'nav--active' }" class="flex align-middle">
-		      	<mark>Projekt & Tjänster</mark>
-		      </a>
-		      <a v-link="{ name: 'about', activeClass: 'nav--active' }" class="flex align-middle">
-		      	<mark>Kontakta oss</mark>
-		      </a>
-		      <a v-link="{ name: 'process', activeClass: 'nav--active' }" class="flex align-middle">
-		      	<mark>Såhär jobbar vi</mark>
-		      </a>
-		      <a v-link="{ name: 'work', activeClass: 'nav--active' }" class="flex align-middle">
-		      	<mark>Jobba här</mark>
-		      </a>
-	     </div>
-	  </div>
-	  
-    </div>	
-</template>
-
+	  	 </div> -->

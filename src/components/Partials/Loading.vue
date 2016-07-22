@@ -1,5 +1,6 @@
 <template>
 	<div class="loading--container flex align-center align-middle" v-bind:class="{'fadeIn' : show}">
+    <div class="loading--inner"></div>
   </div>
 </template>
 <script>

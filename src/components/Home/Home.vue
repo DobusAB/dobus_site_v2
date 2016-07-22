@@ -9,15 +9,15 @@
     <div class="col-xs-12 site--section landing--project flex flow-vertical margin-auto text-center align-middle align-center">
       <h3 class="text--tilted" v-bind:class="{'fadeIn' : this.$root.global.loading}">utvalt projekt</h2>
       <h2 class="text--tilted" v-bind:class="{'fadeIn' : this.$root.global.loading}">{{ featuredRandom.title.rendered}}</h2>
-      <div class="masked--image" style="background-image:url('http://www.digasell.se/wp-content/uploads/2015/06/DSC_0037.jpg')"></div>
+      <div class="masked--image" v-bind:style="{'background-image': 'url(' +  featuredRandom.custom_field.project_featured_image + ')' }"></div>
     </div>
   </div>
 
-  <div class="row image--background" v-bind:style="{'background-image': 'url(' + data.custom_field.group_image + ')' }"> 
+  <div class="row image--background" v-link="{ name: 'about'}" v-bind:style="{'background-image': 'url(' + data.custom_field.group_image + ')' }"> 
     <div class="image--overlay"></div>
     <div class="col-xs-12 site--section landing--about flex flow-vertical margin-auto text-center align-middle align-center">
-      <h3 class="text--tilted" v-bind:class="{'fadeIn' : this.$root.global.loading}">vårt fantastiska team</h2>
-      <h2 class="text--tilted" v-bind:class="{'fadeIn' : this.$root.global.loading}">all kompetens under samma tak.</h2>
+      <h3 class="text--tilted">vårt fantastiska team</h2>
+      <h2 class="text--tilted">all kompetens under samma tak.</h2>
     </div>
   </div>
 </div>

@@ -3,6 +3,7 @@
 	@import 'Variables';
 	@import 'Fonts';
 	@import 'Classes';
+	@import 'Animations';
 	@import 'Menu';
 	@import 'Home';
 	@import 'Detail';

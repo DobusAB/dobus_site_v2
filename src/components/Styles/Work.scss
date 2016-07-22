@@ -1,135 +1,28 @@
-.positions--container {
-	animation-name: fadeIn;
-	animation-duration: 0.5s;
-	animation-delay: 0s;
-	transition:transform 0.5s;
-
-	@keyframes fadeIn {
-	   0% {opacity: 1; transform:translateY(300px);}
-	   100% {opacity: 1; transform:translateY(0px);} 
-	} 
-
-	&.fadeIn {
-		transition:transform 2s;
-		transform:translateY(300px);
-	}
-}
-
-.work--position {
-
-	.work--image {
-		background-size:cover;
-		background-position:bottom right;
-		background-repeat:no-repeat;
+.work--wrapper {
+	padding:$margin--medium*1.5 $margin--small;
+	position:relative;
+	width:100%;
+	@include mask--hover;
+	h2 {
+		margin-top:0.5em;
 		position:relative;
-		padding:$margin--medium $margin--small; 
-		@include desktop {
-			padding:$margin--large $margin--large;
-		}
-		@include mega {
-			padding:$margin--large*1.5 $margin--large;
-		}
-
-		.work--description {
-
-			color:#fff;
-			z-index:2;
-			position:relative;
-
-
-			h1 {
-				font-size:2em;
-				margin-top:0em;
-				margin-bottom:0em;
-
-				@include desktop {
-					font-size:3.5em;
-				}
-				@include mega {
-					font-size:3.5em;
-				}
-			}
-
-			span {
-				font-size:1.2em;
-				opacity: 0.8;
-				@include desktop {
-					font-size:1.5em;
-				}
-
-				@include mega {
-					font-size:1.5em;
-				}
-			}
-
-			p {
-				font-size:1em;
-				@include desktop {
-					font-size:1.5em;
-				}
-				@include mega {
-					font-size:1.5em;
-				}
-			}
-
-			a {
-				text-decoration: none;
-				font-size:1.5em;
-				position:relative;
-				font-weight:600;
-				margin-top:0.8em;
-				display:block;
-				color:#fff;
-
-				span {
-					opacity:0;
-					@include vertical--centerer;
-					position:absolute;
-					margin-left:10px;
-					transition: all 0.25s;
-		
-				}
-				@include desktop {
-					font-size:1.7em;
-					margin-top:1em;
-					&:hover {
-						span {
-							//transition: opacity 1s;
-							transition: all 0.25s;
-							opacity:1;
-							margin-left:25px;
-						}
-					}
-				}
-				@include mega {
-					font-size:1.7em;
-					margin-top:1em;
-					&:hover {
-						span {
-							//transition: opacity 1s;
-							transition: all 0.25s;
-							opacity:1;
-							margin-left:25px;
-						}
-					}
-				}
-			}
-		}
-
-		.work--overlay {
-			position:absolute;
-			opacity:0.65;
-			top:0;
-			left:0;
-			width:100%;
-			z-index:1;
-			height:100%;
-			background-color:$dobus--black;
-			transition:all 1s;
-		}
-
-		@include desktop {
-			
-		}
+		z-index:2;
+	}
+	h3 {
+		margin-bottom:0em;
+		position:relative;
+		z-index:2;
+	}
+	@include mega {
+		padding:$margin--large $margin--large*1.5;
+	}
+	@include desktop {
+		padding:$margin--large*1.5;
+	}
+	@include tablet {
+		padding:$margin--large $margin--small;
+	}
+	@include tablet-landscape {
+		padding:$margin--large $margin--medium;
 	}
 }

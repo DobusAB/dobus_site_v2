@@ -1,49 +1,25 @@
 <template>
    <div class="page--intro flex align-left align-middle" v-if="show">
-      <h1 v-bind:class="{'fadeIn' : this.$root.global.loading}">{{data.title.rendered}}</h1>
-  </div>
+       <h1 class="text--tilted">{{{data.title.rendered}}}</h1>
+   </div>
 
-      <div class="about--container" v-bind:class="{'fadeIn' : this.$root.global.loading}" v-if="show">
-      <div class="row about--employee" v-for="sub in data.sub_pages" v-bind:style="{background: sub.custom_fields.work_color }">
-          <div class="col-xs-12 col-md-8 text-left about--description">
-            <h1>{{sub.post_title}}</h1>
-             <h2>{{sub.custom_fields.work_title}}</h2>
-            <!-- <p>{{sub.custom_fields.work_description}}</p>-->
-            <a href="tel:{{sub.custom_fields.work_phone}}">{{sub.custom_fields.work_phone}}
-              <span><?xml version="1.0" encoding="UTF-8" standalone="no"?>
-                    <svg width="25px" height="25px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <defs></defs>
-                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                            <g id="Tjänster-&amp;-Projekt-Copy-6" transform="translate(-1261.000000, -3125.000000)" stroke="#FFFFFF" stroke-width="5.59999957">
-                                <g id="Group-12" transform="translate(1264.000000, 3128.000000)">
-                                    <path d="M0.566037736,14.7272727 L28.0997842,14.7272727" id="Path-36"></path>
-                                    <polyline id="Path-37" points="14.1509434 0 29.5989795 14.8862893 14.1509434 29.7725787"></polyline>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
-                </span>
-            </a>
-            <a href="mailto:{{sub.custom_fields.work_email}}?Subject=Hej!" target="_top">{{sub.custom_fields.work_email}}
-               <span>
-               <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-                    <svg width="25px" height="25px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <defs></defs>
-                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                            <g id="Tjänster-&amp;-Projekt-Copy-6" transform="translate(-1261.000000, -3125.000000)" stroke="#FFFFFF" stroke-width="5.59999957">
-                                <g id="Group-12" transform="translate(1264.000000, 3128.000000)">
-                                    <path d="M0.566037736,14.7272727 L28.0997842,14.7272727" id="Path-36"></path>
-                                    <polyline id="Path-37" points="14.1509434 0 29.5989795 14.8862893 14.1509434 29.7725787"></polyline>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
-                </span>
-            </a>
-          </div>
-           <img v-bind:src="sub.custom_fields.work_image"/>
-      </div>
+  <div class="about--row row">
+    <div class="col-xs-12 about--wrapper flex flow-vertical margin-auto text-center align-middle align-center" v-for="sub in data.sub_pages" v-bind:style="{background: sub.custom_fields.work_color }">
+      <h3 class="text--tilted">{{sub.custom_fields.work_title}}</h3>
+      <h2 class="text--tilted">{{sub.post_title}}</h2>
+      <a href=""><h4 class="text--tilted">{{sub.custom_fields.work_phone}}</h4></a>
+      <a href=""><h4 class="text--tilted">{{sub.custom_fields.work_email}}</h4></a>
+      <div class="masked--image" v-bind:style="{'background-image': 'url(' + sub.custom_fields.work_image + ')' }"></div>
+     </div>
+  </div>
+    <div class="row image--background" v-link="{ name: 'work'}" v-bind:style="{'background-image': 'url(' + data.custom_field.work_image + ')' }"> 
+    <div class="image--overlay"></div>
+    <div class="col-xs-12 site--section landing--about flex flow-vertical margin-auto text-center align-middle align-center">
+      <h3 class="text--tilted">Vill du vara med?</h2>
+      <h2 class="text--tilted">Kolla in våra lediga jobb.</h2>
     </div>
+  </div>
+</div>
 </template>
 
 <script>

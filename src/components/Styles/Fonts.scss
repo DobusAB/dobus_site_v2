@@ -1,7 +1,7 @@
 h1 {
   text-transform:uppercase;
   font-weight:900;
-  font-style: italic;
+  color:#fff;
   letter-spacing: 0.05em;
   margin:1.5em auto 0em auto;
   font-size:1.5em;
@@ -12,6 +12,7 @@ h1 {
   position:relative;
   line-height: 1.65em;
   z-index:2;
+  
   @include mega {
     font-size:3.75em;
     width:60%;

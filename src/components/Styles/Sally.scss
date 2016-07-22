@@ -6,6 +6,7 @@ html, body {
 }
 .container {
   margin: 0 auto;
+  color:#fff;
   text-align: center;
   background: $dobus--primary;
   background-size:35%;
@@ -15,28 +16,8 @@ html, body {
   }
   @include mega {
     background-size:12%;
-  }
-  &.fadeIn {
-    overflow:hidden;
-    animation: backgroundScroll 1s cubic-bezier(1, 0, 0, 1) infinite;
-    animation-delay: 0.75s;
-  }
-  @keyframes backgroundScroll {
-    from {background-position: 0% 0%;}
-    to {background-position: -108% 0%}
-  }
-  @include desktop {
-       @keyframes backgroundScroll {
-        from {background-position: 0% 0%;}
-        to {background-position: -150% 0%}
-    }
-  }
-  @include mega {
-      @keyframes backgroundScroll {
-      from {background-position: 0% 0%;}
-      to {background-position: -150% 0%}
-    }
-  }
+  } 
+  
   &.nav--project_open {
     overflow:hidden;
     }
