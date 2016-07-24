@@ -104,9 +104,11 @@
 		    }
 			@include mega {
 				height:$nav--height;
+				margin-right:2em;
 			}
 			@include desktop {
 				height:$nav--height;
+				margin-right:1.5em;
 			}
 			&.nav--active {
 				opacity:1;

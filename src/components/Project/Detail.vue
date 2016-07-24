@@ -1,28 +1,24 @@
 <template>
 	<div id="projecttop" class="project-container" v-if="data.length > 0" transition="expand" v-bind:style="{background: data[0].custom_field.project_color}">
-    <div class="project-inner">
-      <div class="project--image flex flow-vertical align-center align-middle">
-        <div class="project--intro">
-          <h1>{{{data[0].title.rendered}}}</h1>
-          <h4>{{{data[0].custom_field.project_description}}}</h4>
-        </div>
-        <div class="project--image_container" v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_featured_image + ')' }"></div>
-        <div class="project--shadow"></div>
+      <div class="col-xs-12 intro--wrapper flex flow-vertical margin-auto text-center align-middle align-center">
+        <h3 class="text--tilted">Kristian Luuk</h3>
+        <h2 class="text--tilted">{{data[0].title.rendered}}</h2>
+        <div class="masked--image large" v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_featured_image + ')' }"></div>
       </div>
-
+      <div class="detail--wrapper">
       <div class="project--section colored row" v-if="data[0].custom_field.project_intro">
-      <div class="description--top"></div>
+      <!--<div class="description--top"></div>
          <div class="col-xs-12 col-sm-12 align-center align-middle"> 
            <h2 class="project--description">{{{data[0].custom_field.project_intro}}}</h2>
          </div>
-      </div>
+      </div>-->
       
-      <div class="project--section colored row" v-if="data[0].custom_field.project_solution_title || data[0].custom_field.project_solution_description" >
-        <div class="col-xs-12 text-center case--image  flex flow-vertical align-center"> 
+      <div class="detail--section  row" v-if="data[0].custom_field.project_solution_title || data[0].custom_field.project_solution_description" >
+        <div class="col-xs-12 text-center detail--image"> 
           <img class="margin-auto" v-bind:src="data[0].custom_field.project_solution_image">
         </div>
-        <div class="col-xs-12 text-center case--info  flex flow-vertical align-center"> 
-          <h1>{{{data[0].custom_field.project_solution_title}}}</h1>
+        <div class="col-xs-12 text-center detail--info flex flow-vertical align-center"> 
+          <h3>{{{data[0].custom_field.project_solution_title}}}</h3>
           <p>{{{data[0].custom_field.project_solution_description}}}</p>
         </div>
       </div>
@@ -67,6 +63,8 @@
             <h1>"{{{data[0].custom_field.project_testimony}}}"</h1>
           </div>
         </div>
+
+      </div>
 
       <div class="next--project row" v-on:click="NextProject(nextProject.post_name)" v-bind:style="{background: nextProject.custom_fields.project_color}" v-if="nextProject.post_title">
         <div class="col-xs-12 text-center">
