@@ -25,6 +25,19 @@ img {
 	&.large {
 		width:100%;
 		height:100%;
+		animation: imageZoom 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+		animation-fill-mode:forwards;
+		animation-delay:0.5s;
+		@keyframes imageZoom {
+			0% {
+				clip-path: circle(20% at center);
+				opacity:0.2;
+			}
+			100% {
+				clip-path: circle(100% at center);
+				opacity:1;
+			}
+		}
 		border-radius:0%;
 	}
 
@@ -71,11 +84,6 @@ img {
 		    .masked--image {
 		      clip-path: circle(30% at center);
 		      opacity:0.4;
-
-		      &.large {
-		      	 clip-path: circle(100% at center);
-		    	  opacity:1;
-		      }
 		    }
 		}
 	}
