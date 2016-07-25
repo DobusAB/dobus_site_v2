@@ -6,7 +6,7 @@
     </div>
   </div>
   <div class="row" v-bind:style="{background: featuredRandom.custom_field.project_color}">
-    <div class="col-xs-12 site--section landing--project flex flow-vertical margin-auto text-center align-middle align-center" v-link="{ name: 'project_by_name', params: { name: featuredRandom.post_name }}">
+    <div class="col-xs-12 site--section landing--project flex flow-vertical margin-auto text-center align-middle align-center" >
       <h3 class="text--tilted" v-bind:class="{'fadeIn' : this.$root.global.loading}">utvalt projekt</h2>
       <h2 class="text--tilted" v-bind:class="{'fadeIn' : this.$root.global.loading}">{{ featuredRandom.title.rendered}}</h2>
       <div class="masked--image" v-bind:style="{'background-image': 'url(' +  featuredRandom.custom_field.project_featured_image + ')' }"></div>
