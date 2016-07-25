@@ -11,7 +11,7 @@
     </div>
     <div class="row project--row " v-bind:style="{background: featuredRandom.custom_field.project_color}">
       <div class="col-xs-12 project--wrapper flex flow-vertical margin-auto text-center align-middle align-center" v-link="{ name: 'project_by_name', params: { name: sub.post_name }}" v-for="sub in item.sub_pages">
-        <h3 class="text--tilted">Kristian Luuk</h3>
+        <h3 class="text--tilted">{{{sub.custom_fields.client_name}}}</h3>
         <h2 class="text--tilted">{{sub.post_title}}</h2>
         <div class="masked--image" v-bind:style="{'background-image': 'url(' + sub.custom_fields.project_featured_image + ')' }"></div>
       </div>

@@ -1,3 +1,47 @@
+.nav--back {
+	position:fixed;
+	left:20px;
+	top:20px;
+	opacity:0;
+	transition:all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+	transform:translateX(-100px);
+	z-index:999;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	height:50px;
+	width:50px;
+	border-radius:50%;
+//	background-color:$dobus--primary;
+	background:rgba(0,0,0,0.3);
+
+	@include mega {
+		left:95px;
+		top:60px;
+	}
+
+	@include desktop {
+		left:95px;
+		top:60px;
+	}
+
+	@include tablet-landscape {
+			left:55px;
+		top:40px;
+	}
+
+
+	@include tablet {
+		left:55px;
+		top:40px;
+	}
+
+	&.nav--project_open {
+		opacity:1;
+		transform:translateX(0px);
+	}
+}
+
 .nav--primary {
 	position:absolute;
 	z-index:999;
@@ -8,22 +52,37 @@
 	margin:0 auto;
 	transition:left 0.2s;
 	padding:2em 0em;
+	.nav--logo {
+		transition:opacity 0.3s;
+	}
+	&.nav--project_open {
+		.nav--logo {
+			opacity:0;
+		}
+	}
 
 	@include tablet {
 		padding:2em 4em;
+		z-index:999;
+		position:fixed;
 	}
 
 	@include mega {
 		padding:2em 4em;
+		z-index:999;
+		position:fixed;
 	}
 
 	@include tablet-landscape {
 		padding:2em 4em;
+		z-index:999;
+		position:fixed;
 	}
 
 	@include desktop {
 		padding:2em 4em;
 		position:fixed;
+		z-index:999;
 
 	}
 
@@ -34,25 +93,66 @@
 
 		 .nav--links--inner {
 		 	display:inline-flex;
+		 	margin:0 auto;
+			 @include mega {
+			 	display: inline-flex;
+			 	margin:0;
+			 }
+			 @include desktop {
+			 	display: inline-flex;
+			 	margin:0;
+			 }
+			 @include tablet {
+		 		display: inline-flex;
+		 		margin:0;
+			 }
+			 @include tablet-landscape{
+		 		display: inline-flex;
+		 		margin:0;
+			 }
+			  @include mobile-landscape {
+			 	display: inline-flex;
+			 	margin:0;
+			 }
 		 }
 		 @include tablet {
 		 	justify-content: flex-end;
+		 	display: inline-flex;
+		 }
+		 @include tablet-landscape {
+		 	justify-content: flex-end;
+		 	display: inline-flex;
 		 }
 		 @include mega {
 		 	justify-content: flex-end;
+		 	display: inline-flex;
 		 }
 		 @include desktop {
 		 	justify-content: flex-end;
+		 	display: inline-flex;
 		 }
 	 }
 		a {
 			text-decoration: none;
-			font-size:1em;
+			font-size:0.75em;
+			margin:0 auto;
 			font-weight:900;
 			letter-spacing: 0.1em;
 			text-transform:uppercase;
 			color:#fff;
 			position:relative;
+
+			@include mega {
+				font-size:1em;
+			}
+			@include desktop {
+				font-size:1em;
+			}
+
+			@include tablet {
+				font-size:0.9em;
+			}
+
 
 			&:first-child {
 				margin-left:1em;
@@ -60,6 +160,7 @@
 			margin-right:0.25em;
 			overflow:hidden;
 		 	mark {
+		 		margin: 0 auto;
 			    background-color:$transparent;
 			    padding:0.65em 1em;
 			    white-space: nowrap;

@@ -1,7 +1,7 @@
 <template>
 	<div id="projecttop" class="project-container" v-if="data.length > 0" transition="expand" v-bind:style="{background: data[0].custom_field.project_color}">
       <div class="col-xs-12 intro--wrapper flex flow-vertical margin-auto text-center align-middle align-center">
-        <h3 class="text--tilted">Kristian Luuk</h3>
+        <h3 class="text--tilted">{{{data[0].custom_field.client_name}}}</h3>
         <h2 class="text--tilted">{{data[0].title.rendered}}</h2>
         <div class="masked--image large" v-bind:class="{'nav--project_open': this.$root.global.projectOpen}" v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_featured_image + ')' }"></div>
       </div>
@@ -11,43 +11,65 @@
            <h2 class="project--description">{{{data[0].custom_field.project_intro}}}</h2>
          </div>
       </div>-->
+
+      <div class="detail--section row detail--intro">
+        <div class="col-xs-12 text-left flex flow-vertical align-center"> 
+          {{{data[0].content.rendered}}}
+          <div class="author--wrapper flow--horizontal flex">
+            <div class="author--image"  v-bind:style="{'background-image': 'url(' + data[0].custom_field.author_image + ')' }"></div>
+            <div class="author--info">
+              <h5>{{{data[0].custom_field.author_title}}}</h5>
+              <h4>{{{data[0].custom_field.author_name}}}</h4>
+            </div>
+          </div>
+        </div>
+      </div>
       
       <div class="detail--section  row" v-if="data[0].custom_field.project_solution_title || data[0].custom_field.project_solution_description" >
-        <div class="col-xs-12 text-center detail--image"> 
-          <img class="margin-auto" v-bind:src="data[0].custom_field.project_solution_image">
+        <div class="col-xs-12 col-lg-6 text-center detail--image"> 
+          <img v-bind:src="data[0].custom_field.project_solution_image">
         </div>
-        <div class="col-xs-12 text-center detail--info flex flow-vertical align-center"> 
+        <div class="col-xs-12 col-lg-6 text-left detail--info flex flow-vertical"> 
           <h3>{{{data[0].custom_field.project_solution_title}}}</h3>
           <p>{{{data[0].custom_field.project_solution_description}}}</p>
         </div>
       </div>
 
       <div class="detail--section  row" v-if="data[0].custom_field.project_solution_title_2 || data[0].custom_field.project_solution_description_2" >
-        <div class="col-xs-12 text-center detail--image"> 
-          <img class="margin-auto" v-bind:src="data[0].custom_field.project_solution_image_2">
+        <div class="col-xs-12 col-lg-6 detail--image"> 
+          <img v-bind:src="data[0].custom_field.project_solution_image_2">
         </div>
-        <div class="col-xs-12 text-center detail--info flex flow-vertical align-center"> 
+        <div class="col-xs-12 col-lg-6 text-left detail--info flex flow-vertical"> 
           <h3>{{{data[0].custom_field.project_solution_title_2}}}</h3>
           <p>{{{data[0].custom_field.project_solution_description_2}}}</p>
         </div>
       </div>
 
-       <div class="detail--section row" v-if="data[0].custom_field.project_solution_title_3 || data[0].custom_field.project_solution_description"_3>
-        <div class="col-xs-12 text-center detail--image"> 
-          <img class="margin-auto" v-bind:src="data[0].custom_field.project_solution_image_3">
+      <div class="detail--section  row" v-if="data[0].custom_field.project_solution_title_3 || data[0].custom_field.project_solution_description_3" >
+        <div class="col-xs-12 col-lg-6 detail--image"> 
+          <img v-bind:src="data[0].custom_field.project_solution_image_3">
         </div>
-        <div class="col-xs-12 text-center detail--info flex flow-vertical align-center"> 
+        <div class="col-xs-12 col-lg-6 text-left detail--info flex flow-vertical"> 
           <h3>{{{data[0].custom_field.project_solution_title_3}}}</h3>
           <p>{{{data[0].custom_field.project_solution_description_3}}}</p>
         </div>
       </div>
 
+      <div class="detail--section  row" v-if="data[0].custom_field.project_solution_title_4 || data[0].custom_field.project_solution_description_4" >
+        <div class="col-xs-12 col-lg-6 detail--image"> 
+          <img v-bind:src="data[0].custom_field.project_solution_image_4">
+        </div>
+        <div class="col-xs-12 col-lg-6 text-left detail--info flex flow-vertical"> 
+          <h3>{{{data[0].custom_field.project_solution_title_4}}}</h3>
+          <p>{{{data[0].custom_field.project_solution_description_4}}}</p>
+        </div>
+      </div>
       <div class="detail--section detail--results row" v-if="data[0].custom_field.project_results">
         <div class="flex align-left align-middle">
             <h1 class="text--tilted">{{{data[0].custom_field.project_results}}}</h1>
         </div>
       </div>
-<!--
+    <!--
       <div class="project--section row" v-if="data[0].custom_field.project_testimony || data[0].custom_field.project_testimony_image"  v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_testimony_image + ')' }">
           <div class="col-xs-12 col-sm-12 text-center project--testimony flex flow-vertical align-center"> 
             <h1>{{{data[0].custom_field.project_testimony}}}</h1>

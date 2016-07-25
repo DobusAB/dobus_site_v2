@@ -25,11 +25,7 @@
 		    </div>
 	     </div>
 	  </div>
-	  
-    </div>	
-</template>
-
-<!--   	 <div v-link="{path: '/projects'}" class="nav--back">
+	  <div v-link="{path: '/projects'}" class="nav--back" v-bind:class="{'nav--project_open': this.$root.global.projectOpen}">
 			<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 			<svg width="20px" height="20px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 			    <defs></defs>
@@ -42,4 +38,7 @@
 			        </g>
 			    </g>
 			</svg>
-	  	 </div> -->
+	  	 </div>
+</template>
+
+<!--   	  -->
