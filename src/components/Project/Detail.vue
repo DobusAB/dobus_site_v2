@@ -126,7 +126,27 @@ export default {
       data: [],
       nextProject: [],
       currentProjectIndex: 0,
-      body: document.getElementsByTagName('body')[0]
+      body: document.getElementsByTagName('body')[0],
+      yoast: {
+        description: '',
+        title: '',
+        keywords: ''
+      }
+    }
+  },
+  head: {
+    title: function () {
+      return {
+        inner: this.yoast.title
+      }
+    },
+    meta: function () {
+      return {
+        name: {
+          description: this.yoast.description,
+          keywords: this.yoast.keywords
+        }
+      }
     }
   },
   props: {
@@ -136,6 +156,9 @@ export default {
     getDetailData: function () {
       this.$http.get(Init.globalUrl() + 'index.php/wp-json/wp/v2/pages?filter[name]=' + this.$route.params.name).then((response) => {
         this.data = response.data
+        this.yoast.description = response.data[0].yoast_meta.yoast_wpseo_metadesc
+        this.yoast.title = response.data[0].yoast_meta.yoast_wpseo_title
+        this.yoast.keywords = response.data[0].yoast_meta.yoast_wpseo_focuskw
         var scrollObject = document.getElementById('projecttop')
         if (scrollObject) {
           scrollObject.scrollTop = 0
@@ -163,7 +186,6 @@ export default {
           this.currentProjectIndex += 1
         }
         this.nextProject = moreProjects[this.currentProjectIndex]
-        console.log(this.nextProject)
       },
       (response) => {})
     },

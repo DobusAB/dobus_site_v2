@@ -36,14 +36,29 @@ export default {
       msg: 'Hello World',
       show: false,
       data: [],
+      yoast: {
+        description: '',
+        title: '',
+        keywords: ''
+      },
       featured: [],
       featuredRandom: [],
       hidden: false
     }
   },
   head: {
-    title: {
-      inner: 'Dobus'
+    title: function () {
+      return {
+        inner: this.yoast.title
+      }
+    },
+    meta: function () {
+      return {
+        name: {
+          description: this.yoast.description,
+          keywords: this.yoast.keywords
+        }
+      }
     }
   },
   components: {
@@ -53,6 +68,9 @@ export default {
     getPageData: function (transition) {
       this.$http.get(Init.globalUrl() + 'index.php/wp-json/wp/v2/pages/37').then((response) => {
         this.data = response.data
+        this.yoast.description = response.data.yoast_meta.yoast_wpseo_metadesc
+        this.yoast.title = response.data.yoast_meta.yoast_wpseo_title
+        this.yoast.keywords = response.data.yoast_meta.yoast_wpseo_focuskw
         this.getFeatured(transition)
       },
       (response) => {})

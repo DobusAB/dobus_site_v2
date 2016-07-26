@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="page--intro flex align-left align-middle">
-        <h1 class="text--tilted">{{{data.title.rendered}}}</h1>
+        <h1 class="text--tilted" v-if="data.title">{{{data.title.rendered}}}</h1>
     </div>
     <projects :project="data.sub_pages"></projects>
   </div>
@@ -20,7 +20,27 @@ export default {
       // preserves its current state and we are modifying
       // its initial state.
       data: [],
-      show: false
+      show: false,
+      yoast: {
+        description: '',
+        title: '',
+        keywords: ''
+      }
+    }
+  },
+  head: {
+    title: function () {
+      return {
+        inner: this.yoast.title
+      }
+    },
+    meta: function () {
+      return {
+        name: {
+          description: this.yoast.description,
+          keywords: this.yoast.keywords
+        }
+      }
     }
   },
   components: {
@@ -31,6 +51,9 @@ export default {
     getProject: function (transition) {
       this.$http.get(Init.globalUrl() + 'index.php/wp-json/wp/v2/pages/2').then((response) => {
         this.data = response.data
+        this.yoast.description = response.data.yoast_meta.yoast_wpseo_metadesc
+        this.yoast.title = response.data.yoast_meta.yoast_wpseo_title
+        this.yoast.keywords = response.data.yoast_meta.yoast_wpseo_focuskw
         this.show = true
         this.$root.global.loading = false
         transition.next()

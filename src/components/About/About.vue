@@ -12,7 +12,7 @@
       <div class="masked--image" v-bind:style="{'background-image': 'url(' + sub.custom_fields.work_image + ')' }"></div>
      </div>
   </div>
-    <div class="row image--background" v-link="{ name: 'work'}" v-bind:style="{'background-image': 'url(' + data.custom_field.work_image + ')' }"> 
+    <div v-if="data.custom_field" class="row image--background" v-link="{ name: 'work'}" v-bind:style="{'background-image': 'url(' + data.custom_field.work_image + ')' }"> 
     <div class="image--overlay"></div>
     <div class="col-xs-12 site--section landing--about flex flow-vertical margin-auto text-center align-middle align-center">
       <h3 class="text--tilted">Vill du vara med?</h2>
@@ -34,13 +34,21 @@ export default {
       // its initial state.
       msg: 'About',
       data: [],
-      show: false
+      show: false,
+      yoast: {
+        description: '',
+        title: '',
+        keywords: ''
+      }
     }
   },
   methods: {
     getAboutPage: function (transition) {
       this.$http.get(Init.globalUrl() + 'index.php/wp-json/wp/v2/pages/4').then((response) => {
         this.data = response.data
+        this.yoast.description = response.data.yoast_meta.yoast_wpseo_metadesc
+        this.yoast.title = response.data.yoast_meta.yoast_wpseo_title
+        this.yoast.keywords = response.data.yoast_meta.yoast_wpseo_focuskw
         this.show = true
         this.$root.global.loading = false
         transition.next()
@@ -49,8 +57,18 @@ export default {
     }
   },
   head: {
-    title: {
-      inner: 'Kontakta oss'
+    title: function () {
+      return {
+        inner: this.yoast.title
+      }
+    },
+    meta: function () {
+      return {
+        name: {
+          description: this.yoast.description,
+          keywords: this.yoast.keywords
+        }
+      }
     }
   },
   components: {
