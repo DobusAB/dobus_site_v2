@@ -50,7 +50,7 @@ a:after {
 	opacity:0.2;
 	border-radius:100%;
 	background-size:cover;
-	background-position:center;
+	background-position:center top;
 	z-index:1;
 	clip-path: circle(20% at center);
 	transition:all 1s cubic-bezier(0.77, 0, 0.175, 1);
