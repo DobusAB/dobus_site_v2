@@ -20,17 +20,7 @@
 		text-decoration: none;
 		color:#fff;
 		z-index:10;
-		@include hover;
-		@include desktop {
-			&:hover {
-				text-decoration: underline;
-			}
-		}
-		@include mega {
-			&:hover {
-				text-decoration: underline;
-			}
-		}
+		@include underline;
 	}
 
 	h4 {

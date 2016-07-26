@@ -50,8 +50,10 @@
 		a {
 			text-decoration: none;
 			color:#fff;
+			opacity:0.8;
 			&:hover {
 				opacity: 1;
+				color:#fff;
 			}
 		}
 	}

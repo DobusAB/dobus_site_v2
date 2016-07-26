@@ -5,19 +5,9 @@
 	@include mask--hover;
 	a {
 		text-decoration: none;
+		@include underline;
 		color:#fff;
 		z-index:10;
-		@include hover;
-		@include desktop {
-			&:hover {
-				text-decoration: underline;
-			}
-		}
-		@include mega {
-			&:hover {
-				text-decoration: underline;
-			}
-		}
 	}
 
 	h4 {
@@ -51,7 +41,7 @@
 		width:100%;
 	}
 	@include mega {
-		padding:$margin--large $margin--large*1.5;
+		padding:$margin--large*1.5 $margin--large*1.5;
 	}
 	@include desktop {
 		padding:$margin--large*1.5;

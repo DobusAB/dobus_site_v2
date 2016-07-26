@@ -6,6 +6,43 @@ img {
 	user-drag: none; 
 	user-select: none;
 }
+
+a {
+  text-decoration: none;
+  position: relative;
+}
+
+a:after {
+  content: '';
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 0%;
+  border-bottom: 3.5px solid #fff;
+  transition: 0.4s;
+  transform: rotate(-2deg);
+	transform-origin: left top 0;
+}
+
+@mixin underline {
+	@include desktop {
+		&:hover:after {
+		  width: 100%;
+		}
+	}
+
+	@include mega {
+		&:hover:after {
+		  width: 100%;
+		}
+	}
+
+}
+
+
+
+
+
 .text--tilted {
 	transform: rotate(-2deg);
 	transform-origin: left top 0;
@@ -94,7 +131,7 @@ img {
 		&:hover {
 		    cursor:pointer;
 		    .masked--image {
-		      clip-path: circle(30% at center);
+		      clip-path: circle(25% at center);
 		      opacity:0.4;
 		    }
 		}
