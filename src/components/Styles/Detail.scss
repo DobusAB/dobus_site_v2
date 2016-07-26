@@ -59,13 +59,16 @@
 				  }
 				  @include tablet {
 				    padding:$margin--medium;
+				    font-size:60%;
 				  }
 				  @include tablet-landscape {
 				   padding:$margin--medium;
+				   font-size:80%;
 
 				  }
 				  @include mobile-landscape {
 				    padding:$margin--medium;
+				    font-size:80%;
 				  }
 			}
 			.detail--section {
@@ -79,7 +82,7 @@
 				   padding: $margin--large;
 				  }
 				  @include tablet {
-				    padding:$margin--medium $margin--medium*1.5;
+				    padding:$margin--medium $margin--small;
 				  }
 				  @include tablet-landscape {
 				   padding:$margin--medium;
@@ -126,13 +129,14 @@
 						margin-left:1em;
 						h5 {
 							margin-top:0em;
-							font-size:1.2em;
+							font-size:1em;
 							font-weight:400;
 							margin-bottom:0em;
 						}
 						h4 {
 							margin-top:0em;
 							font-weight:500;
+							font-size:1.2em;
 						}
 					}
 
@@ -163,7 +167,7 @@
 						 	 font-size:1.5em;
 						  }
 						  @include tablet {
-								font-size:2em;
+								font-size:1.5em;
 						  }
 						  @include tablet-landscape {
 								font-size:1.5em;
@@ -194,12 +198,12 @@
 						 		margin-bottom:0em;
 						  }
 						  @include tablet {
-								margin-right:0em;
+								margin-right:2em;
 								margin-bottom:2em;
 						  }
 						  @include tablet-landscape {
 							margin-right:3.5em;
-							margin-bottom:0em;
+							margin-bottom:2em;
 
 						  }
 						  @include mobile-landscape {
@@ -215,6 +219,12 @@
 					  	padding-left:2.5em;
 					  }
 					  @include desktop {
+						padding-left:2.5em;
+					  }
+					  @include tablet {
+						padding-left:2.5em;
+					  }
+					  @include tablet-landscape {
 						padding-left:2.5em;
 					  }
 					h3 {
@@ -238,13 +248,13 @@
 						    line-height: 1.2em;
 						  }
 						  @include tablet {
-						    font-size:2.2em;
+						    font-size:2em;
 						  }
 						  @include tablet-landscape {
 						    font-size:1.5em;
 						  }
 						  @include mobile-landscape {
-						    font-size:2em;
+						    font-size:1.4em;
 						  }
 					}
 
@@ -262,7 +272,7 @@
 						    line-height: 1.3em;
 						  }
 						  @include tablet {
-						    font-size:1.75em;
+						    font-size:1.65em;
 						  }
 						  @include tablet-landscape {
 						    font-size:1.5em;

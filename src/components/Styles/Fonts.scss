@@ -4,7 +4,7 @@ h1 {
   color:#fff;
   letter-spacing: 0.05em;
   margin:1.5em auto 0em auto;
-  font-size: 1.48em;;
+  font-size: 1.40em;;
 
   margin-bottom:2em;
   transition:opacity 0.5s;
@@ -91,7 +91,7 @@ h2 {
     line-height: 1.2em;
   }
   @include tablet {
-    font-size:2.5em;
+    font-size:2.25em;
     width:75%;
   }
   @include tablet-landscape {
@@ -125,7 +125,7 @@ h3 {
     line-height: 1.2em;
   }
   @include tablet {
-    font-size:1.5em;
+    font-size:1.25em;
   }
   @include tablet-landscape {
     font-size:1.5em;
@@ -149,7 +149,7 @@ h4 {
     line-height: 1.2em;
   }
   @include tablet {
-    font-size:1.5em;
+    font-size:1.75em;
   }
   @include tablet-landscape {
     font-size:1.75em;

@@ -26,40 +26,40 @@
       </div>
       
       <div class="detail--section  row" v-if="data[0].custom_field.project_solution_title || data[0].custom_field.project_solution_description" >
-        <div class="col-xs-12 col-lg-6 text-center detail--image"> 
+        <div class="col-xs-12 col-md-6 text-center detail--image"> 
           <img v-bind:src="data[0].custom_field.project_solution_image">
         </div>
-        <div class="col-xs-12 col-lg-6 text-left detail--info flex flow-vertical"> 
+        <div class="col-xs-12 col-md-6 text-left detail--info flex flow-vertical"> 
           <h3>{{{data[0].custom_field.project_solution_title}}}</h3>
           <p>{{{data[0].custom_field.project_solution_description}}}</p>
         </div>
       </div>
 
       <div class="detail--section  row" v-if="data[0].custom_field.project_solution_title_2 || data[0].custom_field.project_solution_description_2" >
-        <div class="col-xs-12 col-lg-6 detail--image"> 
+        <div class="col-xs-12 col-md-6 detail--image"> 
           <img v-bind:src="data[0].custom_field.project_solution_image_2">
         </div>
-        <div class="col-xs-12 col-lg-6 text-left detail--info flex flow-vertical"> 
+        <div class="col-xs-12 col-md-6 text-left detail--info flex flow-vertical"> 
           <h3>{{{data[0].custom_field.project_solution_title_2}}}</h3>
           <p>{{{data[0].custom_field.project_solution_description_2}}}</p>
         </div>
       </div>
 
-      <div class="detail--section  row" v-if="data[0].custom_field.project_solution_title_3 || data[0].custom_field.project_solution_description_3" >
-        <div class="col-xs-12 col-lg-6 detail--image"> 
+      <div class="detail--section row" v-if="data[0].custom_field.project_solution_title_3 || data[0].custom_field.project_solution_description_3" >
+        <div class="col-xs-12 col-md-6 detail--image"> 
           <img v-bind:src="data[0].custom_field.project_solution_image_3">
         </div>
-        <div class="col-xs-12 col-lg-6 text-left detail--info flex flow-vertical"> 
+        <div class="col-xs-12 col-md-6 text-left detail--info flex flow-vertical"> 
           <h3>{{{data[0].custom_field.project_solution_title_3}}}</h3>
           <p>{{{data[0].custom_field.project_solution_description_3}}}</p>
         </div>
       </div>
 
-      <div class="detail--section  row" v-if="data[0].custom_field.project_solution_title_4 || data[0].custom_field.project_solution_description_4" >
-        <div class="col-xs-12 col-lg-6 detail--image"> 
+      <div class="detail--section row" v-if="data[0].custom_field.project_solution_title_4 || data[0].custom_field.project_solution_description_4" >
+        <div class="col-xs-12 col-md-6 detail--image"> 
           <img v-bind:src="data[0].custom_field.project_solution_image_4">
         </div>
-        <div class="col-xs-12 col-lg-6 text-left detail--info flex flow-vertical"> 
+        <div class="col-xs-12 col-md-6 text-left detail--info flex flow-vertical"> 
           <h3>{{{data[0].custom_field.project_solution_title_4}}}</h3>
           <p>{{{data[0].custom_field.project_solution_description_4}}}</p>
         </div>

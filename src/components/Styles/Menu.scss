@@ -36,6 +36,11 @@
 		top:40px;
 	}
 
+	@include mobile-landscape {
+		left:55px;
+		top:40px;
+	}
+
 	&.nav--project_open {
 		opacity:1;
 		transform:translateX(0px);
@@ -86,6 +91,11 @@
 
 	}
 
+	@include mobile-landscape {
+		position:absolute;
+		padding:1.5em;
+	}
+
 	.nav--links {
 		 display: inline-flex;
 		 overflow: scroll;
@@ -115,9 +125,15 @@
 			 	margin:0;
 			 }
 		 }
+		  @include mobile-landscape {
+		 	justify-content: flex-end;
+		 	display: inline-flex;
+		 	margin-top:0em;
+		 }
 		 @include tablet {
 		 	justify-content: flex-end;
 		 	display: inline-flex;
+		 	margin-top:0em;
 		 }
 		 @include tablet-landscape {
 		 	justify-content: flex-end;

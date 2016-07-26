@@ -1,5 +1,5 @@
 .about--wrapper {
-	padding:$margin--medium*1.5 $margin--small;
+	padding:$margin--medium*1.5 0em;
 	position:relative;
 	width:100%;
 	@include mask--hover;
@@ -19,6 +19,7 @@
 	a {
 		text-decoration: none;
 		color:#fff;
+		font-size:.8em;
 		z-index:10;
 		@include underline;
 	}
@@ -34,24 +35,18 @@
 		@include desktop {
 			margin-top:0.25em;
 		}
-		@include tablet {
-			padding:$margin--large $margin--small;
-		}
-		@include tablet-landscape {
-			padding:$margin--large $margin--medium;
-		}
 	}
 	@include mega {
-		padding:$margin--large $margin--large*1.5;
+		padding:$margin--large $margin--small;
 	}
 	@include desktop {
-		padding:$margin--large;
+		padding:$margin--large $margin--small;
 	}
 	@include tablet {
 		padding:$margin--large $margin--small;
 	}
 	@include tablet-landscape {
-		padding:$margin--large $margin--medium;
+		padding:$margin--large $margin--small;
 	}
 }
 

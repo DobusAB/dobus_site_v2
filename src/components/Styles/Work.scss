@@ -7,6 +7,7 @@
 		text-decoration: none;
 		@include underline;
 		color:#fff;
+		font-size:0.8em;
 		z-index:10;
 	}
 
@@ -20,12 +21,6 @@
 		}
 		@include desktop {
 			margin-top:0.25em;
-		}
-		@include tablet {
-			padding:$margin--large $margin--small;
-		}
-		@include tablet-landscape {
-			padding:$margin--large $margin--medium;
 		}
 	}
 	h2 {
