@@ -59,6 +59,19 @@
 	padding:2em 0em;
 	.nav--logo {
 		transition:opacity 0.3s;
+		position:relative;
+
+		svg {
+			transition:transform 0.25s;
+		}
+
+
+		&:hover {
+			svg {
+				transform:translateY(-10px);
+				cursor: pointer;
+			}
+		}
 	}
 	&.nav--project_open {
 		.nav--logo {

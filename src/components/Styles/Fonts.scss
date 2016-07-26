@@ -141,11 +141,11 @@ h4 {
   margin-top:1em;
   margin-bottom:0.5em;
   @include mega {
-    font-size:1.75em;
+    font-size:2em;
     line-height: 1.2;
   }
   @include desktop {
-    font-size:1.5em;
+    font-size:1.75em;
     line-height: 1.2em;
   }
   @include tablet {

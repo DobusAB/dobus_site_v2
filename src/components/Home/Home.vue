@@ -13,8 +13,9 @@
     </div>
   </div>
 
-  <div class="row image--background" v-link="{ name: 'about'}" v-bind:style="{'background-image': 'url(' + data.custom_field.group_image + ')' }"> 
+  <div class="row image--background" v-link="{ name: 'about'}"> 
     <div class="image--overlay"></div>
+    <div class="image--inner" v-bind:style="{'background-image': 'url(' + data.custom_field.group_image + ')' }"></div>
     <div class="col-xs-12 site--section landing--about flex flow-vertical margin-auto text-center align-middle align-center">
       <h3 class="text--tilted">vårt fantastiska team</h2>
       <h2 class="text--tilted">all kompetens under samma tak.</h2>

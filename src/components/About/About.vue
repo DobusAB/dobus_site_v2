@@ -12,8 +12,9 @@
       <div class="masked--image" v-bind:style="{'background-image': 'url(' + sub.custom_fields.work_image + ')' }"></div>
      </div>
   </div>
-    <div v-if="data.custom_field" class="row image--background" v-link="{ name: 'work'}" v-bind:style="{'background-image': 'url(' + data.custom_field.work_image + ')' }"> 
+    <div v-if="data.custom_field" class="row image--background" > 
     <div class="image--overlay"></div>
+    <div class="image--inner" v-link="{ name: 'work'}" v-bind:style="{'background-image': 'url(' + data.custom_field.work_image + ')' }"></div>
     <div class="col-xs-12 site--section landing--about flex flow-vertical margin-auto text-center align-middle align-center">
       <h3 class="text--tilted">Vill du vara med?</h2>
       <h2 class="text--tilted">Kolla in våra lediga jobb.</h2>

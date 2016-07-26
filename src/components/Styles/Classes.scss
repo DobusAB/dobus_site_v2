@@ -145,13 +145,40 @@ a:after {
 }
 
 .image--background {
-	background-size:cover;
-	background-position:center center;
-	background-repeat: no-repeat;
 	position:relative;
+	overflow:hidden;
+	cursor:pointer;
+	@include desktop {
+		&:hover {
+			.image--inner {
+				transform:scale(1.1);
+				cursor:pointer;
+			}
+		}
+	}
+	@include mega {
+		&:hover {
+			.image--inner {
+				transform:scale(1.1);
+				cursor:pointer;
+			}
+		}
+	}
+
+	.image--inner {
+		width:100%;
+		height:100%;
+		transition:all .35s cubic-bezier(0.77, 0, 0.175, 1);
+		position:absolute;
+		background-size:cover;
+		background-position:center center;
+		background-repeat: no-repeat;
+		z-index:1;
+	}
 	.image--overlay {
 		width:100%;
 		height:100%;
+		z-index:2;
 		position:absolute;
 		background-color:rgba(0,0,0,0.35);
 	}
