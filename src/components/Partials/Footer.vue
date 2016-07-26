@@ -24,9 +24,9 @@
         </div>
         <div class="col-xs-12 col-md-6 col-lg-3">
           <h4>Kontakta oss</h4>
-          <p><a href="">Ekonomi</a></p>
-          <p><a href="">Jobba här</a></p>
-          <p><a href="">Nya projekt</a></p>
+          <p><a v-link="{ name: 'about'}">Ekonomi</a></p>
+          <p><a v-link="{ name: 'work'}">Jobba här</a></p>
+          <p><a v-link="{ name: 'about'}">Nya projekt</a></p>
         </div>
       </div>
 </template>

@@ -6,7 +6,7 @@
         <div class="col-xs-12 work--wrapper flex flow-vertical margin-auto text-center align-middle align-center" v-for="sub in data.sub_pages" v-bind:style="{background: sub.custom_fields.position_color }">
           <h3 class="text--tilted">{{sub.custom_fields.position_title}}</h3>
           <h2 class="text--tilted">{{sub.post_title}}</h2>
-          <a href=""><h4 class="text--tilted">Ansök här</h4></a>
+          <a href="mailto:johan@dobus.se?Subject=Jobb" target="_top"><h4 class="text--tilted">Ansök här</h4></a>
           <div class="masked--image" v-bind:style="{'background-image': 'url(' + sub.custom_fields.position_image + ')' }"></div>
        </div>
     </div>
