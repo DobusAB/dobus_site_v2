@@ -142,23 +142,28 @@
 		 	justify-content: flex-end;
 		 	display: inline-flex;
 		 	margin-top:0em;
+		 	overflow: hidden;
 		 }
 		 @include tablet {
 		 	justify-content: flex-end;
 		 	display: inline-flex;
 		 	margin-top:0em;
+		 	overflow: hidden;
 		 }
 		 @include tablet-landscape {
 		 	justify-content: flex-end;
 		 	display: inline-flex;
+		 	overflow: hidden;
 		 }
 		 @include mega {
 		 	justify-content: flex-end;
 		 	display: inline-flex;
+		 	overflow: hidden;
 		 }
 		 @include desktop {
 		 	justify-content: flex-end;
 		 	display: inline-flex;
+		 	overflow: hidden;
 		 }
 	 }
 		a {
