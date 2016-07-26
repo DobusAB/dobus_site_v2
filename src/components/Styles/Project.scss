@@ -108,29 +108,33 @@
 		.service--illustration {
 			margin:0 auto;
 			left:0;
+			height:100px;
 			right:0;
 			position:absolute;
 			bottom:-5em;
 			@include mega {
 				bottom:-10em;
+				height:100px;
 			}
 
 			@include desktop {
 				bottom:-7.5em;
+				height:100px;
 			}
 
 			@include tablet-landscape {
 				width:10em;
-				height:auto;
+				height:100px;
 			}
 
 			@include tablet {
 				width:10em;
+				height:100px;
 			}
 
 			@include mobile-landscape {
 				width:10em;
-				height:auto;
+				height:100px;
 			}
 		}
 		svg {
@@ -178,14 +182,17 @@
 
 			&.internet-of-things {
 				width:12.5em;
+				height:200px;
 				margin-bottom:-2em;
 
 				@include desktop {
 					width:18.5em;
+					height:200px;
 					margin-bottom:-2em;
 				}
 				@include mega {
 					width:20.5em;
+					height:200px;
 					margin-bottom:0em;
 				}
 			}
