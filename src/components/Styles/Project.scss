@@ -25,6 +25,7 @@
 		padding:$margin--medium*1.5 $margin--small;
 		position:relative;
 		@include mask--hover;
+		@include hover;
 		h2 {
 			margin-top:0.5em;
 			position:relative;

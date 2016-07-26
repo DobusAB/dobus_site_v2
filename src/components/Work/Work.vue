@@ -7,7 +7,9 @@
           <h3 class="text--tilted">{{sub.custom_fields.position_title}}</h3>
           <h2 class="text--tilted">{{sub.post_title}}</h2>
           <a href="mailto:johan@dobus.se?Subject=Jobb" target="_top"><h4 class="text--tilted">Ansök här</h4></a>
-          <div class="masked--image" v-bind:style="{'background-image': 'url(' + sub.custom_fields.position_image + ')' }"></div>
+          <div class="masked--image">
+            <div class="masked--image_inner" v-bind:style="{'background-image': 'url(' + sub.custom_fields.position_image + ')' }"></div>
+          </div>
        </div>
     </div>
 </template>

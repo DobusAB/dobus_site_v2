@@ -2,6 +2,7 @@
 	padding:$margin--medium*1.5 $margin--small;
 	position:relative;
 	width:100%;
+	@include mask--hover;
 	a {
 		text-decoration: none;
 		@include underline;

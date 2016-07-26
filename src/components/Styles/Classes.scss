@@ -48,6 +48,7 @@ a:after {
 	width:200px;
 	height:200px;
 	opacity:0.2;
+	overflow:hidden;
 	border-radius:100%;
 	background-size:cover;
 	background-position: center top;
@@ -55,6 +56,14 @@ a:after {
 	clip-path: none;
 	transition:all .35s cubic-bezier(0.77, 0, 0.175, 1);
 	@include centerer;
+
+	.masked--image_inner {
+		background-size:cover;
+		background-position: center top;
+		height:100%;
+		transition:all .45s cubic-bezier(0.77, 0, 0.175, 1);
+		width:100%;
+	}
 
 	&.large {
 		width:100%;
@@ -84,7 +93,7 @@ a:after {
 	@include desktop {
 		width:300px;
 		height:300px;
-		clip-path: circle(40% at center);
+		//clip-path: circle(40% at center);
 	}
 	@include tablet {
 		width:350px;
@@ -117,21 +126,24 @@ a:after {
 }
 @mixin mask--hover {
 	@include desktop {
-		&:hover {
-		    cursor:pointer;
-		    .masked--image {
-		      clip-path: circle(50% at center);
-		      opacity:0.4;
-		    }
+			&:hover {
+				.masked--image {
+				transform: translate(-50%, -50%) scale(1.2);
+				opacity:.35;
+				.masked--image_inner {
+					transform:scale(1.2);
+				}
+			}
 		}
 	}
 	@include mega {
-		&:hover {
-		    cursor:pointer;
-		    .masked--image {
-		      clip-path: circle(50% at center);
-		      opacity:0.4;
-		    }
+			&:hover {
+				.masked--image {
+				transform: translate(-50%, -50%) scale(1.2);
+				.masked--image_inner {
+					transform:scale(1.2);
+				}
+			}
 		}
 	}
 }

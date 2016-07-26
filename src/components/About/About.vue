@@ -9,7 +9,9 @@
       <h2 class="text--tilted">{{sub.post_title}}</h2>
       <a href="tel:{{sub.custom_fields.work_phone}}"><h4 class="text--tilted">{{sub.custom_fields.work_phone}}</h4></a>
       <a href="mailto:{{sub.custom_fields.work_email}}"><h4 class="text--tilted">{{sub.custom_fields.work_email}}</h4></a>
-      <div class="masked--image" v-bind:style="{'background-image': 'url(' + sub.custom_fields.work_image + ')' }"></div>
+      <div class="masked--image">
+        <div class="masked--image_inner" v-bind:style="{'background-image': 'url(' + sub.custom_fields.work_image + ')' }"></div>
+      </div>
      </div>
   </div>
     <div v-if="data.custom_field" class="row image--background" v-link="{ name: 'work'}"> 

@@ -12,6 +12,7 @@
 	height:50px;
 	width:50px;
 	border-radius:50%;
+	@include hover;
 //	background-color:$dobus--primary;
 	background:rgba(0,0,0,0.2);
 

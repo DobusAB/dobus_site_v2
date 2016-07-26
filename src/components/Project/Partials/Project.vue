@@ -13,7 +13,9 @@
       <div class="col-xs-12 project--wrapper flex flow-vertical margin-auto text-center align-middle align-center" v-link="{ name: 'project_by_name', params: { name: sub.post_name }}" v-for="sub in item.sub_pages">
         <h3 class="text--tilted">{{{sub.custom_fields.client_name}}}</h3>
         <h2 class="text--tilted">{{sub.post_title}}</h2>
-        <div class="masked--image" v-bind:style="{'background-image': 'url(' + sub.custom_fields.project_featured_image + ')' }"></div>
+        <div class="masked--image">
+          <div class="masked--image_inner" v-bind:style="{'background-image': 'url(' + sub.custom_fields.project_featured_image + ')' }"></div>
+        </div>
       </div>
     </div>
      </div>
