@@ -9,7 +9,7 @@
 		-webkit-overflow-scrolling: touch;
 		right:0;
 		transform:translateX(100%);
-		transition:all 1s cubic-bezier(0.77, 0, 0.175, 1);
+		transition:all .5s cubic-bezier(0.77, 0, 0.175, 1);
 
 		p {
 			font-size:1.2em;
