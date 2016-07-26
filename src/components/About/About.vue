@@ -7,8 +7,8 @@
     <div class="col-xs-12 about--wrapper flex flow-vertical margin-auto text-center align-middle align-center" v-for="sub in data.sub_pages" v-bind:style="{background: sub.custom_fields.work_color }">
       <h3 class="text--tilted">{{sub.custom_fields.work_title}}</h3>
       <h2 class="text--tilted">{{sub.post_title}}</h2>
-      <a href=""><h4 class="text--tilted">{{sub.custom_fields.work_phone}}</h4></a>
-      <a href=""><h4 class="text--tilted">{{sub.custom_fields.work_email}}</h4></a>
+      <a href="tel:{{sub.custom_fields.work_phone}}"><h4 class="text--tilted">{{sub.custom_fields.work_phone}}</h4></a>
+      <a href="mailto:{{sub.custom_fields.work_email}}"><h4 class="text--tilted">{{sub.custom_fields.work_email}}</h4></a>
       <div class="masked--image" v-bind:style="{'background-image': 'url(' + sub.custom_fields.work_image + ')' }"></div>
      </div>
   </div>

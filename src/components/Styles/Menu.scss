@@ -13,7 +13,7 @@
 	width:50px;
 	border-radius:50%;
 //	background-color:$dobus--primary;
-	background:rgba(0,0,0,0.3);
+	background:rgba(0,0,0,0.2);
 
 	@include mega {
 		left:95px;
@@ -26,7 +26,7 @@
 	}
 
 	@include tablet-landscape {
-			left:55px;
+		left:55px;
 		top:40px;
 	}
 
