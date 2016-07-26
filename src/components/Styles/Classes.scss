@@ -84,7 +84,7 @@ a:after {
 	@include desktop {
 		width:300px;
 		height:300px;
-		clip-path: circle(30% at center);
+		clip-path: circle(40% at center);
 	}
 	@include tablet {
 		width:350px;

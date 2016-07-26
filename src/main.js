@@ -9,6 +9,7 @@ import animatedScrollTo from 'animated-scrollto'
 
 require('./components/Styles/Style.vue')
 
+console.log('Välkommen till Dobus! Kul att ha dig här. Är du sugen på att jobba med oss? I så fall tycker vi att du ska skriva till oss eller läsa mer om positioner vi söker här http://stage.labb.dobus.se/work')
 Vue.use(VueHead)
 Vue.use(VueRouter)
 Vue.use(VueResource)
