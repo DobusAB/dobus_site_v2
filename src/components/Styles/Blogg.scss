@@ -8,6 +8,20 @@
 		height:225px;
 		background-color: blue;
 		position:relative;
+		&::after {
+			content: "";
+		    background: url(../../assets/wave-transparent.svg) 0 100% repeat-x;
+		    position: absolute;
+		    display:block;
+			left: -50%;
+			right: -50%;
+			z-index: 1;
+			height: 25px;
+			-webkit-transform: scale(0.5);
+			transform: scale(0.5);
+			top: auto;
+			bottom: -18px;
+		}
 	}
 
 	.blog--content {
