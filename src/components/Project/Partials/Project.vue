@@ -1,5 +1,5 @@
 <template>
-	<div class="service--section flex flow-vertical" v-bind:class="{'fadeIn' : this.$root.global.loading}" v-bind:style="{background: item.custom_fields.project_color }"  v-for="item in project">
+	<div class="service--section flex flow-vertical"  v-bind:style="{background: item.custom_fields.project_color }"  v-for="item in project">
     <div class="service--header row flex">
       <div class="col-xs-12 text-center">
         <h3 class="text--tilted">Vad vi gör</h3>
