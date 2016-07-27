@@ -8,7 +8,7 @@
 </div>
  <div class="row">
  <div class="blog--wrapper col-xs-12 col-lg-4 " v-link="{name: post_by_id, params: {id: post.id}}" v-for="post in posts">
-    <div class="blog--image"  v-bind:style="{background: sub.custom_fields.work_color }">
+    <div class="blog--image" v-bind:style="{background: sub.custom_fields.work_color }">
        <div class="masked--image small">
           <div class="masked--image_inner" v-bind:style="{'background-image': 'url(' + sub.custom_fields.work_image + ')' }"></div>
        </div>
@@ -19,8 +19,8 @@
        <div class="author--wrapper flow--horizontal flex">
         <div class="author--image"  v-bind:style="{'background-image': 'url(' + data[0].custom_field.author_image + ')' }"></div>
         <div class="author--info">
-          <h5>asdsad{{{data[0].custom_field.author_title}}}</h5>
-          <h4>asdsad{{{data[0].custom_field.author_name}}}</h4>
+          <h5>{{{data[0].custom_field.author_title}}}</h5>
+          <h4>{{{data[0].custom_field.author_name}}}</h4>
         </div>
       </div>
     </div>
