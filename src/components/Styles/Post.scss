@@ -44,7 +44,22 @@
 
 		.post--content {
 			width:100%;
-			padding:2em 10em;
+			padding:2em 1.25em;
+			@include mega {
+			   	padding:2em 10em;
+			  }
+			  @include desktop {
+			   padding:2em 17.5em;
+			  }
+			  @include tablet {
+			  padding:2em 5em;
+			  }
+			  @include tablet-landscape {
+			  padding:2em 10em;
+			  }
+			  @include mobile-landscape {
+			   padding:2em 5em;
+			  }
 			text-align:left;
 			.author--wrapper {
 				margin-top:2em;
@@ -73,14 +88,48 @@
 		    }
 
 			h5 {
-				font-size:2.65em;
-				max-width:70%;
+				font-size:1.75em;
+				max-width:100%;
 				margin-bottom:0.5em;
+				 @include mega {
+				   	max-width:60%;
+				   	font-size:2.65em;
+				  }
+				  @include desktop {
+				   max-width:85%;
+				   font-size:2.65em;
+				  }
+				  @include tablet {
+				   max-width:80%;
+				  }
+				  @include tablet-landscape {
+				  max-width:70%;
+
+				  }
+				  @include mobile-landscape {
+				    max-width:80%;
+				  }
 			}
 
 			p {
-				font-size:1.4em;
-				max-width:70%;
+				font-size:1.25em;
+				max-width:100%;
+				  @include mega {
+				   	max-width:60%;
+				  }
+				  @include desktop {
+				    max-width:80%;
+				  }
+				  @include tablet {
+				   max-width:80%;
+				  }
+				  @include tablet-landscape {
+				  max-width:70%;
+
+				  }
+				  @include mobile-landscape {
+				    max-width:80%;
+				  }
 			}
 
 			figure {
