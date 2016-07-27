@@ -2,22 +2,20 @@
 	position:relative;
 	width:100%;
 	@include mask--hover;
-	background-color:black;
-
+	@include hover;
 	.blog--image {
 		height:225px;
-		background-color: blue;
+		background: rgba(0, 0, 0, 0.05);
 		position:relative;
 		&::after {
 			content: "";
-		    background: url(../../assets/wave-transparent.svg) 0 100% repeat-x;
+		    background: url(../../assets/wave-transparent.svg) 0 70% repeat-x;
 		    position: absolute;
 		    display:block;
 			left: -50%;
 			right: -50%;
 			z-index: 1;
 			height: 25px;
-			-webkit-transform: scale(0.5);
 			transform: scale(0.5);
 			top: auto;
 			bottom: -18px;
@@ -40,17 +38,19 @@
 			margin-top:0.25em;
 		}
 	}
+	p {
+		font-size:1.1em;
+	}
 
 	.author--wrapper {
 		margin-top:2em;
 		position:absolute;
-		bottom:20px;
+		bottom:2em;
 	}
 	.author--image {
 		height:60px;
 		width:60px;
 		border-radius:50%;
-		background-color:blue;
 		background-size:cover;
 		background-repeat:no-repeat;
 		background-position:center;
