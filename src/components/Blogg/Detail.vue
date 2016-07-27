@@ -22,6 +22,7 @@ export default {
       show: false,
       data: [],
       posts: [],
+      body: document.getElementsByTagName('body')[0],
       yoast: {
         description: '',
         title: '',
@@ -38,21 +39,23 @@ export default {
         this.data = response.data
         this.$root.global.loading = false
         this.show = true
-        transition.next(transition)
       },
 			(response) => {})
     }
   },
   route: {
-    activate: function (transition) {
-      this.getPost(transition)
+    data: function () {
+      this.getPost()
     },
     deactivate: function (transition) {
-      this.$root.global.loading = true
-      setTimeout(function () {
-        transition.next(transition)
-      }, 250)
+      this.$root.global.projectOpen = false
+      this.body.className = ''
+      transition.next(transition)
     }
+  },
+  ready: function () {
+    this.$root.global.projectOpen = true
+    this.body.classList.add('project-open')
   }
 }
 </script>
