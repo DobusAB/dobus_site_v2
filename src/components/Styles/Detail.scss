@@ -2,10 +2,11 @@
 		max-height:100vh;
 		min-height:100vh;
 		position:fixed;
+		overflow-x:hidden;
 		width:100%;
 		z-index:2;
 		top:0;
-		overflow:scroll;
+		overflow-y:scroll;
 		-webkit-overflow-scrolling: touch;
 		right:0;
 		transform:translateX(100%);
