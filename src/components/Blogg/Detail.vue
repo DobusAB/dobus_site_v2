@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     getPost: function (transition) {
-      this.$http.get(Init.globalUrl() + 'index.php/wp-json/wp/v2/posts/575').then((response) => {
+      this.$http.get(Init.globalUrl() + 'index.php/wp-json/wp/v2/posts/' + this.$route.params.id).then((response) => {
         this.data = response.data
         this.$root.global.loading = false
         this.show = true
