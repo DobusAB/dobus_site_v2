@@ -169,6 +169,8 @@
 	 }
 		a {
 			text-decoration: none;
+			transition:transform 0.25s;
+			@include floatUp;
 			font-size:0.75em;
 			margin:0 auto;
 			font-weight:900;

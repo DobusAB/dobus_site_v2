@@ -288,6 +288,7 @@
 			.project--wrapper {
 				padding:$margin--medium*1.5 $margin--small;
 				position:relative;
+				@include hover;
 				@include mask--hover;
 				h2 {
 					margin-top:0.5em;

@@ -69,48 +69,15 @@
             <h1 class="text--tilted">{{{data[0].custom_field.project_results}}}</h1>
         </div>
       </div>
-    <!--
-      <div class="project--section row" v-if="data[0].custom_field.project_testimony || data[0].custom_field.project_testimony_image"  v-bind:style="{'background-image': 'url(' + data[0].custom_field.project_testimony_image + ')' }">
-          <div class="col-xs-12 col-sm-12 text-center project--testimony flex flow-vertical align-center"> 
-            <h1>{{{data[0].custom_field.project_testimony}}}</h1>
-          </div>
-        </div>
-
-      </div>-->
-
       <div class="row next--project " v-on:click="NextProject(nextProject.post_name)" v-bind:style="{background: nextProject.custom_fields.project_color}" v-if="nextProject.post_title">
       <div class="col-xs-12 project--wrapper flex flow-vertical margin-auto text-center align-middle align-center">
         <h3 class="text--tilted">Nästa projekt</h3>
         <h2 class="text--tilted">{{{nextProject.post_title}}} {{nextProject.name}}</h2>
-        <div class="masked--image" v-bind:style="{'background-image': 'url(' + nextProject.custom_fields.project_featured_image + ')' }"></div>
+        <div class="masked--image">
+          <div class="masked--image_inner" v-bind:style="{'background-image': 'url(' + nextProject.custom_fields.project_featured_image + ')' }"></div>
+        </div>
       </div>
     </div>
-
-      <!--<div class="next--project row" v-on:click="NextProject(nextProject.post_name)" v-bind:style="{background: nextProject.custom_fields.project_color}" v-if="nextProject.post_title">
-        <div class="col-xs-12 text-center">
-          <div class="project--intro">
-           <h1>{{{nextProject.post_title}}} {{nextProject.name}}</h1>
-           <h4>{{{nextProject.custom_fields.project_description}}}</h4>
-          </div>
-          <div class="project--image_container" v-bind:style="{'background-image': 'url(' + nextProject.custom_fields.project_featured_image + ')' }"></div>
-           <div class="project--shadow"></div>
-           <div class="project--arrow flex align-middle align-center">
-            <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-              <svg width="25px" height="25px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <defs></defs>
-                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                      <g id="Tjänster-&amp;-Projekt-Copy-6" transform="translate(-1261.000000, -3125.000000)" stroke="#FFFFFF" stroke-width="5.59999957">
-                          <g id="Group-12" transform="translate(1264.000000, 3128.000000)">
-                              <path d="M0.566037736,14.7272727 L28.0997842,14.7272727" id="Path-36"></path>
-                              <polyline id="Path-37" points="14.1509434 0 29.5989795 14.8862893 14.1509434 29.7725787"></polyline>
-                          </g>
-                      </g>
-                  </g>
-              </svg>
-        </div>
-        </div>
-      </div>-->
-
     </div>
 	</div>
 </template>

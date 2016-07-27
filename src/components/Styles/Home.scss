@@ -1,6 +1,8 @@
 .landing--container {
 	position:relative;
 	color:#fff;
+	//background:$dobus--primary url("../../assets/pattern_dobus.svg");
+	//background-size:25%;
 	.landing--intro {
 		height:100vh;
 		padding:0em $margin--small/4;
@@ -22,6 +24,7 @@
 	.landing--project {
 		padding:$margin--medium $margin--small;
 		position:relative;
+		@include hover;
 		@include mask--hover;
 		h2 {
 			margin-top:0.5em;
@@ -47,6 +50,7 @@
 		}
 	}
 	.landing--about {
+		@include hover;
 		padding:$margin--small*1.5 $margin--small;
 		position:relative;
 		@include mega {

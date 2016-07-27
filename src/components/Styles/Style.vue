@@ -20,6 +20,7 @@
 		padding:0;
 		font-family: $font ,sans-serif;
 		background-color:#fefefe;
+		overflow-x: hidden;
 		-webkit-font-smoothing: antialiased;
 
 		&.project-open {
