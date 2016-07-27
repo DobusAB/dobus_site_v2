@@ -53,9 +53,9 @@ router.map({
     name: 'work',
     component: require('./components/Work/Work.vue')
   },
-  '/process': {
-    name: 'process',
-    component: require('./components/Process/Process.vue')
+  '/blogg': {
+    name: 'blogg',
+    component: require('./components/Blogg/Blogg.vue')
   }
 })
 router.beforeEach(function (transition) {

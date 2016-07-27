@@ -52,6 +52,9 @@
 		      <a v-link="{ name: 'work', activeClass: 'nav--active' }" class="flex align-middle">
 		      	<mark>Jobba här</mark>
 		      </a>
+               <a v-link="{ name: 'blogg', activeClass: 'nav--active' }" class="flex align-middle">
+                <mark>Blogg</mark>
+              </a>
 		    </div>
 	     </div>
 	  </div>
