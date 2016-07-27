@@ -21,7 +21,8 @@ export default {
       msg: 'About',
       global: {
         projectOpen: false,
-        loading: true
+        loading: true,
+        backname: ''
       }
     }
   },

@@ -62,6 +62,7 @@ export default {
   },
   ready: function () {
     this.$root.global.projectOpen = true
+    this.$root.global.backname = 'blogg'
     this.body.classList.add('project-open')
   }
 }
