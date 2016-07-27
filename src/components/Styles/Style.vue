@@ -10,6 +10,7 @@
 	@import 'Page';
 	@import 'Project';
 	@import 'About';
+	@import 'Blogg';
 	@import 'Work';
 	@import 'Footer';
 	@import 'Loading';
