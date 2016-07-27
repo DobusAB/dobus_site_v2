@@ -10,7 +10,7 @@
 		-webkit-overflow-scrolling: touch;
 		right:0;
 		transform:translateX(100%);
-		transition:all .5s cubic-bezier(0.77, 0, 0.175, 1);
+		transition:transform .5s cubic-bezier(0.77, 0, 0.175, 1);
 
 		.intro--wrapper {
 			padding:$margin--medium*1.5 $margin--small;
