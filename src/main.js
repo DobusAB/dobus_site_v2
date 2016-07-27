@@ -55,7 +55,13 @@ router.map({
   },
   '/blogg': {
     name: 'blogg',
-    component: require('./components/Blogg/Blogg.vue')
+    component: require('./components/Blogg/Blogg.vue'),
+    subRoutes: {
+      '/:id': {
+        name: 'post_by_id',
+        component: require('./components/Blogg/Detail.vue')
+      }
+    }
   }
 })
 router.beforeEach(function (transition) {
