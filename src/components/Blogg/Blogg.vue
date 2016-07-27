@@ -1,9 +1,22 @@
 <template>
-   <div class="page--intro flex align-left align-middle" v-if="show">
-      <h1 class="text--tilted">{{{data.title.rendered}}}</h1>
+  <div class="page--intro flex align-left align-middle" v-if="show">
+       <h1 class="text--tilted">{{{data.title.rendered}}}</h1>
    </div>
-   <single :item="items"></single>
-<router-view></router-view>
+   <div class="row">
+    <div class="blog--wrapper col-xs-12 col-lg-4" v-bind:style="{background: post.custom_field.post_color }" v-for="post in items" v-link="{name: 'post_by_id', params: {id: post.id}}">
+      <div class="blog--image">
+         <div class="masked--image small">
+            <div class="masked--image_inner" v-bind:style="{'background-image': 'url(' + post.custom_field.post_image + ')' }"></div>
+         </div>
+      </div>
+      <div class="blog--content text-left">
+        <h4>{{post.title.rendered}}</h1>
+        <p>{{{post.excerpt.rendered}}}</p>
+         <!--  <div class="author--image"  v-bind:style="{'background-image': 'url(' + data[0].custom_field.author_image + ')' }"></div>-->
+      </div>
+    </div>
+  </div>
+   <router-view></router-view>
 </template>
 <script>
 import Init from '../Partials/Init'
@@ -35,29 +48,31 @@ export default {
     single: Single
   },
   methods: {
-    getPageData: function (transition) {
+    getBloggPage: function (transition) {
       this.$http.get(Init.globalUrl() + 'index.php/wp-json/wp/v2/pages/573').then((response) => {
         this.data = response.data
-        this.yoast.description = response.data.yoast_meta.yoast_wpseo_metadesc
-        this.yoast.title = response.data.yoast_meta.yoast_wpseo_title
-        this.yoast.keywords = response.data.yoast_meta.yoast_wpseo_focuskw
-        this.getFeatured(transition)
+        this.show = true
+        this.$root.global.loading = false
+        this.getPosts()
+        transition.next()
       },
       (response) => {})
     },
-    getFeatured: function (transition) {
-      this.$http.get(Init.globalUrl() + 'index.php/wp-json/wp/v2/posts').then((response) => {
-        // this.items = response.data
-        this.$root.global.loading = false
+    getPosts: function (transition) {
+      this.$http.get(Init.globalUrl() + 'index.php/wp-json/wp/v2/posts?filter[category_name]=blogg').then((response) => {
+        this.items = response.data
+        /* this.featured = response.data
+        this.featuredRandom = this.featured[Math.floor(Math.random() * this.featured.length)]
         this.show = true
-        transition.next()
+        this.$root.global.loading = false */
+        // transition.next(transition)
       },
       (response) => {})
     }
   },
   route: {
     activate: function (transition) {
-      this.getPageData(transition)
+      this.getBloggPage(transition)
     },
     deactivate: function (transition) {
       this.$root.global.loading = true
