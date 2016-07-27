@@ -7,6 +7,7 @@ img {
 	user-select: none;
 }
 
+
 a {
   text-decoration: none;
   position: relative;
@@ -70,14 +71,14 @@ a:after {
 	background-position: center top;
 	z-index:1;
 	clip-path: none;
-	transition:all .35s cubic-bezier(0.77, 0, 0.175, 1);
+	transition:all .45s cubic-bezier(0.77, 0, 0.175, 1);
 	@include centerer;
 
 	.masked--image_inner {
 		background-size:cover;
 		background-position: center top;
 		height:100%;
-		transition:all .45s cubic-bezier(0.77, 0, 0.175, 1);
+		transition:all .55s cubic-bezier(0.77, 0, 0.175, 1);
 		width:100%;
 	}
 

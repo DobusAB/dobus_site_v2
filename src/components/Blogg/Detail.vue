@@ -1,10 +1,10 @@
 <template>
 <div class="post-container" transition="expand"  v-bind:style="{background: data.custom_field.post_color}">
     <div class="col-xs-12 intro--wrapper flex flow-vertical margin-auto text-center align-middle align-center">
-        <h2 class="text--tilted">{{data.title.rendered}}</h2>
         <div class="masked--image large" v-bind:class="{'nav--project_open': this.$root.global.projectOpen}" v-bind:style="{'background-image': 'url(' + data.custom_field.post_image + ')' }"></div>
     </div>
-    <div class="col-xs-12 post--content">
+     <div class="detail--intro">
+      <h2>{{{data.title.rendered}}}</h2>
        <div class="author--wrapper flow--horizontal flex">
         <div class="author--image"  v-bind:style="{'background-image': 'url(' + data[0].custom_field.author_image + ')' }"></div>
         <div class="author--info">
@@ -12,7 +12,10 @@
           <h4>{{{data[0].custom_field.author_name}}}Albin Martinsson</h4>
         </div>
       </div>
+      </div>
+    <div class="col-xs-12 post--content">
       {{{data.content.rendered}}}
+    </div>
 </template>
 
 <script>
