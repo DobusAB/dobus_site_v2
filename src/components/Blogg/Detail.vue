@@ -1,10 +1,19 @@
 <template>
-<div class="project-container" transition="expand" style="background:red;">
-  <div class="row">
-    <div class="col-xs-12 landing--intro margin-auto text-center flex align-middle">
-      <h1 class="text--tilted" v-bind:class="{'fadeIn' : this.$root.global.loading}" v-if="data.title">{{{ data.title.rendered }}}</h1>
+<div class="post-container" transition="expand"  v-bind:style="{background: data.custom_field.post_color}">
+    <div class="col-xs-12 intro--wrapper flex flow-vertical margin-auto text-center align-middle align-center">
+        <h2 class="text--tilted">{{data.title.rendered}}</h2>
+        <div class="masked--image large" v-bind:class="{'nav--project_open': this.$root.global.projectOpen}" v-bind:style="{'background-image': 'url(' + data.custom_field.post_image + ')' }"></div>
     </div>
-  </div>
+    <div class="col-xs-12 post--content">
+       <div class="author--wrapper flow--horizontal flex">
+        <div class="author--image"  v-bind:style="{'background-image': 'url(' + data[0].custom_field.author_image + ')' }"></div>
+        <div class="author--info">
+          <h5>{{{data[0].custom_field.author_title}}}Designer</h5>
+          <h4>{{{data[0].custom_field.author_name}}}Albin Martinsson</h4>
+        </div>
+      </div>
+      {{{data.content.rendered}}}
+    </div>
 </div>
 </template>
 
