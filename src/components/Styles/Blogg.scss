@@ -2,8 +2,7 @@
 	position:relative;
 	width:100%;
 	@include mask--hover;
-	background-color:$app--color;
-
+	@include hover;
 	.blog--image {
 		height:225px;
 		background: rgba(0, 0, 0, 0.05);

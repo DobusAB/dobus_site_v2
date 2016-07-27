@@ -7,10 +7,10 @@
   </div>
 </div>
  <div class="row">
- <div class="blog--wrapper col-xs-12 col-lg-4 " v-link="{name: post_by_id, params: {id: post.id}}" v-for="post in posts">
-    <div class="blog--image" v-bind:style="{background: sub.custom_fields.work_color }">
+ <div class="blog--wrapper col-xs-12 col-md-6 col-lg-4 " v-link="{name: post_by_id, params: {id: post.id}}" v-for="post in posts" v-bind:style="{background: post.custom_field.post_color }"> 
+    <div class="blog--image">
        <div class="masked--image small">
-          <div class="masked--image_inner" v-bind:style="{'background-image': 'url(' + sub.custom_fields.work_image + ')' }"></div>
+          <div class="masked--image_inner" v-bind:style="{'background-image': 'url(' + post.custom_field.post_image + ')' }"></div>
        </div>
     </div>
     <div class="blog--content text-left">
