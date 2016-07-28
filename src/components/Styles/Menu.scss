@@ -233,7 +233,7 @@
 		    }
 		    &:nth-child(4) {
 		       mark {
-		      	 background-image: linear-gradient(to left, $design--color 50% ,$transparent 50%);
+		      	 background-image: linear-gradient(to left, $startup--color 50% ,$transparent 50%);
 		   	   }
 		    }
 			@include mega {
