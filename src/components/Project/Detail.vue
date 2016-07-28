@@ -15,11 +15,11 @@
       <div class="detail--section row detail--intro">
         <div class="col-xs-12 text-left flex flow-vertical align-center"> 
           {{{data[0].content.rendered}}}
-          <div class="author--wrapper flow--horizontal flex">
-            <div class="author--image"  v-bind:style="{'background-image': 'url(' + data[0].custom_field.author_image + ')' }"></div>
+           <div class="author--wrapper flow--horizontal flex">
+            <div class="author--image"  v-bind:style="{'background-image': 'url(' + data[0].user_data.profile_image + ')' }"></div>
             <div class="author--info">
-              <h5>{{{data[0].custom_field.author_title}}}</h5>
-              <h4>{{{data[0].custom_field.author_name}}}</h4>
+              <h5>{{{data[0].user_data.user.description}}}</h5>
+              <h4>{{{data[0].user_data.user.first_name}}} {{{data[0].user_data.user.last_name}}}</h4>
             </div>
           </div>
         </div>

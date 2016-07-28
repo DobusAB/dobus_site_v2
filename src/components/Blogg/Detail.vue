@@ -5,13 +5,13 @@
     </div>
      <div class="detail--intro">
       <h2>{{{data.title.rendered}}}</h2>
-       <div class="author--wrapper flow--horizontal flex">
-        <div class="author--image"  v-bind:style="{'background-image': 'url(' + data[0].custom_field.author_image + ')' }"></div>
-        <div class="author--info">
-          <h5>{{{data[0].custom_field.author_title}}}Designer</h5>
-          <h4>{{{data[0].custom_field.author_name}}}Albin Martinsson</h4>
-        </div>
-      </div>
+        <div class="author--wrapper flow--horizontal flex">
+            <div class="author--image"  v-bind:style="{'background-image': 'url(' + data.user_data.profile_image + ')' }"></div>
+            <div class="author--info">
+              <h5>{{{data.user_data.user.description}}}</h5>
+              <h4>{{{data.user_data.user.first_name}}} {{{data.user_data.user.last_name}}}</h4>
+            </div>
+          </div>
       </div>
     <div class="col-xs-12 post--content">
       {{{data.content.rendered}}}
