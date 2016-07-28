@@ -59,7 +59,7 @@ export default {
       (response) => {})
     }
   },
-  /* head: {
+  head: {
     title: function () {
       return {
         inner: this.yoast.title
@@ -73,7 +73,7 @@ export default {
         }
       }
     }
-  }, */
+  },
   components: {
     loading: Loading
   },

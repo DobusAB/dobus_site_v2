@@ -33,14 +33,6 @@ export default {
       return {
         inner: this.yoast.title
       }
-    },
-    meta: function () {
-      return {
-        name: {
-          description: this.yoast.description,
-          keywords: this.yoast.keywords
-        }
-      }
     }
   },
   components: {
