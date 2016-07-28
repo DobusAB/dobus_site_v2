@@ -1,54 +1,41 @@
 //Webbutveckling 
-/*
-#box_x5F_1 {
-transform:translate(188.000000px, 96.000000px);
-}
-#box_x5F_2 {
-	transform: translate(237.000000px, 68.000000px);
-}
-#box_x5F_3 {
-	transform: translate(140.000000px, 68.000000px);
-}
-#box_x5F_4 {
-	transform: translate(188.000000px, 40.000000px);
-}
-#box_x5F_5 {
-	transform: translate(92.000000px, 40.000000px);
-}
-#box_x5F_6 {
-	transform: translate(140.000000px, 12.000000px);
-}
 
 
 @include desktop {
 	#box_x5F_1 {
 	transform:translate(188.000000px, -700.000000px);
 	transition: all 0.75s;
+	opacity:0;
 	transition-delay: 0.1s;
 	}
 	#box_x5F_2 {
 		transform: translate(237.000000px, -700.000000px);
 		transition: all 0.75s;
+		opacity:0;
 		transition-delay: 0.2s;
 	}
 	#box_x5F_3 {
 		transform: translate(140.000000px, -700.000000px);
 		transition: all 0.75s;
+		opacity:0;
 		transition-delay: 0.3s;
 	}
 	#box_x5F_4 {
 		transform: translate(188.000000px, -700.000000px);
 		transition: all 0.75s;
+		opacity:0;
 		transition-delay: 0.4s;
 	}
 	#box_x5F_5 {
 		transform: translate(92.000000px, -700.000000px);
 		transition: all 0.75s;
+		opacity:0;
 		transition-delay: 0.5s;
 	}
 	#box_x5F_6 {
 		transform: translate(140.000000px, -700.000000px);
 		transition: all 0.75s;
+		opacity:0;
 		transition-delay: 0.6s;
 	}
 }
@@ -120,26 +107,32 @@ transform:translate(188.000000px, 96.000000px);
 
 
 @include mega {
-
+.service--section {
 	&:hover{
 			//Webb
 
 			#box_x5F_1 {
 			transform:translate(188.000000px, 96.000000px);
+			opacity:1;
 			}
 			#box_x5F_2 {
 				transform: translate(237.000000px, 68.000000px);
+				opacity:1;
 			}
 			#box_x5F_3 {
 				transform: translate(140.000000px, 68.000000px);
+				opacity:1;
 			}
 			#box_x5F_4 {
 				transform: translate(188.000000px, 40.000000px);
+				opacity:1;
 			}
 			#box_x5F_5 {
 				transform: translate(92.000000px, 40.000000px);
+				opacity:1;
 			}
 			#box_x5F_6 {
+				opacity:1;
 				transform: translate(140.000000px, 12.000000px);
 			}
 
@@ -165,10 +158,11 @@ transform:translate(188.000000px, 96.000000px);
 			}
 
 		}
+	}
 
 }
 @include desktop {
-
+	.service--section {
 	&:hover{
 
 			//Internet of things 
@@ -192,21 +186,27 @@ transform:translate(188.000000px, 96.000000px);
 
 			#box_x5F_1 {
 			transform:translate(188.000000px, 96.000000px);
+			opacity:1;
 			}
 			#box_x5F_2 {
 				transform: translate(237.000000px, 68.000000px);
+				opacity:1;
 			}
 			#box_x5F_3 {
 				transform: translate(140.000000px, 68.000000px);
+				opacity:1;
 			}
 			#box_x5F_4 {
 				transform: translate(188.000000px, 40.000000px);
+				opacity:1;
 			}
 			#box_x5F_5 {
 				transform: translate(92.000000px, 40.000000px);
+				opacity:1;
 			}
 			#box_x5F_6 {
 				transform: translate(140.000000px, 12.000000px);
+				opacity:1;
 			}
 
 			// Digital Design 
@@ -220,7 +220,7 @@ transform:translate(188.000000px, 96.000000px);
 			// Rocket Illustration
 			#raket{
 				transition:all 0.8s;
-				transform:translateY(-950.00000px) translateX(150.00000px);
+				transform:translateY(-250.00000px) translateX(150.00000px);
 			}
 			#raket_x5F_skugga {
 				transition:all 0.4s;
@@ -231,5 +231,5 @@ transform:translate(188.000000px, 96.000000px);
 			}
 
 		}
+	}
 }
-*/
