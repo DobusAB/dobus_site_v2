@@ -57,7 +57,7 @@ router.map({
     name: 'blogg',
     component: require('./components/Blogg/Blogg.vue'),
     subRoutes: {
-      '/:id': {
+      '/:name': {
         name: 'post_by_id',
         component: require('./components/Blogg/Detail.vue')
       }
