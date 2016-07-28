@@ -9,7 +9,7 @@
             <div class="author--image"  v-bind:style="{'background-image': 'url(' + data.user_data.profile_image + ')' }"></div>
             <div class="author--info">
               <h5>{{{data.user_data.user.description}}}</h5>
-              <h4>{{{data.user_data.user.first_name}}} {{{data.user_data.user.last_name}}}</h4>
+              <h4>{{{data.user_data.user.first_name}}}  {{{data.user_data.user.last_name}}}</h4>
             </div>
           </div>
       </div>
