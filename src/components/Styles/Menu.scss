@@ -66,12 +66,8 @@
 			transition:transform 0.25s;
 		}
 
-
-		&:hover {
-			svg {
-				transform:translateY(-10px);
-				cursor: pointer;
-			}
+		svg {
+			@include floatUp;
 		}
 	}
 	&.nav--project_open {

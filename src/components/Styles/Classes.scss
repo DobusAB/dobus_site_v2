@@ -44,12 +44,14 @@ a:after {
 	@include desktop {
 		&:hover {
 		  transform:translateY(-10px);
+		  cursor:pointer;
 		}
 	}
 
 	@include mega {
 		&:hover {
 		  transform:translateY(-10px);
+		    cursor:pointer;
 		}
 	}
 
