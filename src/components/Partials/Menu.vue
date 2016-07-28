@@ -1,5 +1,5 @@
 <template>
-	<div class="nav--primary row align-middle" v-bind:class="{'nav--project_open': this.$root.global.projectOpen}">
+	<nav class="nav--primary row align-middle" v-bind:class="{'nav--project_open': this.$root.global.projectOpen}">
 	  	 <div class="nav--logo col-xs-12 col-md-2" v-link="{ name: 'start' }">
 			<?xml version="1.0" encoding="UTF-8" standalone="no"?>
             <svg width="100px" height="34px" viewBox="0 0 100 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -54,7 +54,7 @@
               </a>
 		    </div>
 	     </div>
-	  </div>
+	  </nav>
 	  <div v-link="{name: this.$root.global.backname}" class="nav--back" v-bind:class="{'nav--project_open': this.$root.global.projectOpen}">
 			<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 			<svg width="20px" height="20px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -68,7 +68,7 @@
 			        </g>
 			    </g>
 			</svg>
-	  	 </div>
+    </div>
 </template>
 
 <!--   	  -->
