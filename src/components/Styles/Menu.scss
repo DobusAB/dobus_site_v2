@@ -201,7 +201,7 @@
 			    background-color:$transparent;
 			    padding:0.65em 1em;
 			    white-space: nowrap;
-			    background-size: 200% 100%;
+			    background-size: 201% 100%;
 			    background-position: 0% 100%;
 			    background-color:none;
 			    transition: background-position 1.5s cubic-bezier(0.77, 0, 0.175, 1);
@@ -251,7 +251,7 @@
 			&.nav--active {
 				opacity:1;
 				mark {
-					background-position: -100% 100%;
+					background-position: -99% 100%;
 				}
 				@include desktop {
 					&:hover {
