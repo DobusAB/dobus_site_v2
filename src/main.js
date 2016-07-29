@@ -35,11 +35,11 @@ router.map({
     name: 'start',
     component: require('./components/Home/Home.vue')
   },
-  '/about': {
+  '/kontakt': {
     name: 'about',
     component: require('./components/About/About.vue')
   },
-  '/projects': {
+  '/projekt': {
     name: 'project',
     component: require('./components/Project/Projects.vue'),
     subRoutes: {
@@ -49,7 +49,7 @@ router.map({
       }
     }
   },
-  '/work': {
+  '/jobb': {
     name: 'work',
     component: require('./components/Work/Work.vue')
   },
