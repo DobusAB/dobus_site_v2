@@ -4,7 +4,7 @@ h1 {
   color:#fff;
   letter-spacing: 0.05em;
   margin:1.5em auto 0em auto;
-  font-size: 1.40em;;
+  font-size: 1.40em;
   margin-bottom:2em;
   transition:opacity 0.5s;
   opacity:1;
@@ -14,7 +14,7 @@ h1 {
   z-index:2;
   
   @include mega {
-    font-size:3.75em;
+    font-size:3em;
     width:60%;
     line-height: 1.6em;
   }
