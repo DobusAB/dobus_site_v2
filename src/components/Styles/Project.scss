@@ -2,18 +2,23 @@
 	background: rgba(0, 0, 0, 0.05);
 	z-index:999;
 	z-index:1;
-	padding-top:$margin--small;
+	padding-top:$margin--large*0.75; /* */
+	padding-bottom:$margin--large*0.75; /* */
 	@include mega {
 		padding-top:$margin--large;
+		padding-bottom:$margin--large; /* */
 	}
 	@include desktop {
 		padding-top:$margin--large;
+		padding-bottom:$margin--large; /* */
 	}
 	@include tablet {
 		padding-top:$margin--large;
+		padding-bottom:$margin--large; /* */ 
 	}
 	@include tablet-landscape {
 		padding-top:$margin--large;
+		padding-bottom:$margin--large; /* */
 	}
 	@include mobile-landscape {
 		padding-top:0em;
@@ -22,7 +27,9 @@
 .service--section {
 	color:#fff;
 	.project--wrapper {
-		padding:$margin--medium*1.5 $margin--small;
+		padding-top:$margin--small*0.5; /* $margin--small;*/
+		padding-bottom:$margin--small*1.5;
+		margin:$margin--small*0.75; /* */ 
 		position:relative;
 		@include mask--hover;
 		@include hover;
@@ -37,13 +44,16 @@
 			z-index:2;
 		}
 		@include mega {
-			padding:$margin--large $margin--large*1.5;
+			// padding:$margin--large $margin--large*1.5;
+			margin: 0;
 		}
 		@include desktop {
-			padding:$margin--large;
+			// padding:$margin--large;
+			margin: 0;
 		}
 		@include tablet {
 			padding:$margin--large $margin--small;
+			margin:$margin--small*0.25; /* */
 		}
 		@include tablet-landscape {
 			padding:$margin--large $margin--medium;

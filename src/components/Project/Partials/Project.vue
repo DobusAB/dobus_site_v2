@@ -10,12 +10,17 @@
       </div>
     </div>
     <div class="row project--row">
-      <div class="col-xs-12 project--wrapper flex flow-vertical margin-auto text-center align-middle align-center" v-link="{ name: 'project_by_name', params: { name: sub.post_name }}" v-for="sub in item.sub_pages">
+      <div class="col-xs-12 col-lg-6 project--wrapper flex flow-vertical text-center align-middle align-center" v-link="{ name: 'project_by_name', params: { name: sub.post_name }}" v-for="sub in item.sub_pages">
         <h3 class="text--tilted">{{{sub.custom_fields.client_name}}}</h3>
         <h2 class="text--tilted">{{sub.post_title}}</h2>
         <div class="masked--image">
           <div class="masked--image_inner" v-bind:style="{'background-image': 'url(' + sub.custom_fields.project_featured_image + ')' }"></div>
         </div>
+        <a href="#" class="read--more" style="padding: 0.5em 1em; background-color: #B076B9; opacity: 1; font-size: 1.3em; font-weight: 800; text-transform: uppercase; z-index: 999; border-radius: 100em; display: flex; color: white; justify-content: center; align-items: center; -webkit-box-shadow: 0px 0px 25px 0px rgba(89,89,89,1);
+-moz-box-shadow: 0px 0px 25px 0px rgba(89,89,89,1);
+box-shadow: 0px 0px 25px 0px rgba(89,89,89,1);">
+          läs mer
+        </a>
       </div>
     </div>
      </div>
