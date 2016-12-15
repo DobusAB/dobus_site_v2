@@ -27,10 +27,12 @@
 .service--section {
 	color:#fff;
 	.project--wrapper {
-		padding-top:$margin--small*0.5; /* $margin--small;*/
-		padding-bottom:$margin--small*1.5;
-		margin:$margin--small*0.75; /* */ 
+		// padding-top:$margin--small*0.5;  $margin--small;
+		// padding-bottom:$margin--small*1.5;
+		margin: 0em 0em;
+		// margin:$margin--small*0.75; /* */ 
 		position:relative;
+		height: 30em;
 		@include mask--hover;
 		@include hover;
 		h2 {
@@ -49,7 +51,7 @@
 		}
 		@include desktop {
 			// padding:$margin--large;
-			margin: 0;
+			margin: 0em 0em;
 		}
 		@include tablet {
 			padding:$margin--large $margin--small;

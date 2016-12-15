@@ -57,6 +57,38 @@ a:after {
 
 }
 
+.text--wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // padding: 5em 0em;
+}
+
+.read--more {
+	padding: 0.7em 2em; 
+	background-color: #B076B9; 
+	opacity: 1; 
+	font-size: 1.3em; 
+	font-weight: 800; 
+	text-transform: uppercase; 
+	z-index: 999; 	
+	border-radius: 100em;
+	position: absolute;
+    bottom: 0;
+	color: white; 
+	box-shadow: 0px 0px 25px 0px rgba(157,95,168,1);
+	&:hover {	
+		.masked--image {
+			transform: translate(-50%, -50%) scale(1.2);
+			opacity:.35;
+			.masked--image_inner {
+				transform:scale(1.2);
+			}
+		}
+	}
+}
+
 .text--tilted {
 	transform: rotate(-2deg);
 	transform-origin: left top 0;
@@ -166,10 +198,10 @@ a:after {
 	@include desktop {
 			&:hover {
 				.masked--image {
-				transform: translate(-50%, -50%) scale(1.2);
+				transform: translate(-50%, -50%) scale(1.1);
 				opacity:.35;
 				.masked--image_inner {
-					transform:scale(1.2);
+					transform:scale(1.1);
 				}
 			}
 		}
@@ -177,9 +209,9 @@ a:after {
 	@include mega {
 			&:hover {
 				.masked--image {
-				transform: translate(-50%, -50%) scale(1.2);
+				transform: translate(-50%, -50%) scale(1.1);
 				.masked--image_inner {
-					transform:scale(1.2);
+					transform:scale(1.1);
 				}
 			}
 		}
