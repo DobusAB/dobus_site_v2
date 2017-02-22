@@ -5,12 +5,9 @@
         <h3 class="text--tilted">Vad vi gör</h3>
         <h1 class="text--tilted">{{item.post_title}}</h1>
       </div>
-      <div class="service--illustration flex align-middle align-center">
-        {{{item.custom_fields.service_illustration}}}
-      </div>
     </div>
     <div class="row project--row">
-      <div class="col-xs-12 col-lg-6 project--wrapper flex flow-vertical text-center align-middle align-center" v-link="{ name: 'project_by_name', params: { name: sub.post_name }}" v-for="sub in item.sub_pages">
+      <div class="col-xs-12 col-lg-6 project--wrapper flex flow-vertical text-center align-middle align-center" v-for="sub in item.sub_pages" v-link="{ name: 'project_by_name', params: { name: sub.post_name }}">
       <div class="text--wrapper">
         <h3 class="text--tilted">{{{sub.custom_fields.client_name}}}</h3>
         <h2 class="text--tilted">{{sub.post_title}}</h2>
@@ -19,7 +16,7 @@
           <div class="masked--image_inner" v-bind:style="{'background-image': 'url(' + sub.custom_fields.project_featured_image + ')' }">
           </div>
         </div>
-        <a href="#" class="read--more">
+        <a href="#" class="read--more" v-link="{ name: 'project_by_name', params: { name: sub.post_name }}" v-bind:style="">
           läs mer
         </a>
       </div>

@@ -3,8 +3,8 @@
       <div class="row">
         <div class="col-xs-12 col-md-6 col-lg-3">
           <h4>Hitta oss</h4>
-          <p>Kristian IV:s väg 3</p>
-          <p>302 51, Halmstad</p>
+          <p>Köpmansgatan 41</p>
+          <p>302 32, Halmstad</p>
           <p>Våning 2</p>
         </div>
         <div class="col-xs-12 col-md-6 col-lg-3">
