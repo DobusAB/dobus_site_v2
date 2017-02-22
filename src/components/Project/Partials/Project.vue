@@ -16,9 +16,12 @@
           <div class="masked--image_inner" v-bind:style="{'background-image': 'url(' + sub.custom_fields.project_featured_image + ')' }">
           </div>
         </div>
-        <a href="#" class="read--more" v-link="{ name: 'project_by_name', params: { name: sub.post_name }}" v-bind:style="">
+        <div class="readmore-container">
+          <a href="#" class="read--more" v-link="{ name: 'project_by_name', params: { name: sub.post_name }}">
           läs mer
         </a>
+        </div>
+          
       </div>
     </div>
      </div>
