@@ -7,7 +7,7 @@
   </div>
   <div class="row" v-bind:style="{background: featuredRandom.custom_field.project_color}">
     <div class="col-xs-12 site--section landing--project flex flow-vertical margin-auto text-center align-middle align-center" v-link="{ name: 'project_by_name', params: { name: featuredRandom.slug }}">
-      <h3 class="text--tilted" v-bind:class="{'fadeIn' : this.$root.global.loading}">utvalt projekt!</h2>
+      <h3 class="text--tilted" v-bind:class="{'fadeIn' : this.$root.global.loading}">utvalt projekt</h2>
       <h2 class="text--tilted" v-bind:class="{'fadeIn' : this.$root.global.loading}">{{ featuredRandom.title.rendered}}</h2>
       <div class="masked--image">
         <div class="masked--image_inner" v-bind:style="{'background-image': 'url(' +  featuredRandom.custom_field.project_featured_image + ')' }"></div>
@@ -47,21 +47,6 @@ export default {
       featured: [],
       featuredRandom: [],
       hidden: false
-    }
-  },
-  head: {
-    title: function () {
-      return {
-        inner: this.yoast.title
-      }
-    },
-    meta: function () {
-      return {
-        name: {
-          description: this.yoast.description,
-          keywords: this.yoast.keywords
-        }
-      }
     }
   },
   components: {
