@@ -31,7 +31,7 @@ export default {
   head: {
     title: function () {
       return {
-        inner: this.yoast.title
+        inner: "Appar, Webbutveckling, Användaren"
       }
     }
   },
