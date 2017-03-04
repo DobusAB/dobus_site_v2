@@ -31,7 +31,7 @@ export default {
   head: {
     title: function () {
       return {
-        inner: "Appar, Webbutveckling, Användaren"
+        inner: 'Appar, Webbutveckling, Användaren'
       }
     }
   },
