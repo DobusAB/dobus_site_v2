@@ -56,9 +56,6 @@ export default {
     getPageData: function (transition) {
       this.$http.get(Init.globalUrl() + 'wp-json/wp/v2/pages/41').then((response) => {
         this.data = response.data
-        this.yoast.description = response.data.yoast_meta.yoast_wpseo_metadesc
-        this.yoast.title = response.data.yoast_meta.yoast_wpseo_title
-        this.yoast.keywords = response.data.yoast_meta.yoast_wpseo_focuskw
         this.show = true
         this.$root.global.loading = false
         // console.log(response.data)
