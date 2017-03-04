@@ -54,7 +54,7 @@ export default {
   },
   methods: {
     getPageData: function (transition) {
-      this.$http.get(Init.globalUrl() + 'index.php/wp-json/wp/v2/pages/37').then((response) => {
+      this.$http.get(Init.globalUrl() + 'wp-json/wp/v2/pages/37').then((response) => {
         this.data = response.data
         this.yoast.description = response.data.yoast_meta.yoast_wpseo_metadesc
         this.yoast.title = response.data.yoast_meta.yoast_wpseo_title
@@ -64,7 +64,7 @@ export default {
       (response) => {})
     },
     getFeatured: function (transition) {
-      this.$http.get(Init.globalUrl() + 'index.php/wp-json/wp/v2/pages?filter[category_name]=featured').then((response) => {
+      this.$http.get(Init.globalUrl() + 'wp-json/wp/v2/pages?filter[category_name]=featured').then((response) => {
         this.featured = response.data
         this.featuredRandom = this.featured[Math.floor(Math.random() * this.featured.length)]
         this.show = true

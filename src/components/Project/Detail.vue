@@ -106,7 +106,7 @@ export default {
   },
   methods: {
     getDetailData: function () {
-      this.$http.get(Init.globalUrl() + 'index.php/wp-json/wp/v2/pages?filter[name]=' + this.$route.params.name).then((response) => {
+      this.$http.get(Init.globalUrl() + 'wp-json/wp/v2/pages?filter[name]=' + this.$route.params.name).then((response) => {
         this.data = response.data
         this.yoast.description = response.data[0].yoast_meta.yoast_wpseo_metadesc
         this.yoast.title = response.data[0].yoast_meta.yoast_wpseo_title
@@ -120,7 +120,7 @@ export default {
     },
     getAllProjects: function () {
       var moreProjects = []
-      this.$http.get(Init.globalUrl() + 'index.php/wp-json/wp/v2/pages/2').then((response) => {
+      this.$http.get(Init.globalUrl() + 'wp-json/wp/v2/pages/2').then((response) => {
         for (var i = 0; i < response.data.sub_pages.length; i++) {
           for (var x = 0; x < response.data.sub_pages[i].sub_pages.length; x++) {
             moreProjects.push(response.data.sub_pages[i].sub_pages[x])

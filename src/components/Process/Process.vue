@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     getPageData: function (transition) {
-      this.$http.get(Init.globalUrl() + 'index.php/wp-json/wp/v2/pages/39').then((response) => {
+      this.$http.get(Init.globalUrl() + 'wp-json/wp/v2/pages/39').then((response) => {
         this.data = response.data
         this.show = true
         this.$root.global.loading = false
