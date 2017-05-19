@@ -72,7 +72,7 @@ export default {
       (response) => {})
     },
     getPosts: function (transition) {
-      this.$http.get(Init.globalUrl() + 'wp-json/wp/v2/posts?filter[category_name]=blogg').then((response) => {
+      this.$http.get(Init.globalUrl() + 'wp-json/wp/v2/posts?categories=3').then((response) => {
         this.items = response.data
         /* this.featured = response.data
         this.featuredRandom = this.featured[Math.floor(Math.random() * this.featured.length)]

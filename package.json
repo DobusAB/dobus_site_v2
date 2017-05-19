@@ -17,7 +17,7 @@
     "babel-runtime": "^6.0.0",
     "fastclick": "^1.0.6",
     "vue": "^1.0.21",
-    "vue-head": "^1.0.5",
+    "vue-head": "^1.0.7",
     "vue-lazyload-img": "^0.1.5",
     "vue-resource": "^0.8.0",
     "vue-router": "^0.7.13"

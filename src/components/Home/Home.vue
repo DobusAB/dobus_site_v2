@@ -61,7 +61,7 @@ export default {
       (response) => {})
     },
     getFeatured: function (transition) {
-      this.$http.get(Init.globalUrl() + 'wp-json/wp/v2/pages?filter[category_name]=featured').then((response) => {
+      this.$http.get(Init.globalUrl() + 'wp-json/wp/v2/pages?categories=2').then((response) => {
         this.featured = response.data
         this.featuredRandom = this.featured[Math.floor(Math.random() * this.featured.length)]
         this.show = true

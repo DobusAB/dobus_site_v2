@@ -40,6 +40,11 @@ export default {
       }
     }
   },
+  meta: function () {
+    return [
+      { name: 'fb:app_id', content: '123456789' }
+    ]
+  },
   components: {
     loading: Loading
   },
