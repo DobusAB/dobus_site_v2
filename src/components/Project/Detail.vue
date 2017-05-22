@@ -106,7 +106,7 @@ export default {
   },
   methods: {
     getDetailData: function () {
-      this.$http.get(Init.globalUrl() + 'wp-json/wp/v2/pages?filter[name]=' + this.$route.params.name).then((response) => {
+      this.$http.get(Init.globalUrl() + 'wp-json/wp/v2/pages?slug=' + this.$route.params.name).then((response) => {
         this.data = response.data
         this.yoast.description = response.data[0].yoast_meta.yoast_wpseo_metadesc
         this.yoast.title = response.data[0].yoast_meta.yoast_wpseo_title
