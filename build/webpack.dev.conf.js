@@ -33,6 +33,6 @@ module.exports = merge(baseWebpackConfig, {
     }),
     new ScriptExtHtmlWebpackPlugin({
       defaultAttribute: 'async'
-    }),
+    })
   ]
 })
