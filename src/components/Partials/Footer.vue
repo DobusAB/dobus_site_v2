@@ -10,7 +10,7 @@
         <div class="col-xs-12 col-md-6 col-lg-3">
           <h4>Socialisera</h4>
           <p><a href="https://www.facebook.com/dobuswebb/" target="_blank">Facebook</a></p>
-          <p><a href="https://twitter.com/dobuswebb" target="_blank">Twitter</a></p>
+          <p><a href="https://www.instagram.com/dobuswebb/" target="_blank"> Instagram </a></p>
           <p><a href="https://www.linkedin.com/company/dobus" target="_blank">LinkedIn</a></p>
           <p><a href="https://github.com/DobusAB" target="_blank">Github</a></p>
         </div>
@@ -24,9 +24,9 @@
         </div>
         <div class="col-xs-12 col-md-6 col-lg-3">
           <h4>Kontakta oss</h4>
-          <p><a v-link="{ name: 'about'}">Ekonomi</a></p>
+          <p><a href="mailto:info@dobus.se">info@dobus.se</a></p>
+          <p><a href="tel:+46738308980">+46 73 830 89 80</a></p>
           <p><a v-link="{ name: 'work'}">Jobba här</a></p>
-          <p><a v-link="{ name: 'about'}">Nya projekt</a></p>
         </div>
       </div>
 </template>

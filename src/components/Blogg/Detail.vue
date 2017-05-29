@@ -50,7 +50,7 @@ export default {
   },
   methods: {
     getPost: function (transition) {
-      this.$http.get(Init.globalUrl() + 'wp-json/wp/v2/posts?filter[name]=' + this.$route.params.name).then((response) => {
+      this.$http.get(Init.globalUrl() + 'wp-json/wp/v2/posts?slug=' + this.$route.params.name).then((response) => {
         this.data = response.data[0]
         this.$root.global.loading = false
         this.show = true
