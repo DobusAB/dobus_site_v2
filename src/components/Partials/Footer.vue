@@ -19,14 +19,13 @@
           <p><a v-link="{ name: 'project'}">Apputveckling</a></p>
           <p><a v-link="{ name: 'project'}">Digital design</a></p>
           <p><a v-link="{ name: 'project'}">Webbutveckling</a></p>
-          <p><a v-link="{ name: 'project'}">Internet of Things</a></p>
-          <p><a v-link="{ name: 'project'}">Startuphjälpen</a></p>
         </div>
         <div class="col-xs-12 col-md-6 col-lg-3">
           <h4>Kontakta oss</h4>
           <p><a href="mailto:info@dobus.se">info@dobus.se</a></p>
           <p><a href="tel:+46738308980">+46 73 830 89 80</a></p>
           <p><a v-link="{ name: 'work'}">Jobba här</a></p>
+          <p><a href="https://cv.dobus.se" target="_blank">Personalkompetens</a></p>
         </div>
       </div>
 </template>
