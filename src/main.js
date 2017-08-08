@@ -39,6 +39,10 @@ router.map({
     name: 'about',
     component: require('./components/About/About.vue')
   },
+  '/teamet': {
+    name: 'us',
+    component: require('./components/Us/Us.vue')
+  },
   '/projekt': {
     name: 'project',
     component: require('./components/Project/Projects.vue'),

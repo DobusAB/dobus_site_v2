@@ -43,6 +43,9 @@
 		      <a v-link="{ name: 'project', activeClass: 'nav--active' }" class="flex align-middle">
 		      	<mark>Vad vi gör</mark>
 		      </a>
+              <a v-link="{ name: 'us', activeClass: 'nav--active' }" class="flex align-middle">
+                <mark>Vilka är vi</mark>
+              </a>
 		      <a v-link="{ name: 'about', activeClass: 'nav--active' }" class="flex align-middle">
 		      	<mark>Kontakta oss</mark>
 		      </a>
